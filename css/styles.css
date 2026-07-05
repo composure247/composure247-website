@@ -126,7 +126,7 @@ body {
   font-size: var(--text-base);
   line-height: 1.6;
   color: var(--text-body);
-  background: var(--white);
+  background: #d6f5d6; /* TEST: light green background */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
