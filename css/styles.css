@@ -532,51 +532,55 @@ p { line-height: 1.7; }
 .feature-card {
   background: var(--white);
   border: 1px solid var(--border-light);
-  border-radius: var(--radius-lg);
-  padding: var(--sp-6);
+  border-radius: var(--radius-xl);
+  padding: var(--sp-8) var(--sp-6);
   box-shadow: var(--shadow-card);
   transition: var(--transition-slow);
+  text-align: center;
 }
 
 .feature-card:hover {
   box-shadow: var(--shadow-lg);
   border-color: var(--accent);
-  transform: translateY(-2px);
+  transform: translateY(-4px);
 }
 
 .feature-card:hover .feature-icon {
-  background: var(--accent);
-  color: var(--white);
+  transform: scale(1.05);
 }
 
 /* ============================================================
    Feature Icon
    ============================================================ */
 .feature-icon {
-  width: 44px;
-  height: 44px;
-  background: var(--accent-glow);
-  border: 1px solid rgba(59, 127, 234, 0.18);
-  border-radius: var(--radius);
+  width: 56px;
+  height: 56px;
+  margin-inline: auto;
+  background: var(--grad-accent);
+  border: none;
+  border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent);
+  color: var(--white);
   flex-shrink: 0;
+  box-shadow: 0 10px 26px rgba(59, 127, 234, 0.35);
   transition: var(--transition);
 }
 
 .feature-icon-lg {
-  width: 56px;
-  height: 56px;
-  background: var(--accent-glow);
-  border: 1px solid rgba(59, 127, 234, 0.18);
-  border-radius: var(--radius-lg);
+  width: 64px;
+  height: 64px;
+  margin-inline: auto;
+  background: var(--grad-accent);
+  border: none;
+  border-radius: var(--radius-full);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--accent);
+  color: var(--white);
   flex-shrink: 0;
+  box-shadow: 0 10px 26px rgba(59, 127, 234, 0.35);
   transition: var(--transition);
 }
 
