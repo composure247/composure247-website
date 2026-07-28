@@ -653,6 +653,44 @@ p { line-height: 1.7; }
   z-index: 1;
 }
 
+/* ---- Full-bleed image hero (Altera-style) ---- */
+.hero--image {
+  min-height: 660px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(7,15,35,0.94) 0%, rgba(7,15,35,0.62) 48%, rgba(7,15,35,0.18) 100%),
+    url('../images/hero.jpg') center / cover no-repeat,
+    radial-gradient(1100px 620px at 78% 26%, rgba(139,92,246,0.40), transparent 60%),
+    radial-gradient(900px 520px at 60% 78%, rgba(59,127,234,0.42), transparent 62%),
+    linear-gradient(150deg, #070f23 0%, #0d1b40 55%, #131a4a 100%);
+}
+.hero--image::before,
+.hero--image::after { display: none; }
+.hero--image .container { width: 100%; }
+.hero--image .hero-layout { grid-template-columns: 1fr; }
+.hero--image .hero-visual { display: none; }
+.hero--image .hero-headline { color: var(--white); }
+.hero--image .hero-sub { color: rgba(255,255,255,0.80); }
+.hero--image .hero-note { color: rgba(255,255,255,0.62); }
+.hero--image .eyebrow-tag {
+  background: rgba(255,255,255,0.10);
+  color: rgba(255,255,255,0.92);
+  border-color: rgba(255,255,255,0.22);
+}
+.hero--image .btn-secondary {
+  color: var(--white);
+  border-color: rgba(255,255,255,0.45);
+}
+.hero--image .btn-secondary:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: var(--white);
+}
+
+/* White nav links while over a dark hero */
+.nav[data-dark-hero]:not(.scrolled) .nav-link { color: rgba(255,255,255,0.82); }
+.nav[data-dark-hero]:not(.scrolled) .nav-link:hover { color: var(--white); }
+
 .hero-content {
   max-width: 680px;
 }
