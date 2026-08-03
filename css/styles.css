@@ -798,9 +798,9 @@ p { line-height: 1.7; }
   box-shadow: 0 0 18px rgba(59,127,234,0.7);
 }
 .section-futuristic .section-header h2 {
-  font-size: clamp(2.25rem, 4.6vw, 3.4rem);
+  font-size: clamp(1.9rem, 3.8vw, 2.9rem);
   font-weight: 700;
-  line-height: 1.06;
+  line-height: 1.08;
   letter-spacing: -0.035em;
 }
 .headline-accent {
