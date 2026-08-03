@@ -822,6 +822,7 @@ p { line-height: 1.7; }
 }
 .integration-card {
   padding: 0 var(--sp-2);
+  text-align: center;
 }
 .integration-icon {
   width: 40px;
@@ -830,7 +831,10 @@ p { line-height: 1.7; }
   align-items: center;
   justify-content: center;
   color: var(--navy);
-  margin-bottom: var(--sp-3);
+  margin: 0 auto var(--sp-3);
+}
+.integration-card > div:last-of-type {
+  justify-content: center;
 }
 .integration-card h4 { color: var(--navy); margin-bottom: 2px; }
 .integration-card .int-sub {
