@@ -822,7 +822,11 @@ p { line-height: 1.7; }
   padding: var(--sp-12) 0 var(--sp-16);
   text-align: center;
 }
-.video-band-head { margin-bottom: var(--sp-8); }
+.video-band-head {
+  margin-bottom: var(--sp-8);
+  text-align: center;
+}
+.video-band-head .eyebrow-tag { margin-left: auto; margin-right: auto; }
 .video-band .eyebrow-tag {
   background: rgba(255,255,255,0.08);
   color: rgba(255,255,255,0.9);
