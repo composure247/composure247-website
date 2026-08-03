@@ -781,6 +781,37 @@ p { line-height: 1.7; }
   .problem-3d-card { transform: none; }
 }
 
+/* Cool header treatment inside the futuristic section */
+.section-futuristic .section-header {
+  position: relative;
+  padding-left: var(--sp-6);
+}
+.section-futuristic .section-header::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 3px;
+  border-radius: 3px;
+  background: var(--grad-accent);
+  box-shadow: 0 0 18px rgba(59,127,234,0.7);
+}
+.section-futuristic .section-header h2 {
+  font-size: clamp(2.25rem, 4.6vw, 3.4rem);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.035em;
+}
+.headline-accent {
+  background: var(--grad-accent);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: drop-shadow(0 0 24px rgba(59,127,234,0.5));
+}
+
 .hero-content {
   max-width: 680px;
 }
