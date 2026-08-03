@@ -731,7 +731,11 @@ p { line-height: 1.7; }
 }
 .section-futuristic .container { position: relative; z-index: 1; }
 .section-futuristic h2 { color: #fff; }
-.section-futuristic .section-header p { color: rgba(255,255,255,0.66) !important; }
+.section-futuristic .section-header p {
+  color: rgba(255,255,255,0.6) !important;
+  font-size: var(--text-base);
+  line-height: 1.6;
+}
 .section-futuristic .eyebrow-tag {
   background: rgba(255,255,255,0.08);
   color: rgba(255,255,255,0.9);
