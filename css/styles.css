@@ -707,6 +707,80 @@ p { line-height: 1.7; }
   .comms-visual { min-height: 460px; max-width: 460px; margin: 0 auto; }
 }
 
+/* ---- Futuristic 3D problem section ---- */
+.section-futuristic {
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+  background:
+    radial-gradient(900px 520px at 12% -10%, rgba(59,127,234,0.22), transparent 60%),
+    radial-gradient(760px 560px at 92% 110%, rgba(124,92,246,0.16), transparent 60%),
+    linear-gradient(160deg, #0a1428 0%, #0d1b3a 55%, #090f22 100%);
+}
+.section-futuristic::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px);
+  background-size: 46px 46px;
+  -webkit-mask-image: radial-gradient(circle at 72% 42%, #000 0%, transparent 72%);
+  mask-image: radial-gradient(circle at 72% 42%, #000 0%, transparent 72%);
+  pointer-events: none;
+}
+.section-futuristic .container { position: relative; z-index: 1; }
+.section-futuristic h2 { color: #fff; }
+.section-futuristic .section-header p { color: rgba(255,255,255,0.66) !important; }
+.section-futuristic .eyebrow-tag {
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.9);
+  border-color: rgba(255,255,255,0.18);
+}
+.section-futuristic .problem-point {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.07);
+}
+.section-futuristic .problem-point:hover {
+  background: rgba(255,255,255,0.055);
+  border-color: rgba(59,127,234,0.45);
+}
+.section-futuristic .problem-point h4 { color: #fff !important; }
+.section-futuristic .problem-point p { color: rgba(255,255,255,0.6) !important; }
+.section-futuristic .problem-icon {
+  background: rgba(239,68,68,0.16);
+  color: #ff6b6b;
+}
+
+/* Glassy tilted 3D card */
+.problem-3d { perspective: 1600px; }
+.problem-3d-card {
+  background: linear-gradient(155deg, rgba(255,255,255,0.11), rgba(255,255,255,0.03));
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255,255,255,0.14);
+  border-radius: var(--radius-xl);
+  box-shadow:
+    0 40px 80px rgba(0,0,0,0.55),
+    0 0 40px rgba(59,127,234,0.12),
+    inset 0 1px 0 rgba(255,255,255,0.16);
+  transform: rotateY(-7deg) rotateX(3deg);
+  transition: transform 0.55s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transform-style: preserve-3d;
+}
+.problem-3d-card:hover { transform: rotateY(0deg) rotateX(0deg); }
+
+.problem-alert-chip { animation: problemPulse 2.2s ease-out infinite; }
+@keyframes problemPulse {
+  0%   { box-shadow: 0 0 0 0 rgba(239,68,68,0.45); }
+  70%  { box-shadow: 0 0 0 10px rgba(239,68,68,0); }
+  100% { box-shadow: 0 0 0 0 rgba(239,68,68,0); }
+}
+
+@media (max-width: 900px) {
+  .problem-3d-card { transform: none; }
+}
+
 .hero-content {
   max-width: 680px;
 }

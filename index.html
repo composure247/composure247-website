@@ -301,7 +301,7 @@
 <!-- ══════════════════════════════════════════════════════════
      THE PROBLEM
 ══════════════════════════════════════════════════════════ -->
-<section class="section section-alt" aria-labelledby="problem-heading">
+<section class="section section-futuristic" aria-labelledby="problem-heading">
   <div class="container">
     <div class="problem-grid">
 
@@ -355,39 +355,41 @@
         </div>
       </div>
 
-      <!-- Visual: client-experience timeline (floating card) -->
-      <div class="fade-in stagger-2" style="position:relative;">
-        <div class="comms-card" style="padding:var(--sp-6);">
-          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--sp-5);">
-            <div style="font-weight:600;color:var(--text-body);">A poorly communicated incident</div>
-            <span class="badge" style="background:rgba(239,68,68,0.1);color:var(--danger);border:1px solid rgba(239,68,68,0.2);">Client's view</span>
+      <!-- Visual: glassy 3D client-experience timeline -->
+      <div class="fade-in stagger-2 problem-3d" style="position:relative;">
+        <div class="problem-3d-card" style="padding:var(--sp-6);position:relative;overflow:hidden;">
+          <div style="position:absolute;top:-70px;right:-70px;width:220px;height:220px;background:radial-gradient(circle,rgba(59,127,234,0.35),transparent 70%);pointer-events:none;"></div>
+
+          <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--sp-5);position:relative;">
+            <div style="font-weight:600;color:#fff;">A poorly communicated incident</div>
+            <span class="badge" style="background:rgba(239,68,68,0.16);color:#ff8a8a;border:1px solid rgba(239,68,68,0.35);">Client's view</span>
           </div>
 
-          <div style="display:flex;flex-direction:column;gap:var(--sp-4);">
+          <div style="display:flex;flex-direction:column;gap:var(--sp-4);position:relative;">
             <div style="display:flex;gap:var(--sp-3);align-items:flex-start;">
-              <span style="width:9px;height:9px;border-radius:50%;background:#ef4444;margin-top:6px;flex-shrink:0;"></span>
-              <div><div style="font-size:var(--text-xs);font-weight:700;color:var(--text-body);">09:12 · Client notices the issue</div><div style="font-size:var(--text-sm);color:var(--text-muted);">"Our email is down. I'll wait a moment."</div></div>
+              <span style="width:9px;height:9px;border-radius:50%;background:#ff5d5d;margin-top:6px;flex-shrink:0;box-shadow:0 0 10px rgba(255,93,93,0.9);"></span>
+              <div><div style="font-size:var(--text-xs);font-weight:700;color:#fff;">09:12 · Client notices the issue</div><div style="font-size:var(--text-sm);color:rgba(255,255,255,0.62);">"Our email is down. I'll wait a moment."</div></div>
             </div>
             <div style="display:flex;gap:var(--sp-3);align-items:flex-start;">
-              <span style="width:9px;height:9px;border-radius:50%;background:#f59e0b;margin-top:6px;flex-shrink:0;"></span>
-              <div><div style="font-size:var(--text-xs);font-weight:700;color:var(--text-body);">09:35 · Still no update</div><div style="font-size:var(--text-sm);color:var(--text-muted);">"Should I raise a ticket? Do they even know?"</div></div>
+              <span style="width:9px;height:9px;border-radius:50%;background:#ffb020;margin-top:6px;flex-shrink:0;box-shadow:0 0 10px rgba(255,176,32,0.9);"></span>
+              <div><div style="font-size:var(--text-xs);font-weight:700;color:#fff;">09:35 · Still no update</div><div style="font-size:var(--text-sm);color:rgba(255,255,255,0.62);">"Should I raise a ticket? Do they even know?"</div></div>
             </div>
             <div style="display:flex;gap:var(--sp-3);align-items:flex-start;">
-              <span style="width:9px;height:9px;border-radius:50%;background:#ef4444;margin-top:6px;flex-shrink:0;"></span>
-              <div><div style="font-size:var(--text-xs);font-weight:700;color:var(--text-body);">10:10 · Calls the Account Manager</div><div style="font-size:var(--text-sm);color:var(--text-muted);">"The AM doesn't know either. Trust gone."</div></div>
+              <span style="width:9px;height:9px;border-radius:50%;background:#ff5d5d;margin-top:6px;flex-shrink:0;box-shadow:0 0 10px rgba(255,93,93,0.9);"></span>
+              <div><div style="font-size:var(--text-xs);font-weight:700;color:#fff;">10:10 · Calls the Account Manager</div><div style="font-size:var(--text-sm);color:rgba(255,255,255,0.62);">"The AM doesn't know either. Trust gone."</div></div>
             </div>
             <div style="display:flex;gap:var(--sp-3);align-items:flex-start;">
-              <span style="width:9px;height:9px;border-radius:50%;background:#ef4444;margin-top:6px;flex-shrink:0;"></span>
-              <div><div style="font-size:var(--text-xs);font-weight:700;color:var(--text-body);">10:45 · Issue fixed — but silent</div><div style="font-size:var(--text-sm);color:var(--text-muted);">"They still haven't told us anything. Renewal's in 3 months."</div></div>
+              <span style="width:9px;height:9px;border-radius:50%;background:#ff5d5d;margin-top:6px;flex-shrink:0;box-shadow:0 0 10px rgba(255,93,93,0.9);"></span>
+              <div><div style="font-size:var(--text-xs);font-weight:700;color:#fff;">10:45 · Issue fixed — but silent</div><div style="font-size:var(--text-sm);color:rgba(255,255,255,0.62);">"They still haven't told us anything. Renewal's in 3 months."</div></div>
             </div>
           </div>
 
-          <div style="margin-top:var(--sp-5);padding-top:var(--sp-4);border-top:1px solid var(--border-light);font-size:var(--text-sm);color:var(--text-body);text-align:center;font-weight:500;">The issue was fixed. The trust damage was not.</div>
+          <div style="margin-top:var(--sp-5);padding-top:var(--sp-4);border-top:1px solid rgba(255,255,255,0.14);font-size:var(--text-sm);color:rgba(255,255,255,0.92);text-align:center;font-weight:500;position:relative;">The issue was fixed. The trust damage was not.</div>
         </div>
 
         <!-- floating alert chip -->
-        <div style="position:absolute;top:-14px;right:22px;background:var(--white);border:1px solid rgba(239,68,68,0.25);border-radius:var(--radius-full);box-shadow:var(--shadow-lg);padding:7px 14px;display:flex;align-items:center;gap:8px;font-size:var(--text-xs);font-weight:600;color:var(--danger);">
-          <span style="width:8px;height:8px;border-radius:50%;background:#ef4444;flex-shrink:0;"></span> Client trust at risk
+        <div class="problem-alert-chip" style="position:absolute;top:-14px;right:22px;background:rgba(20,14,20,0.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid rgba(239,68,68,0.4);border-radius:var(--radius-full);padding:7px 14px;display:flex;align-items:center;gap:8px;font-size:var(--text-xs);font-weight:600;color:#ff8a8a;">
+          <span style="width:8px;height:8px;border-radius:50%;background:#ff5d5d;flex-shrink:0;"></span> Client trust at risk
         </div>
       </div>
 
