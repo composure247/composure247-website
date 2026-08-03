@@ -819,11 +819,11 @@ p { line-height: 1.7; }
 /* ---- Product flow video band (blends out of the hero) ---- */
 .video-band {
   background: linear-gradient(180deg, #070f23 0%, #0a1730 100%);
-  padding: var(--sp-12) 0 var(--sp-16);
+  padding: var(--sp-8) 0 var(--sp-10);
   text-align: center;
 }
 .video-band-head {
-  margin-bottom: var(--sp-8);
+  margin-bottom: var(--sp-5);
   text-align: center;
 }
 .video-band-head .eyebrow-tag { margin-left: auto; margin-right: auto; }
@@ -1129,7 +1129,7 @@ p { line-height: 1.7; }
    Trust Strip / Logos
    ============================================================ */
 .trust-strip {
-  padding: var(--sp-12) 0;
+  padding: var(--sp-6) 0;
   border-top: 1px solid var(--border-light);
   border-bottom: 1px solid var(--border-light);
   background: var(--white);
@@ -1142,14 +1142,14 @@ p { line-height: 1.7; }
   text-transform: uppercase;
   color: var(--text-subtle);
   text-align: center;
-  margin-bottom: var(--sp-6);
+  margin-bottom: var(--sp-4);
 }
 
 .trust-logos {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: var(--sp-10);
+  gap: var(--sp-6) var(--sp-8);
   flex-wrap: wrap;
 }
 
