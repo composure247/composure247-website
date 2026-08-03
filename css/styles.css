@@ -816,6 +816,34 @@ p { line-height: 1.7; }
   filter: drop-shadow(0 0 24px rgba(59,127,234,0.5));
 }
 
+/* ---- Product flow video band (blends out of the hero) ---- */
+.video-band {
+  background: linear-gradient(180deg, #070f23 0%, #0a1730 100%);
+  padding: var(--sp-12) 0 var(--sp-16);
+  text-align: center;
+}
+.video-band-head { margin-bottom: var(--sp-8); }
+.video-band .eyebrow-tag {
+  background: rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.9);
+  border-color: rgba(255,255,255,0.18);
+  margin-bottom: var(--sp-3);
+}
+.video-band h2 {
+  color: #fff;
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+.flow-video {
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+  display: block;
+  border-radius: var(--radius-xl);
+  box-shadow: 0 40px 90px rgba(0,0,0,0.55), 0 0 60px rgba(59,127,234,0.14);
+}
+
 /* ---- Integrations card row (light, minimal) ---- */
 .integrations-panel {
   margin-top: var(--sp-6);
