@@ -655,7 +655,7 @@ p { line-height: 1.7; }
 
 /* ---- Full-bleed image hero (Altera-style) ---- */
 .hero--image {
-  min-height: 660px;
+  min-height: 600px;
   display: flex;
   align-items: center;
   background:
@@ -665,9 +665,19 @@ p { line-height: 1.7; }
     radial-gradient(900px 520px at 60% 78%, rgba(59,127,234,0.42), transparent 62%),
     linear-gradient(150deg, #070f23 0%, #0d1b40 55%, #131a4a 100%);
 }
-.hero--image::before,
-.hero--image::after { display: none; }
-.hero--image .container { width: 100%; }
+.hero--image::before { display: none; }
+.hero--image::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 160px;
+  background: linear-gradient(180deg, rgba(7,15,35,0) 0%, #070f23 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+.hero--image .container { width: 100%; position: relative; z-index: 2; }
 .hero--image .hero-layout { grid-template-columns: 1fr; }
 .hero--image .hero-visual { display: none; }
 .hero--image .hero-headline { color: var(--white); }
@@ -819,7 +829,7 @@ p { line-height: 1.7; }
 /* ---- Product flow video band (blends out of the hero) ---- */
 .video-band {
   background: linear-gradient(180deg, #070f23 0%, #0a1730 100%);
-  padding: var(--sp-8) 0 var(--sp-10);
+  padding: var(--sp-5) 0 var(--sp-10);
   text-align: center;
 }
 .video-band-head {
