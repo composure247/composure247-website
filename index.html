@@ -596,22 +596,23 @@
 <!-- ══════════════════════════════════════════════════════════
      AUDIENCE CALIBRATION
 ══════════════════════════════════════════════════════════ -->
-<section class="section" aria-labelledby="audience-heading">
+<section class="section audience-section" aria-labelledby="audience-heading">
   <div class="container">
     <div class="audience-hero fade-up">
       <div class="audience-avatars">
-        <div class="aud-avatar" style="background:#3B7FEA;">CTO</div>
-        <div class="aud-avatar" style="background:#7C3AED;">IT</div>
-        <div class="aud-avatar" style="background:#0CA5D8;">FD</div>
-        <div class="aud-avatar" style="background:#10B981;">AM</div>
+        <div class="aud-avatar aud-avatar--cto" style="background:#3B7FEA;">CTO</div>
+        <div class="aud-avatar aud-avatar--it" style="background:#7C3AED;">IT</div>
+        <div class="aud-avatar aud-avatar--fd" style="background:#0CA5D8;">FD</div>
+        <div class="aud-avatar aud-avatar--am" style="background:#10B981;">AM</div>
       </div>
       <div class="eyebrow-tag">Stakeholder-calibrated communication</div>
       <h2 id="audience-heading">One incident. Four stakeholders.<br><span class="headline-accent">Four very different messages.</span></h2>
       <p>A CTO, a Finance Director, an IT Manager, and an Account Manager all need different information — in a different tone, with a different level of detail. Composure handles all of it.</p>
     </div>
 
-    <div class="grid-2" style="gap:var(--sp-5);">
-      <div class="card fade-up stagger-1" style="border-left:3px solid var(--accent);">
+    <div class="audience-stage">
+      <div class="aud-hint">Hover a stakeholder above to see the exact message they'd receive.</div>
+      <div class="card aud-msg aud-msg--cto" style="border-left:3px solid var(--accent);">
         <div style="display:flex;align-items:center;gap:var(--sp-3);margin-bottom:var(--sp-4);">
           <div class="contact-avatar" style="background:#3B7FEA;width:40px;height:40px;">CTO</div>
           <div>
@@ -628,7 +629,7 @@
         </div>
       </div>
 
-      <div class="card fade-up stagger-2" style="border-left:3px solid #7C3AED;">
+      <div class="card aud-msg aud-msg--it" style="border-left:3px solid #7C3AED;">
         <div style="display:flex;align-items:center;gap:var(--sp-3);margin-bottom:var(--sp-4);">
           <div class="contact-avatar" style="background:#7C3AED;width:40px;height:40px;">IT</div>
           <div>
@@ -645,7 +646,7 @@
         </div>
       </div>
 
-      <div class="card fade-up stagger-3" style="border-left:3px solid #0CA5D8;">
+      <div class="card aud-msg aud-msg--fd" style="border-left:3px solid #0CA5D8;">
         <div style="display:flex;align-items:center;gap:var(--sp-3);margin-bottom:var(--sp-4);">
           <div class="contact-avatar" style="background:#0CA5D8;width:40px;height:40px;">FD</div>
           <div>
@@ -662,7 +663,7 @@
         </div>
       </div>
 
-      <div class="card fade-up stagger-4" style="border-left:3px solid var(--success);">
+      <div class="card aud-msg aud-msg--am" style="border-left:3px solid var(--success);">
         <div style="display:flex;align-items:center;gap:var(--sp-3);margin-bottom:var(--sp-4);">
           <div class="contact-avatar" style="background:var(--success);width:40px;height:40px;">AM</div>
           <div>
