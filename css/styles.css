@@ -549,6 +549,37 @@ p { line-height: 1.7; }
   transform: scale(1.05);
 }
 
+/* Compact icon-left tiles for the "What Composure does" section */
+[aria-labelledby="features-heading"] .feature-card {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  column-gap: var(--sp-4);
+  row-gap: 2px;
+  align-items: start;
+  text-align: left;
+  padding: var(--sp-5);
+  border-radius: var(--radius-lg);
+}
+[aria-labelledby="features-heading"] .feature-icon {
+  grid-row: 1 / 3;
+  width: 46px;
+  height: 46px;
+  margin: 0 !important;
+  box-shadow: 0 6px 16px rgba(59,127,234,0.28);
+}
+[aria-labelledby="features-heading"] .feature-card h4 {
+  grid-column: 2;
+  margin: 0 0 2px !important;
+  font-size: var(--text-base);
+}
+[aria-labelledby="features-heading"] .feature-card p {
+  grid-column: 2;
+  font-size: var(--text-sm);
+  line-height: 1.55;
+}
+[aria-labelledby="features-heading"] .grid-3 { gap: var(--sp-4) !important; }
+
 /* ============================================================
    Feature Icon
    ============================================================ */
