@@ -891,10 +891,38 @@ p { line-height: 1.7; }
 .aud-avatar:nth-child(4) { transform: translateY(16px); }
 .aud-avatar:nth-child(2),
 .aud-avatar:nth-child(3) { transform: translateY(-6px); }
-.aud-avatar { cursor: pointer; transition: box-shadow .25s ease, border-color .25s ease; }
-.aud-avatar:hover {
-  border-color: #fff;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.5), 0 0 0 4px rgba(59,127,234,0.35);
+.aud-avatar {
+  cursor: pointer;
+  opacity: 0.45;
+  transition: box-shadow .25s ease, border-color .25s ease, opacity .25s ease;
+}
+.aud-avatar:hover { border-color: #fff; }
+
+/* The active stakeholder's bubble lights up (in its colour); the rest dim.
+   Defaults to CTO so it pairs with the default CTO message. */
+.aud-avatar--cto {
+  opacity: 1;
+  box-shadow: 0 0 0 4px rgba(59,127,234,0.5), 0 12px 30px rgba(0,0,0,0.45);
+}
+.audience-section:has(.aud-avatar:hover) .aud-avatar {
+  opacity: 0.45;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.4);
+}
+.audience-section:has(.aud-avatar--cto:hover) .aud-avatar--cto {
+  opacity: 1;
+  box-shadow: 0 0 0 4px rgba(59,127,234,0.5), 0 12px 30px rgba(0,0,0,0.45);
+}
+.audience-section:has(.aud-avatar--it:hover) .aud-avatar--it {
+  opacity: 1;
+  box-shadow: 0 0 0 4px rgba(124,58,237,0.5), 0 12px 30px rgba(0,0,0,0.45);
+}
+.audience-section:has(.aud-avatar--fd:hover) .aud-avatar--fd {
+  opacity: 1;
+  box-shadow: 0 0 0 4px rgba(12,165,216,0.5), 0 12px 30px rgba(0,0,0,0.45);
+}
+.audience-section:has(.aud-avatar--am:hover) .aud-avatar--am {
+  opacity: 1;
+  box-shadow: 0 0 0 4px rgba(16,185,129,0.5), 0 12px 30px rgba(0,0,0,0.45);
 }
 
 /* Hover-reveal message stage */
