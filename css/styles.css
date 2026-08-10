@@ -922,11 +922,14 @@ p { line-height: 1.7; }
   left: 0;
   right: 0;
   opacity: 0;
-  transform: translateY(12px);
-  transition: opacity .35s ease, transform .35s ease;
+  transform: translateY(10px);
+  transition: opacity .3s ease, transform .3s ease;
   pointer-events: none;
 }
-.audience-section:has(.aud-avatar:hover) .aud-hint { opacity: 0; }
+/* Default: feature the CTO message */
+.aud-msg--cto { opacity: 1; transform: none; }
+/* Hovering a bubble hides the default and reveals that stakeholder */
+.audience-section:has(.aud-avatar:hover) .aud-msg { opacity: 0; transform: translateY(10px); pointer-events: none; }
 .audience-section:has(.aud-avatar--cto:hover) .aud-msg--cto,
 .audience-section:has(.aud-avatar--it:hover)  .aud-msg--it,
 .audience-section:has(.aud-avatar--fd:hover)  .aud-msg--fd,
@@ -949,9 +952,13 @@ p { line-height: 1.7; }
   }
 }
 
-/* Blend the reveal into the dark panel */
-.audience-hero .audience-stage { margin-bottom: var(--sp-8); }
-.audience-hero .aud-hint { color: rgba(255,255,255,0.5); }
+/* Blend the reveal into the dark panel — compact, close to the bubbles */
+.audience-hero .audience-stage {
+  margin: 0 auto var(--sp-5);
+  min-height: 196px;
+  max-width: 640px;
+}
+.audience-hero .aud-hint { display: none; }
 .audience-hero .aud-msg.card {
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.12);
@@ -959,12 +966,21 @@ p { line-height: 1.7; }
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   text-align: left;
+  padding: var(--sp-4) var(--sp-5);
 }
-.audience-hero .aud-msg [style*="color:var(--navy)"] { color: #fff !important; }
+.audience-hero .aud-msg .contact-avatar {
+  width: 34px !important;
+  height: 34px !important;
+  font-size: 11px !important;
+}
+.audience-hero .aud-msg [style*="color:var(--navy)"] { color: #fff !important; font-size: var(--text-sm) !important; }
 .audience-hero .aud-msg [style*="var(--text-muted)"] { color: rgba(255,255,255,0.6) !important; }
 .audience-hero .aud-msg [style*="var(--off-white)"] {
   background: rgba(255,255,255,0.06) !important;
   color: rgba(255,255,255,0.72) !important;
+  font-size: var(--text-sm) !important;
+  padding: var(--sp-3) var(--sp-4) !important;
+  line-height: 1.5 !important;
 }
 
 /* ---- Product flow video band (blends out of the hero) ---- */
