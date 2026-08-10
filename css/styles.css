@@ -949,6 +949,24 @@ p { line-height: 1.7; }
   }
 }
 
+/* Blend the reveal into the dark panel */
+.audience-hero .audience-stage { margin-bottom: var(--sp-8); }
+.audience-hero .aud-hint { color: rgba(255,255,255,0.5); }
+.audience-hero .aud-msg.card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  box-shadow: none;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  text-align: left;
+}
+.audience-hero .aud-msg [style*="color:var(--navy)"] { color: #fff !important; }
+.audience-hero .aud-msg [style*="var(--text-muted)"] { color: rgba(255,255,255,0.6) !important; }
+.audience-hero .aud-msg [style*="var(--off-white)"] {
+  background: rgba(255,255,255,0.06) !important;
+  color: rgba(255,255,255,0.72) !important;
+}
+
 /* ---- Product flow video band (blends out of the hero) ---- */
 .video-band {
   background: linear-gradient(180deg, #070f23 0%, #0a1730 100%);
