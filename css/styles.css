@@ -700,8 +700,18 @@ p { line-height: 1.7; }
     url('../images/hero-light.jpg') right center / cover no-repeat,
     var(--grad-hero);
 }
-.hero--light-image::before,
-.hero--light-image::after { display: none; }
+.hero--light-image::before { display: none; }
+.hero--light-image::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 130px;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, #FFFFFF 100%);
+  pointer-events: none;
+  z-index: 1;
+}
 .hero--light-image .container { position: relative; z-index: 1; width: 100%; }
 .hero--light-image .hero-layout { grid-template-columns: 1fr; }
 .hero--light-image .hero-visual { display: none; }
@@ -1067,8 +1077,8 @@ p { line-height: 1.7; }
 
 /* ---- Product flow video band (blends out of the hero) ---- */
 .video-band {
-  background: linear-gradient(180deg, #0D2F4F 0%, #12395C 100%);
-  padding: var(--sp-5) 0 var(--sp-10);
+  background: linear-gradient(180deg, #FFFFFF 0%, #F2F8FF 55%, #E9F2FF 100%);
+  padding: var(--sp-8) 0 var(--sp-12);
   text-align: center;
 }
 .video-band-head {
@@ -1077,13 +1087,13 @@ p { line-height: 1.7; }
 }
 .video-band-head .eyebrow-tag { margin-left: auto; margin-right: auto; }
 .video-band .eyebrow-tag {
-  background: rgba(255,255,255,0.08);
-  color: rgba(255,255,255,0.9);
-  border-color: rgba(255,255,255,0.18);
+  background: var(--accent-glow);
+  color: var(--accent);
+  border: 1px solid rgba(84,161,255,0.2);
   margin-bottom: var(--sp-3);
 }
 .video-band h2 {
-  color: #fff;
+  color: var(--navy);
   font-size: clamp(1.6rem, 3.2vw, 2.4rem);
   line-height: 1.12;
   letter-spacing: -0.03em;
