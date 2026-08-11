@@ -700,7 +700,7 @@ p { line-height: 1.7; }
   /* full-bleed photo across the whole width */
   background:
     linear-gradient(90deg, #E7F4DE 0%, rgba(231,244,222,0.92) 24%, rgba(231,244,222,0.5) 44%, rgba(231,244,222,0) 66%),
-    url('../images/hero-green.jpg') right center / cover no-repeat,
+    url('../images/hero-green.jpg?v=2') right center / cover no-repeat,
     #E7F4DE;
 }
 .hero--green-image::before { display: none; }
