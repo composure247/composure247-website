@@ -690,34 +690,36 @@ p { line-height: 1.7; }
   z-index: 1;
 }
 
-/* ---- Light image hero (dark text on the light side) ---- */
-.hero--light-image {
-  min-height: 600px;
+/* ---- Green image hero (devices right, text left over the green) ---- */
+.hero--green-image {
+  min-height: 620px;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
-  /* soft, light warm-white */
-  background: linear-gradient(120deg, #F7F3EE 0%, #F8F3EC 60%, #F9F3EA 100%);
+  background:
+    /* left green keeps the headline readable */
+    linear-gradient(90deg, #E7F4DE 0%, rgba(231,244,222,0.85) 30%, rgba(231,244,222,0.15) 56%, rgba(231,244,222,0) 74%),
+    url('../images/hero-green.jpg') right center / cover no-repeat,
+    #E7F4DE;
 }
-.hero--light-image::before {
+.hero--green-image::before { display: none; }
+/* fade the bottom into the green section below (no seam) */
+.hero--green-image::after {
   content: '';
   position: absolute;
-  inset: 0;
-  background: url('../images/hero-light.jpg') right center / cover no-repeat;
-  /* faint so it reads as a light backdrop, text sits cleanly on top */
-  opacity: 0.28;
-  /* feather every edge into the background */
-  -webkit-mask-image: radial-gradient(150% 140% at 74% 46%, #000 42%, rgba(0,0,0,0.55) 72%, rgba(0,0,0,0) 100%);
-  mask-image: radial-gradient(150% 140% at 74% 46%, #000 42%, rgba(0,0,0,0.55) 72%, rgba(0,0,0,0) 100%);
-  z-index: 0;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 160px;
+  background: linear-gradient(180deg, rgba(231,244,222,0) 0%, #E7F4DE 100%);
   pointer-events: none;
+  z-index: 0;
 }
-.hero--light-image::after { display: none; }
-.hero--light-image .container { position: relative; z-index: 1; width: 100%; }
-.hero--light-image .hero-layout { grid-template-columns: 1fr; }
-.hero--light-image .hero-visual { display: none; }
-.hero--light-image .hero-content { max-width: 620px; }
+.hero--green-image .container { position: relative; z-index: 1; width: 100%; }
+.hero--green-image .hero-layout { grid-template-columns: 1fr; }
+.hero--green-image .hero-visual { display: none; }
+.hero--green-image .hero-content { max-width: 600px; }
 
 /* ---- Full-bleed image hero (Altera-style) ---- */
 .hero--image {
@@ -1079,7 +1081,7 @@ p { line-height: 1.7; }
 
 /* ---- Product flow video band (blends out of the hero) ---- */
 .video-band {
-  background: linear-gradient(180deg, #F5F9FF 0%, #FFFFFF 100%);
+  background: linear-gradient(180deg, #E7F4DE 0%, #E7F4DE 55%, #FFFFFF 100%);
   padding: var(--sp-8) 0 var(--sp-12);
   text-align: center;
 }
