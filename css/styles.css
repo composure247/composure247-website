@@ -14,40 +14,45 @@
    CSS Custom Properties (Design Tokens)
    ============================================================ */
 :root {
-  /* Brand Colours */
-  --navy:        #0C1A2B;
-  --navy-mid:    #112540;
-  --navy-light:  #1A3554;
-  --accent:      #3B7FEA;
-  --accent-dark: #2563CB;
-  --accent-hover:#1D55B8;
-  --accent-glow: rgba(59, 127, 234, 0.14);
-  --teal:        #0CA5D8;
-  --teal-light:  rgba(12, 165, 216, 0.1);
+  /* Brand Colours (from Composure247 brand guide) */
+  --navy:        #0D2F4F;   /* brand Navy */
+  --navy-mid:    #143F63;
+  --navy-light:  #1E5480;
+  --accent:      #54A1FF;   /* brand Blue */
+  --accent-dark: #3B8DF0;
+  --accent-hover:#2F86F5;
+  --accent-glow: rgba(84, 161, 255, 0.15);
+  --teal:        #54A1FF;
+  --teal-light:  rgba(84, 161, 255, 0.10);
+
+  /* Brand greens & sky */
+  --mint:        #E4FFD8;
+  --tea-green:   #B5EA9D;
+  --pale-sky:    #D0E5FF;
 
   /* Neutrals */
   --white:       #FFFFFF;
-  --off-white:   #F8FAFD;
-  --surface:     #F1F5FB;
-  --surface-alt: #EBF0F9;
-  --border:      #D1DCF0;
-  --border-light:#E8EEF8;
-  --text:        #0C1A2B;
-  --text-body:   #1E3A52;
-  --text-muted:  #5B7591;
-  --text-subtle: #92A8BF;
+  --off-white:   #F2F8FF;   /* brand Light Blue */
+  --surface:     #EAF2FF;
+  --surface-alt: #DFEBFF;
+  --border:      #CFE0F7;
+  --border-light:#E4EEFB;
+  --text:        #0D2F4F;
+  --text-body:   #2B4A68;
+  --text-muted:  #5F7B98;
+  --text-subtle: #93A9C0;
 
   /* Semantic */
-  --success:     #10B981;
-  --success-bg:  rgba(16, 185, 129, 0.08);
+  --success:     #2FA84F;
+  --success-bg:  rgba(181, 234, 157, 0.30);
   --warning:     #F59E0B;
   --danger:      #EF4444;
 
   /* Gradients */
-  --grad-dark:    linear-gradient(160deg, #0C1A2B 0%, #112540 60%, #0C1A2B 100%);
-  --grad-accent:  linear-gradient(135deg, #3B7FEA 0%, #0CA5D8 100%);
-  --grad-subtle:  linear-gradient(180deg, #FFFFFF 0%, #F8FAFD 100%);
-  --grad-hero:    linear-gradient(160deg, #F0F6FF 0%, #FFFFFF 50%, #F5F8FF 100%);
+  --grad-dark:    linear-gradient(160deg, #0D2F4F 0%, #143F63 60%, #0D2F4F 100%);
+  --grad-accent:  linear-gradient(135deg, #54A1FF 0%, #3B8DF0 100%);
+  --grad-subtle:  linear-gradient(180deg, #FFFFFF 0%, #F2F8FF 100%);
+  --grad-hero:    linear-gradient(160deg, #EAF3FF 0%, #FFFFFF 50%, #F0F6FF 100%);
 
   /* Shadows */
   --shadow-xs: 0 1px 3px rgba(12, 26, 43, 0.06), 0 1px 2px rgba(12, 26, 43, 0.04);
@@ -55,7 +60,7 @@
   --shadow-md: 0 4px 20px rgba(12, 26, 43, 0.10), 0 2px 8px rgba(12, 26, 43, 0.05);
   --shadow-lg: 0 12px 40px rgba(12, 26, 43, 0.12), 0 4px 16px rgba(12, 26, 43, 0.06);
   --shadow-xl: 0 24px 64px rgba(12, 26, 43, 0.14), 0 8px 24px rgba(12, 26, 43, 0.08);
-  --shadow-accent: 0 8px 32px rgba(59, 127, 234, 0.22);
+  --shadow-accent: 0 8px 32px rgba(84, 161, 255, 0.28);
   --shadow-card: 0 2px 16px rgba(12, 26, 43, 0.07), 0 0 0 1px rgba(12, 26, 43, 0.05);
 
   /* Spacing */
@@ -690,11 +695,11 @@ p { line-height: 1.7; }
   display: flex;
   align-items: center;
   background:
-    linear-gradient(90deg, rgba(7,15,35,0.94) 0%, rgba(7,15,35,0.62) 48%, rgba(7,15,35,0.18) 100%),
+    linear-gradient(90deg, rgba(13,47,79,0.94) 0%, rgba(13,47,79,0.62) 48%, rgba(13,47,79,0.18) 100%),
     url('../images/hero.jpg') center / cover no-repeat,
-    radial-gradient(1100px 620px at 78% 26%, rgba(139,92,246,0.40), transparent 60%),
+    radial-gradient(1100px 620px at 78% 26%, rgba(84,161,255,0.40), transparent 60%),
     radial-gradient(900px 520px at 60% 78%, rgba(59,127,234,0.42), transparent 62%),
-    linear-gradient(150deg, #070f23 0%, #0d1b40 55%, #131a4a 100%);
+    linear-gradient(150deg, #0D2F4F 0%, #143F63 55%, #1A4A72 100%);
 }
 .hero--image::before { display: none; }
 .hero--image::after {
@@ -704,7 +709,7 @@ p { line-height: 1.7; }
   right: 0;
   bottom: -1px;
   height: 160px;
-  background: linear-gradient(180deg, rgba(7,15,35,0) 0%, #070f23 100%);
+  background: linear-gradient(180deg, rgba(13,47,79,0) 0%, #0D2F4F 100%);
   pointer-events: none;
   z-index: 1;
 }
@@ -755,8 +760,8 @@ p { line-height: 1.7; }
   color: #fff;
   background:
     radial-gradient(900px 520px at 12% -10%, rgba(59,127,234,0.22), transparent 60%),
-    radial-gradient(760px 560px at 92% 110%, rgba(124,92,246,0.16), transparent 60%),
-    linear-gradient(160deg, #0a1428 0%, #0d1b3a 55%, #090f22 100%);
+    radial-gradient(760px 560px at 92% 110%, rgba(84,161,255,0.16), transparent 60%),
+    linear-gradient(160deg, #0D2F4F 0%, #133A5E 55%, #0B2843 100%);
 }
 .section-futuristic::before {
   content: '';
@@ -868,8 +873,8 @@ p { line-height: 1.7; }
   color: #fff;
   background:
     radial-gradient(720px 380px at 50% -12%, rgba(59,127,234,0.30), transparent 60%),
-    radial-gradient(560px 400px at 82% 120%, rgba(124,92,246,0.18), transparent 60%),
-    linear-gradient(160deg, #0a1428 0%, #0d1b3a 60%, #090f22 100%);
+    radial-gradient(560px 400px at 82% 120%, rgba(84,161,255,0.18), transparent 60%),
+    linear-gradient(160deg, #0D2F4F 0%, #133A5E 60%, #0B2843 100%);
 }
 .audience-hero::before {
   content: '';
@@ -1044,7 +1049,7 @@ p { line-height: 1.7; }
 
 /* ---- Product flow video band (blends out of the hero) ---- */
 .video-band {
-  background: linear-gradient(180deg, #070f23 0%, #0a1730 100%);
+  background: linear-gradient(180deg, #0D2F4F 0%, #12395C 100%);
   padding: var(--sp-5) 0 var(--sp-10);
   text-align: center;
 }
