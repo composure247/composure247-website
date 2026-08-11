@@ -697,24 +697,29 @@ p { line-height: 1.7; }
   align-items: center;
   position: relative;
   overflow: hidden;
-  background:
-    /* left green keeps the headline readable — very gradual so no visible edge */
-    linear-gradient(90deg, #E7F4DE 0%, rgba(231,244,222,0.9) 22%, rgba(231,244,222,0.6) 40%, rgba(231,244,222,0.25) 58%, rgba(231,244,222,0) 82%),
-    url('../images/hero-green.jpg') right center / cover no-repeat,
-    #E7F4DE;
+  /* soft green backdrop */
+  background: linear-gradient(115deg, #DBEFCE 0%, #E7F4DE 55%, #EFF8E7 100%);
 }
-.hero--green-image::before { display: none; }
-/* fade the bottom to white (blends into the white section below) */
+/* faint photo — desk edges dissolve into the green, devices stay visible */
+.hero--green-image::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: url('../images/hero-green.jpg') right center / cover no-repeat;
+  opacity: 0.42;
+  z-index: 0;
+  pointer-events: none;
+}
+/* left green for headline legibility + soft fade to white at the bottom */
 .hero--green-image::after {
   content: '';
   position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -1px;
-  height: 400px;
-  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.45) 38%, rgba(255,255,255,0.85) 68%, #FFFFFF 92%);
-  pointer-events: none;
+  inset: 0;
+  background:
+    linear-gradient(90deg, #E4F2DA 0%, rgba(228,242,218,0.72) 30%, rgba(228,242,218,0) 62%),
+    linear-gradient(180deg, rgba(255,255,255,0) 58%, rgba(255,255,255,0.65) 82%, #FFFFFF 100%);
   z-index: 0;
+  pointer-events: none;
 }
 .hero--green-image .container { position: relative; z-index: 1; width: 100%; }
 .hero--green-image .hero-layout { grid-template-columns: 1fr; }
