@@ -704,15 +704,15 @@ p { line-height: 1.7; }
     #E7F4DE;
 }
 .hero--green-image::before { display: none; }
-/* fade the bottom into the green section below (no seam) */
+/* fade the bottom to white (blends into the white section below) */
 .hero--green-image::after {
   content: '';
   position: absolute;
   left: 0;
   right: 0;
   bottom: -1px;
-  height: 160px;
-  background: linear-gradient(180deg, rgba(231,244,222,0) 0%, #E7F4DE 100%);
+  height: 300px;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.7) 52%, #FFFFFF 100%);
   pointer-events: none;
   z-index: 0;
 }
@@ -1081,7 +1081,7 @@ p { line-height: 1.7; }
 
 /* ---- Product flow video band (blends out of the hero) ---- */
 .video-band {
-  background: linear-gradient(180deg, #E7F4DE 0%, #E7F4DE 55%, #FFFFFF 100%);
+  background: linear-gradient(180deg, #FFFFFF 0%, #FCFDFF 100%);
   padding: var(--sp-8) 0 var(--sp-12);
   text-align: center;
 }
