@@ -692,34 +692,29 @@ p { line-height: 1.7; }
 
 /* ---- Green image hero (devices right, text left over the green) ---- */
 .hero--green-image {
-  min-height: 620px;
+  min-height: 640px;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
-  /* soft green backdrop */
-  background: linear-gradient(115deg, #DBEFCE 0%, #E7F4DE 55%, #EFF8E7 100%);
+  /* full-bleed photo across the whole width */
+  background:
+    linear-gradient(90deg, #E7F4DE 0%, rgba(231,244,222,0.92) 24%, rgba(231,244,222,0.5) 44%, rgba(231,244,222,0) 66%),
+    url('../images/hero-green.jpg') right center / cover no-repeat,
+    #E7F4DE;
 }
-/* faint photo — desk edges dissolve into the green, devices stay visible */
-.hero--green-image::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: url('../images/hero-green.jpg') right center / cover no-repeat;
-  opacity: 0.42;
-  z-index: 0;
-  pointer-events: none;
-}
-/* left green for headline legibility + soft fade to white at the bottom */
+.hero--green-image::before { display: none; }
+/* soft, tall fade to white at the bottom (no seam into the section below) */
 .hero--green-image::after {
   content: '';
   position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(90deg, #E4F2DA 0%, rgba(228,242,218,0.72) 30%, rgba(228,242,218,0) 62%),
-    linear-gradient(180deg, rgba(255,255,255,0) 58%, rgba(255,255,255,0.65) 82%, #FFFFFF 100%);
-  z-index: 0;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 340px;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.5) 46%, rgba(255,255,255,0.9) 78%, #FFFFFF 100%);
   pointer-events: none;
+  z-index: 0;
 }
 .hero--green-image .container { position: relative; z-index: 1; width: 100%; }
 .hero--green-image .hero-layout { grid-template-columns: 1fr; }
