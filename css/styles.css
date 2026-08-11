@@ -690,6 +690,23 @@ p { line-height: 1.7; }
   z-index: 1;
 }
 
+/* ---- Light image hero (dark text on the light side) ---- */
+.hero--light-image {
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.72) 40%, rgba(255,255,255,0.18) 66%, rgba(255,255,255,0) 82%),
+    url('../images/hero-light.jpg') center right / cover no-repeat,
+    var(--grad-hero);
+}
+.hero--light-image::before,
+.hero--light-image::after { display: none; }
+.hero--light-image .container { position: relative; z-index: 1; width: 100%; }
+.hero--light-image .hero-layout { grid-template-columns: 1fr; }
+.hero--light-image .hero-visual { display: none; }
+.hero--light-image .hero-content { max-width: 620px; }
+
 /* ---- Full-bleed image hero (Altera-style) ---- */
 .hero--image {
   min-height: 600px;
