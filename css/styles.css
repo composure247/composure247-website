@@ -698,11 +698,14 @@ p { line-height: 1.7; }
   background:
     /* left fade — keeps headline readable */
     linear-gradient(90deg, #FFFFFF 0%, rgba(255,255,255,0.9) 26%, rgba(255,255,255,0.22) 52%, rgba(255,255,255,0) 70%),
+    /* bottom fade — merges into the white section below (no seam) */
+    linear-gradient(0deg, #FFFFFF 0%, #FFFFFF 4%, rgba(255,255,255,0) 30%),
     /* vignette — feathers every edge of the photo into the page */
     radial-gradient(140% 135% at 74% 44%, rgba(255,255,255,0) 46%, rgba(255,255,255,0.5) 74%, #FFFFFF 100%),
     url('../images/hero-light.jpg') right center / cover no-repeat,
     var(--grad-hero);
 }
+.hero--light-image { margin-bottom: -1px; }
 .hero--light-image::before,
 .hero--light-image::after {
   display: none;
