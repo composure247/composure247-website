@@ -696,8 +696,8 @@ p { line-height: 1.7; }
   display: flex;
   align-items: center;
   background:
-    linear-gradient(90deg, rgba(255,255,255,0.94) 0%, rgba(255,255,255,0.72) 40%, rgba(255,255,255,0.18) 66%, rgba(255,255,255,0) 82%),
-    url('../images/hero-light.jpg') center right / cover no-repeat,
+    linear-gradient(90deg, rgba(255,255,255,0.97) 0%, rgba(255,255,255,0.92) 34%, rgba(255,255,255,0.6) 52%, rgba(255,255,255,0.12) 72%, rgba(255,255,255,0) 86%),
+    url('../images/hero-light.jpg') right center / cover no-repeat,
     var(--grad-hero);
 }
 .hero--light-image::before,
