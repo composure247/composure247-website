@@ -1079,9 +1079,7 @@ p { line-height: 1.7; }
 
 /* ---- Product flow video band (blends out of the hero) ---- */
 .video-band {
-  background:
-    linear-gradient(180deg, rgba(255,255,255,0) 55%, #FFFFFF 100%),
-    linear-gradient(120deg, #F7F3EE 0%, #F8F3EC 60%, #F9F3EA 100%);
+  background: linear-gradient(180deg, #F5F9FF 0%, #FFFFFF 100%);
   padding: var(--sp-8) 0 var(--sp-12);
   text-align: center;
 }
