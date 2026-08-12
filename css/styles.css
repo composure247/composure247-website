@@ -697,9 +697,9 @@ p { line-height: 1.7; }
   align-items: center;
   position: relative;
   overflow: hidden;
-  /* full-bleed photo across the whole width */
+  /* full-bleed photo across the whole width; solid green over the left hides the photo's white wave */
   background:
-    linear-gradient(90deg, #E7F4DE 0%, rgba(231,244,222,0.92) 24%, rgba(231,244,222,0.5) 44%, rgba(231,244,222,0) 66%),
+    linear-gradient(90deg, #E7F4DE 0%, #E7F4DE 42%, rgba(231,244,222,0.92) 52%, rgba(231,244,222,0.3) 59%, rgba(231,244,222,0) 68%),
     url('../images/hero-green.jpg?v=2') right center / cover no-repeat,
     #E7F4DE;
 }
