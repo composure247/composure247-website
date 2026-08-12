@@ -1994,38 +1994,37 @@ p { line-height: 1.7; }
    CTA Banner
    ============================================================ */
 .cta-banner {
-  background: var(--grad-dark);
-  padding: var(--sp-24) 0;
+  background: linear-gradient(160deg, #E4F0FF 0%, #D0E5FF 100%);
+  padding: var(--sp-16) 0;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
+.cta-banner::before { display: none; }
 
-.cta-banner::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 1000px;
-  height: 600px;
-  background: radial-gradient(ellipse, rgba(59, 127, 234, 0.12) 0%, transparent 70%);
-  pointer-events: none;
+.cta-banner .eyebrow-tag {
+  background: rgba(255,255,255,0.6);
+  color: var(--accent);
+  border: 1px solid rgba(84,161,255,0.25);
 }
-
 .cta-banner h2 {
-  color: var(--white);
-  font-size: clamp(2rem, 4vw, 3rem);
-  margin-bottom: var(--sp-4);
+  color: var(--navy);
+  font-size: clamp(1.75rem, 3.4vw, 2.5rem);
+  margin-bottom: var(--sp-3);
 }
 
 .cta-banner p {
-  font-size: var(--text-lg);
-  color: rgba(255,255,255,0.65);
-  margin-bottom: var(--sp-8);
-  max-width: 560px;
+  font-size: var(--text-base);
+  color: var(--text-muted);
+  margin-bottom: var(--sp-6);
+  max-width: 520px;
   margin-left: auto;
   margin-right: auto;
+}
+.cta-banner .security-badge {
+  color: var(--text-muted);
+  border-color: rgba(13,47,79,0.15);
+  background: rgba(255,255,255,0.45);
 }
 
 .cta-banner-actions {
