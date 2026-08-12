@@ -967,31 +967,12 @@ p { line-height: 1.7; }
 .aud-avatar:hover { border-color: #fff; }
 
 /* The active stakeholder's bubble lights up (in its colour); the rest dim.
-   Defaults to CTO so it pairs with the default CTO message. */
-.aud-avatar--cto {
-  opacity: 1;
-  box-shadow: 0 0 0 4px rgba(59,127,234,0.5), 0 12px 30px rgba(0,0,0,0.45);
-}
-.audience-section:has(.aud-avatar:hover) .aud-avatar {
-  opacity: 0.45;
-  box-shadow: 0 10px 26px rgba(0,0,0,0.4);
-}
-.audience-section:has(.aud-avatar--cto:hover) .aud-avatar--cto {
-  opacity: 1;
-  box-shadow: 0 0 0 4px rgba(59,127,234,0.5), 0 12px 30px rgba(0,0,0,0.45);
-}
-.audience-section:has(.aud-avatar--it:hover) .aud-avatar--it {
-  opacity: 1;
-  box-shadow: 0 0 0 4px rgba(124,58,237,0.5), 0 12px 30px rgba(0,0,0,0.45);
-}
-.audience-section:has(.aud-avatar--fd:hover) .aud-avatar--fd {
-  opacity: 1;
-  box-shadow: 0 0 0 4px rgba(12,165,216,0.5), 0 12px 30px rgba(0,0,0,0.45);
-}
-.audience-section:has(.aud-avatar--am:hover) .aud-avatar--am {
-  opacity: 1;
-  box-shadow: 0 0 0 4px rgba(16,185,129,0.5), 0 12px 30px rgba(0,0,0,0.45);
-}
+   .is-active is toggled by JS (auto-cycle + hover). */
+.aud-avatar.is-active { opacity: 1; }
+.aud-avatar--cto.is-active { box-shadow: 0 0 0 4px rgba(59,127,234,0.5), 0 12px 30px rgba(0,0,0,0.45); }
+.aud-avatar--it.is-active  { box-shadow: 0 0 0 4px rgba(124,58,237,0.5), 0 12px 30px rgba(0,0,0,0.45); }
+.aud-avatar--fd.is-active  { box-shadow: 0 0 0 4px rgba(12,165,216,0.5), 0 12px 30px rgba(0,0,0,0.45); }
+.aud-avatar--am.is-active  { box-shadow: 0 0 0 4px rgba(16,185,129,0.5), 0 12px 30px rgba(0,0,0,0.45); }
 
 /* Hover-reveal message stage */
 .audience-stage {
@@ -1022,30 +1003,52 @@ p { line-height: 1.7; }
   transition: opacity .3s ease, transform .3s ease;
   pointer-events: none;
 }
-/* Default: feature the CTO message */
-.aud-msg--cto { opacity: 1; transform: none; }
-/* Hovering a bubble hides the default and reveals that stakeholder */
-.audience-section:has(.aud-avatar:hover) .aud-msg { opacity: 0; transform: translateY(10px); pointer-events: none; }
-.audience-section:has(.aud-avatar--cto:hover) .aud-msg--cto,
-.audience-section:has(.aud-avatar--it:hover)  .aud-msg--it,
-.audience-section:has(.aud-avatar--fd:hover)  .aud-msg--fd,
-.audience-section:has(.aud-avatar--am:hover)  .aud-msg--am {
+/* The active message (set by JS: auto-cycle + hover) */
+.aud-msg.is-active {
   opacity: 1;
   transform: none;
   pointer-events: auto;
 }
 
-/* Touch / no-hover: show all four stacked */
-@media (hover: none) {
-  .aud-hint { display: none; }
-  .audience-stage { min-height: 0; }
-  .aud-msg {
-    position: static;
-    opacity: 1;
-    transform: none;
-    pointer-events: auto;
-    margin-bottom: var(--sp-5);
-  }
+/* ---- "Why different" — minimal columns with thin dividing lines ---- */
+.compare-cols {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(255,255,255,0.14);
+}
+.compare-col {
+  text-align: center;
+  padding: var(--sp-8) var(--sp-5) var(--sp-4);
+  border-left: 1px solid rgba(255,255,255,0.14);
+}
+.compare-col:first-child { border-left: none; }
+.compare-icon {
+  width: 46px;
+  height: 46px;
+  margin: 0 auto var(--sp-5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #7AB3FF;
+}
+.compare-col h4 {
+  color: #fff;
+  font-size: var(--text-base);
+  margin-bottom: var(--sp-3);
+}
+.compare-col p {
+  font-size: var(--text-sm);
+  color: rgba(255,255,255,0.6);
+  line-height: 1.6;
+}
+@media (max-width: 820px) {
+  .compare-cols { grid-template-columns: 1fr 1fr; }
+  .compare-col { border-top: 1px solid rgba(255,255,255,0.14); }
+  .compare-col:nth-child(odd) { border-left: none; }
+}
+@media (max-width: 480px) {
+  .compare-cols { grid-template-columns: 1fr; }
+  .compare-col { border-left: none; }
 }
 
 /* Blend the reveal into the dark panel — compact, close to the bubbles */
