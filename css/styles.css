@@ -697,23 +697,25 @@ p { line-height: 1.7; }
   align-items: center;
   position: relative;
   overflow: hidden;
-  /* green backdrop that eases to white at the bottom (blends into the section below) */
+  /* full-bleed photo across the whole width; solid green over the left hides the photo's white wave */
   background:
-    linear-gradient(180deg, rgba(255,255,255,0) 60%, rgba(255,255,255,0.55) 84%, #FFFFFF 100%),
-    linear-gradient(115deg, #E0F1D5 0%, #E9F5E1 55%, #F1F9EA 100%);
+    linear-gradient(90deg, #E7F4DE 0%, #E7F4DE 42%, rgba(231,244,222,0.9) 52%, rgba(231,244,222,0.3) 60%, rgba(231,244,222,0) 70%),
+    url('../images/hero-green.jpg?v=2') right center / cover no-repeat,
+    #E7F4DE;
 }
-/* photo with every edge feathered into the green (no hard rectangle, no white wave) */
-.hero--green-image::before {
+.hero--green-image::before { display: none; }
+/* soft fade to white at the bottom, into the section below */
+.hero--green-image::after {
   content: '';
   position: absolute;
-  inset: 0;
-  background: url('../images/hero-green.jpg?v=2') right center / cover no-repeat;
-  -webkit-mask-image: radial-gradient(135% 125% at 74% 48%, #000 44%, rgba(0,0,0,0.5) 72%, rgba(0,0,0,0) 100%);
-  mask-image: radial-gradient(135% 125% at 74% 48%, #000 44%, rgba(0,0,0,0.5) 72%, rgba(0,0,0,0) 100%);
-  z-index: 0;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 320px;
+  background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.6) 55%, #FFFFFF 100%);
   pointer-events: none;
+  z-index: 0;
 }
-.hero--green-image::after { display: none; }
 .hero--green-image .container { position: relative; z-index: 1; width: 100%; }
 .hero--green-image .hero-layout { grid-template-columns: 1fr; }
 .hero--green-image .hero-visual { display: none; }
