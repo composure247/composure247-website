@@ -697,8 +697,9 @@ p { line-height: 1.7; }
   align-items: center;
   position: relative;
   overflow: hidden;
-  /* full-bleed photo across the whole width; deeper green over the left matches the photo (reaches the bottom evenly) */
+  /* full-bleed photo; green vignette feathers every edge into the background (like the reference) */
   background:
+    radial-gradient(125% 140% at 66% 46%, rgba(207,232,191,0) 44%, rgba(207,232,191,0.45) 70%, #CFE8BF 100%),
     linear-gradient(90deg, #CFE8BF 0%, #CFE8BF 42%, rgba(207,232,191,0.9) 52%, rgba(207,232,191,0.3) 60%, rgba(207,232,191,0) 70%),
     url('../images/hero-green.jpg?v=2') right center / cover no-repeat,
     #CFE8BF;
