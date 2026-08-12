@@ -1086,11 +1086,11 @@ p { line-height: 1.7; }
 /* ---- Product flow video band (blends out of the hero) ---- */
 .video-band {
   background: linear-gradient(180deg, #FFFFFF 0%, #FCFDFF 100%);
-  padding: var(--sp-8) 0 var(--sp-12);
+  padding: var(--sp-6) 0 var(--sp-8);
   text-align: center;
 }
 .video-band-head {
-  margin-bottom: var(--sp-5);
+  margin-bottom: var(--sp-4);
   text-align: center;
 }
 .video-band-head .eyebrow-tag { margin-left: auto; margin-right: auto; }
@@ -1108,11 +1108,11 @@ p { line-height: 1.7; }
 }
 .flow-video {
   width: 100%;
-  max-width: 960px;
+  max-width: 620px;
   margin: 0 auto;
   display: block;
   border-radius: var(--radius-xl);
-  box-shadow: 0 40px 90px rgba(0,0,0,0.55), 0 0 60px rgba(59,127,234,0.14);
+  box-shadow: 0 30px 70px rgba(0,0,0,0.5), 0 0 50px rgba(59,127,234,0.12);
 }
 
 /* ---- Integrations card row (light, minimal) ---- */
