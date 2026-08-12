@@ -9,7 +9,7 @@
   <meta property="og:description" content="The AI-powered communication layer for Managed Service Providers. Never let a client sit in silence during an incident again.">
   <meta property="og:type" content="website">
   <title>Composure — Client Communication for MSPs, Handled Brilliantly</title>
-  <link rel="stylesheet" href="css/styles.css?v=11">
+  <link rel="stylesheet" href="css/styles.css?v=12">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <style>
@@ -1123,14 +1123,13 @@
     });
   }
   function tick(){ i=(i+1)%roles.length; setActive(roles[i]); }
-  function start(){ if(!timer) timer=setInterval(tick,2800); }
   function stop(){ if(timer){ clearInterval(timer); timer=null; } }
-  var panel=section.querySelector('.audience-hero')||section;
-  panel.addEventListener('mouseenter',stop);
-  panel.addEventListener('mouseleave',start);
+  function start(){ stop(); timer=setInterval(tick,2800); }
+  var arc=section.querySelector('.audience-avatars');
   roles.forEach(function(r){
-    if(av[r]) av[r].addEventListener('mouseenter',function(){ i=roles.indexOf(r); setActive(r); });
+    if(av[r]) av[r].addEventListener('mouseenter',function(){ stop(); i=roles.indexOf(r); setActive(r); });
   });
+  if(arc){ arc.addEventListener('mouseleave',start); }
   setActive(roles[0]);
   start();
 })();
