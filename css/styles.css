@@ -697,11 +697,11 @@ p { line-height: 1.7; }
   align-items: center;
   position: relative;
   overflow: hidden;
-  /* full-bleed photo across the whole width; solid green over the left hides the photo's white wave */
+  /* full-bleed photo across the whole width; deeper green over the left matches the photo (reaches the bottom evenly) */
   background:
-    linear-gradient(90deg, #E7F4DE 0%, #E7F4DE 42%, rgba(231,244,222,0.9) 52%, rgba(231,244,222,0.3) 60%, rgba(231,244,222,0) 70%),
+    linear-gradient(90deg, #CFE8BF 0%, #CFE8BF 42%, rgba(207,232,191,0.9) 52%, rgba(207,232,191,0.3) 60%, rgba(207,232,191,0) 70%),
     url('../images/hero-green.jpg?v=2') right center / cover no-repeat,
-    #E7F4DE;
+    #CFE8BF;
 }
 .hero--green-image::before { display: none; }
 /* soft fade to white at the bottom, into the section below */
