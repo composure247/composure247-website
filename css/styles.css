@@ -713,7 +713,7 @@ p { line-height: 1.7; }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, rgba(231,244,222,0.85) 0%, rgba(231,244,222,0.45) 28%, rgba(231,244,222,0) 52%);
+  background: linear-gradient(90deg, rgba(240,247,243,0.88) 0%, rgba(240,247,243,0.5) 28%, rgba(240,247,243,0) 54%);
   z-index: 1;
   pointer-events: none;
 }
