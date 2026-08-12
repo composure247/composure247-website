@@ -1109,10 +1109,59 @@ p { line-height: 1.7; }
 .flow-video {
   width: 100%;
   max-width: 620px;
-  margin: 0 auto;
+  flex: 0 1 620px;
   display: block;
   border-radius: var(--radius-xl);
   box-shadow: 0 30px 70px rgba(0,0,0,0.5), 0 0 50px rgba(59,127,234,0.12);
+}
+/* Floating client chips flanking the video */
+.video-stage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--sp-6);
+}
+.video-clients {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sp-4);
+  flex: 1 1 0;
+  max-width: 230px;
+}
+.video-clients--left { align-items: flex-end; }
+.video-clients--right { align-items: flex-start; }
+.client-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--sp-2);
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-full);
+  padding: 9px 16px;
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--navy);
+  box-shadow: var(--shadow-sm);
+  white-space: nowrap;
+  animation: chipFloat 4.5s ease-in-out infinite;
+}
+.video-clients .client-chip:nth-child(2) { animation-delay: -1.2s; }
+.video-clients .client-chip:nth-child(3) { animation-delay: -2.4s; }
+.video-clients--right .client-chip { animation-delay: -0.6s; }
+.client-dot { width: 20px; height: 20px; border-radius: 5px; flex-shrink: 0; }
+.video-clients-label {
+  text-align: center;
+  margin-top: var(--sp-8);
+  font-size: var(--text-xs);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-subtle);
+}
+@keyframes chipFloat { 0%,100%{transform:translateY(0);} 50%{transform:translateY(-6px);} }
+@media (max-width: 900px) {
+  .video-stage { flex-direction: column; }
+  .video-clients { flex-direction: row; flex-wrap: wrap; justify-content: center; align-items: center; max-width: none; }
 }
 
 /* ---- Integrations card row (light, minimal) ---- */
