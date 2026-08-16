@@ -2554,7 +2554,7 @@ p { line-height: 1.7; }
    ============================================================ */
 .page-hero {
   padding: calc(60px + var(--sp-4)) 0 var(--sp-5);
-  background: var(--grad-dark);
+  background: radial-gradient(130% 130% at 50% 0%, #14416E 0%, #0D2F4F 52%, #0A2540 100%);
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -2573,11 +2573,15 @@ p { line-height: 1.7; }
 }
 
 .page-hero h1 {
-  color: var(--white);
   font-size: clamp(1.5rem, 2.8vw, 2.25rem);
   line-height: 1.25;
   max-width: 720px;
   margin: var(--sp-2) auto var(--sp-4);
+  background: linear-gradient(105deg, #DCEBFF 0%, #9FC6FF 46%, #8FE3C0 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: #DCEBFF;
 }
 
 .page-hero p {
