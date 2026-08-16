@@ -2589,8 +2589,9 @@ p { line-height: 1.7; }
   color: rgba(255,255,255,0.6);
   font-size: var(--text-sm);
   line-height: 1.7;
-  max-width: 560px;
+  max-width: 780px;
   margin: 0 auto var(--sp-6);
+  text-wrap: balance;
 }
 
 /* ============================================================
