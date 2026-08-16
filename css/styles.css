@@ -2111,12 +2111,27 @@ p { line-height: 1.7; }
   box-shadow: var(--shadow-card);
 }
 
+.testimonial-stars {
+  color: #FBBF24;
+  letter-spacing: 2px;
+  font-size: 15px;
+  margin-bottom: var(--sp-3);
+}
+.testimonial-highlight {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+  margin-bottom: var(--sp-2);
+}
+.testimonial-highlight span { color: var(--accent); }
 .testimonial-quote {
   font-size: var(--text-sm);
-  line-height: 1.75;
-  color: var(--text-body);
+  line-height: 1.6;
+  color: var(--text-muted);
   font-style: italic;
-  margin-bottom: var(--sp-4);
+  margin-bottom: var(--sp-5);
 }
 
 .testimonial-author {
