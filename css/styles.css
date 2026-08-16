@@ -377,6 +377,13 @@ p { line-height: 1.7; }
   flex-shrink: 0;
 }
 
+.logo-mark {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  color: inherit;
+}
+
 .nav-links {
   display: flex;
   align-items: center;
