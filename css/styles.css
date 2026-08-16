@@ -2233,6 +2233,8 @@ p { line-height: 1.7; }
 .footer--slim {
   padding: var(--sp-8) 0 var(--sp-6);
   position: relative;
+  background: #D0E5FF;
+  color: rgba(13,47,79,0.6);
 }
 .footer--slim::before {
   content: "";
@@ -2241,6 +2243,17 @@ p { line-height: 1.7; }
   height: 3px;
   background: linear-gradient(90deg, #6FD08A 0%, #52C99A 45%, #54A1FF 100%);
 }
+.footer--slim .footer-logo { color: var(--navy); }
+.footer--slim .footer-slim-links a { color: rgba(13,47,79,0.7); }
+.footer--slim .footer-slim-links a:hover { color: var(--navy); }
+.footer--slim .footer-slim-social a { color: rgba(13,47,79,0.55); }
+.footer--slim .footer-slim-social a:hover { color: var(--navy); }
+.footer--slim .footer-slim-bottom {
+  border-top: 1px solid rgba(13,47,79,0.12);
+  color: rgba(13,47,79,0.55);
+}
+.footer--slim .footer-slim-legal a { color: rgba(13,47,79,0.55); }
+.footer--slim .footer-slim-legal a:hover { color: var(--navy); }
 .footer-slim {
   display: flex;
   align-items: center;
