@@ -49,170 +49,113 @@
 </section>
 
 <!-- USE CASES -->
+<style>
+.sol-header{text-align:center;max-width:640px;margin:0 auto var(--sp-10);}
+.sol-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:38px var(--sp-6);align-items:start;}
+.sol-card{position:relative;background:var(--white);border:1px solid var(--border-light);border-radius:16px;padding:36px var(--sp-6) var(--sp-6);text-align:center;transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s ease,border-color .3s ease;cursor:pointer;}
+.sol-card:hover,.sol-card.is-open{transform:translateY(-4px);box-shadow:0 18px 40px rgba(13,47,79,0.12);border-color:rgba(59,127,234,0.28);z-index:2;}
+.sol-badge{position:absolute;top:-24px;left:50%;transform:translateX(-50%);width:52px;height:52px;border-radius:50%;background:var(--grad-accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;box-shadow:0 10px 22px rgba(59,127,234,0.38);}
+.sol-card:nth-child(even) .sol-badge{background:var(--grad-green);box-shadow:0 10px 22px rgba(63,181,124,0.38);}
+.sol-card h3{font-size:var(--text-lg);color:var(--navy);margin:var(--sp-3) 0 var(--sp-2);line-height:1.25;}
+.sol-desc{font-size:var(--text-sm);color:var(--text-muted);line-height:1.6;margin:0;}
+.sol-hint{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--accent);margin-top:var(--sp-4);max-height:24px;overflow:hidden;transition:max-height .3s ease,opacity .3s ease,margin .3s ease;}
+.sol-card:hover .sol-hint,.sol-card.is-open .sol-hint{max-height:0;opacity:0;margin-top:0;}
+.sol-more{max-height:0;overflow:hidden;opacity:0;text-align:left;transition:max-height .45s cubic-bezier(.16,1,.3,1),opacity .3s ease,margin .3s ease;}
+.sol-card:hover .sol-more,.sol-card.is-open .sol-more{max-height:600px;opacity:1;margin-top:var(--sp-4);}
+.sol-block{border-top:1px solid var(--border-light);padding-top:var(--sp-3);margin-top:var(--sp-3);}
+.sol-block:first-child{border-top:none;padding-top:0;margin-top:0;}
+.sol-block h5{font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--accent);font-weight:700;margin:0 0 4px;}
+.sol-card:nth-child(even) .sol-block h5{color:#2E9E6B;}
+.sol-block p{font-size:12.5px;color:var(--text-muted);line-height:1.6;margin:0;}
+@media(max-width:900px){.sol-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.sol-grid{grid-template-columns:1fr;}.sol-more{max-height:none;opacity:1;margin-top:var(--sp-4);}.sol-hint{display:none;}}
+</style>
 <section class="section">
   <div class="container">
+    <div class="sol-header fade-up">
+      <div class="eyebrow-tag" style="display:inline-flex;margin-bottom:var(--sp-3);">How MSPs use Composure</div>
+      <h2>Six scenarios Composure was built for</h2>
+      <p style="color:var(--text-muted);margin-top:var(--sp-2);font-size:var(--text-sm);">Hover any scenario to see the pain today and how Composure solves it.</p>
+    </div>
+    <div class="sol-grid fade-up">
 
-    <!-- UC 1 -->
-    <div class="use-case-card fade-up" style="margin-bottom:var(--sp-6);">
-      <div class="use-case-number">01</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-8);align-items:start;">
-        <div>
-          <h2 style="font-size:var(--text-2xl);margin-bottom:var(--sp-3);">Major incident response, P0 and P1</h2>
-          <p style="color:var(--text-muted);">A critical outage affects multiple clients. Engineers are working under pressure. The last thing anyone needs is to be writing client communications.</p>
-          <div class="use-case-meta">
-            <div class="use-case-meta-block">
-              <h5>The pain today</h5>
-              <p>Engineers are heads-down on resolution. Client communications are either not happening, or being written manually under extreme pressure, leading to delayed, inconsistent, and sometimes damaging updates.</p>
-            </div>
-            <div class="use-case-meta-block">
-              <h5>How Composure solves it</h5>
-              <p>The moment a P1 is raised, Composure drafts role-calibrated communications for every affected stakeholder, schedules proactive holding updates, and keeps Account Managers briefed, all without engineering involvement.</p>
-            </div>
-          </div>
-          <div class="use-case-impact">
-            <strong>Business impact:</strong> Engineers stay focused on resolution. Clients receive professional, timely updates. AMs are never caught off guard. Trust is preserved even during your hardest moments.
-          </div>
+      <div class="sol-card">
+        <div class="sol-badge">1</div>
+        <h3>Major incident response</h3>
+        <p class="sol-desc">A critical outage hits multiple clients while engineers work under pressure, exactly when nobody has time to write client updates.</p>
+        <span class="sol-hint">Hover for detail <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        <div class="sol-more">
+          <div class="sol-block"><h5>The pain today</h5><p>Engineers are heads-down on resolution. Client communications are delayed, inconsistent, or damaging, written manually under extreme pressure.</p></div>
+          <div class="sol-block"><h5>How Composure solves it</h5><p>The moment a P1 is raised, Composure drafts role-calibrated messages for every stakeholder, schedules holding updates, and briefs Account Managers, with no engineering involvement.</p></div>
+          <div class="sol-block"><h5>Business impact</h5><p>Engineers stay focused on resolution. Clients receive timely updates. AMs are never caught off guard.</p></div>
         </div>
-        <div style="background:var(--surface);border-radius:var(--radius-lg);padding:var(--sp-6);">
-          <div style="font-size:var(--text-xs);font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-subtle);margin-bottom:var(--sp-4);">Composure in action</div>
-          <div style="display:flex;flex-direction:column;gap:var(--sp-3);">
-            <div style="display:flex;align-items:center;gap:var(--sp-3);"><div style="width:28px;height:28px;background:rgba(239,68,68,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5" stroke-linecap="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><span style="font-size:var(--text-sm);">P1 incident raised, Composure activates</span></div>
-            <div style="display:flex;align-items:center;gap:var(--sp-3);"><div style="width:28px;height:28px;background:var(--accent-glow);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><span style="font-size:var(--text-sm);">AI drafts messages for all stakeholders</span></div>
-            <div style="display:flex;align-items:center;gap:var(--sp-3);"><div style="width:28px;height:28px;background:var(--accent-glow);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><span style="font-size:var(--text-sm);">AMs receive internal briefing immediately</span></div>
-            <div style="display:flex;align-items:center;gap:var(--sp-3);"><div style="width:28px;height:28px;background:var(--success-bg);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><span style="font-size:var(--text-sm);">Communications approved and sent, under 3 minutes</span></div>
-            <div style="display:flex;align-items:center;gap:var(--sp-3);"><div style="width:28px;height:28px;background:var(--success-bg);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><span style="font-size:var(--text-sm);">Holding updates scheduled automatically</span></div>
-          </div>
+      </div>
+
+      <div class="sol-card">
+        <div class="sol-badge">2</div>
+        <h3>Planned maintenance and migrations</h3>
+        <p class="sol-desc">Maintenance windows, migrations, and cutovers need careful, multi-round communication before, during, and after the event.</p>
+        <span class="sol-hint">Hover for detail <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        <div class="sol-more">
+          <div class="sol-block"><h5>The pain today</h5><p>Maintenance comms are written ad hoc, often late, and inconsistent. Contacts miss the notice, and the completion confirmation rarely gets sent.</p></div>
+          <div class="sol-block"><h5>How Composure solves it</h5><p>Build a full sequence, notice, reminder, work beginning, completion, and schedule it in advance. Every contact gets the right message at the right time.</p></div>
+          <div class="sol-block"><h5>Business impact</h5><p>No client is caught off guard. Your team spends minutes, not hours, on maintenance comms.</p></div>
+        </div>
+      </div>
+
+      <div class="sol-card">
+        <div class="sol-badge">3</div>
+        <h3>Keeping Account Managers ahead</h3>
+        <p class="sol-desc">When a client calls their Account Manager mid-incident and the AM does not know what is happening, trust collapses instantly.</p>
+        <span class="sol-hint">Hover for detail <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        <div class="sol-more">
+          <div class="sol-block"><h5>The pain today</h5><p>AMs are the last to know. They have no talking points, no status, and no context, making a bad situation worse.</p></div>
+          <div class="sol-block"><h5>How Composure solves it</h5><p>Composure briefs AMs the moment client comms go out, status, messages sent, talking points, and engineer contact, in one secure internal update.</p></div>
+          <div class="sol-block"><h5>Business impact</h5><p>AMs handle client calls with confidence. Client trust holds even under pressure.</p></div>
+        </div>
+      </div>
+
+      <div class="sol-card">
+        <div class="sol-badge">4</div>
+        <h3>Post-incident reporting</h3>
+        <p class="sol-desc">One of the most commercially important communications an MSP produces, and the most consistently neglected.</p>
+        <span class="sol-hint">Hover for detail <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        <div class="sol-more">
+          <div class="sol-block"><h5>The pain today</h5><p>Reports are written days later by engineers who have already moved on, inconsistent, superficial, and sometimes never sent at all.</p></div>
+          <div class="sol-block"><h5>How Composure solves it</h5><p>Composure drafts a professional report the moment an incident closes, from the full timeline and communication log, with a structured approval workflow.</p></div>
+          <div class="sol-block"><h5>Business impact</h5><p>Every incident ends with a timely, professional report that builds client confidence.</p></div>
+        </div>
+      </div>
+
+      <div class="sol-card">
+        <div class="sol-badge">5</div>
+        <h3>Enterprise client communication</h3>
+        <p class="sol-desc">Enterprise clients have multiple stakeholders with different roles and information needs. A single communication style serves none of them.</p>
+        <span class="sol-hint">Hover for detail <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        <div class="sol-more">
+          <div class="sol-block"><h5>The pain today</h5><p>Most MSPs send one email to all contacts. The Finance Director gets jargon, the CTO gets vague reassurance, and neither is served.</p></div>
+          <div class="sol-block"><h5>How Composure solves it</h5><p>Composure tailors each message by role, the CTO gets strategic context, the IT Manager gets technical detail, the Finance Director gets plain-English impact.</p></div>
+          <div class="sol-block"><h5>Business impact</h5><p>Enterprise clients feel communicated with specifically. This is often the difference in winning contracts.</p></div>
+        </div>
+      </div>
+
+      <div class="sol-card">
+        <div class="sol-badge">6</div>
+        <h3>Reducing churn</h3>
+        <p class="sol-desc">Most MSP churn is not technical, it is the feeling that the MSP does not care or is not on top of things.</p>
+        <span class="sol-hint">Hover for detail <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        <div class="sol-more">
+          <div class="sol-block"><h5>The pain today</h5><p>Clients leave at renewal citing communication issues, even when the technical service was excellent.</p></div>
+          <div class="sol-block"><h5>How Composure solves it</h5><p>Consistent, professional communication at every touchpoint builds a perception of reliability that makes you the obvious choice to stay with.</p></div>
+          <div class="sol-block"><h5>Business impact</h5><p>Lower churn rate. Higher NPS. Stronger renewals.</p></div>
         </div>
       </div>
     </div>
-
-    <!-- UC 2 -->
-    <div class="use-case-card fade-up" style="margin-bottom:var(--sp-6);">
-      <div class="use-case-number">02</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-8);align-items:start;">
-        <div>
-          <h2 style="font-size:var(--text-2xl);margin-bottom:var(--sp-3);">Planned maintenance and migrations</h2>
-          <p style="color:var(--text-muted);">Maintenance windows, server migrations, cloud cutovers, and platform upgrades all require careful, timely client communication, often across multiple rounds before, during, and after the event.</p>
-          <div class="use-case-meta">
-            <div class="use-case-meta-block">
-              <h5>The pain today</h5>
-              <p>Maintenance communications are written ad hoc, often late, and frequently inconsistent across clients. Important contacts miss the initial notice. The post-maintenance confirmation rarely gets sent.</p>
-            </div>
-            <div class="use-case-meta-block">
-              <h5>How Composure solves it</h5>
-              <p>Build a full maintenance communication sequence, initial notice, reminder, work beginning, update, completion, and schedule the entire sequence in advance. Every contact receives the right message at the right time.</p>
-            </div>
-          </div>
-          <div class="use-case-impact">
-            <strong>Business impact:</strong> No client is caught off guard by maintenance. Professionalism is demonstrated through proactive communication. Your team spends minutes, not hours, on maintenance comms.
-          </div>
-        </div>
-        <div style="background:var(--navy);border-radius:var(--radius-lg);padding:var(--sp-6);">
-          <div style="font-size:var(--text-xs);font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:var(--sp-4);">Maintenance communication sequence</div>
-          <div style="display:flex;flex-direction:column;gap:var(--sp-3);">
-            <div style="background:rgba(255,255,255,0.06);border-radius:var(--radius);padding:var(--sp-3);border:1px solid rgba(255,255,255,0.1);">
-              <div style="font-size:var(--text-xs);color:rgba(255,255,255,0.4);margin-bottom:4px;">7 days before</div>
-              <div style="font-size:var(--text-sm);color:var(--white);font-weight:500;">Initial maintenance notice, all stakeholders</div>
-            </div>
-            <div style="background:rgba(255,255,255,0.06);border-radius:var(--radius);padding:var(--sp-3);border:1px solid rgba(255,255,255,0.1);">
-              <div style="font-size:var(--text-xs);color:rgba(255,255,255,0.4);margin-bottom:4px;">1 day before</div>
-              <div style="font-size:var(--text-sm);color:var(--white);font-weight:500;">Reminder with preparation checklist</div>
-            </div>
-            <div style="background:rgba(59,127,234,0.2);border-radius:var(--radius);padding:var(--sp-3);border:1px solid rgba(59,127,234,0.3);">
-              <div style="font-size:var(--text-xs);color:rgba(59,127,234,0.8);margin-bottom:4px;">Window start</div>
-              <div style="font-size:var(--text-sm);color:var(--white);font-weight:500;">Work beginning, services may be affected</div>
-            </div>
-            <div style="background:rgba(16,185,129,0.12);border-radius:var(--radius);padding:var(--sp-3);border:1px solid rgba(16,185,129,0.25);">
-              <div style="font-size:var(--text-xs);color:rgba(16,185,129,0.8);margin-bottom:4px;">Completion</div>
-              <div style="font-size:var(--text-sm);color:var(--white);font-weight:500;">Work complete, all services restored ✓</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- UC 3 -->
-    <div class="use-case-card fade-up" style="margin-bottom:var(--sp-6);">
-      <div class="use-case-number">03</div>
-      <h2 style="font-size:var(--text-2xl);margin-bottom:var(--sp-3);">Keeping Account Managers ahead of the client</h2>
-      <p style="color:var(--text-muted);margin-bottom:var(--sp-5);">When a client calls their Account Manager during an incident and the AM doesn't know what's happening, trust collapses immediately. Composure ensures your relationship team is always one step ahead.</p>
-      <div class="use-case-meta">
-        <div class="use-case-meta-block">
-          <h5>The pain today</h5>
-          <p>AMs are the last to know. They find out about incidents when clients call them. They have no talking points, no status, and no context, making a bad situation significantly worse.</p>
-        </div>
-        <div class="use-case-meta-block">
-          <h5>How Composure solves it</h5>
-          <p>Composure generates an internal AM briefing at the same moment client communications go out. AMs receive the incident status, client-facing messages sent, key talking points, and engineer contact, all in a single, secure internal communication.</p>
-        </div>
-      </div>
-      <div class="use-case-impact">
-        <strong>Business impact:</strong> AMs handle client calls with confidence and composure. Client trust is maintained. The relationship layer of your business functions as it should, even under pressure.
-      </div>
-    </div>
-
-    <!-- UC 4 -->
-    <div class="use-case-card fade-up" style="margin-bottom:var(--sp-6);">
-      <div class="use-case-number">04</div>
-      <h2 style="font-size:var(--text-2xl);margin-bottom:var(--sp-3);">Post-incident reporting that actually gets done</h2>
-      <p style="color:var(--text-muted);margin-bottom:var(--sp-5);">Post-incident reports are one of the most commercially important communications an MSP can produce, and one of the most consistently neglected.</p>
-      <div class="use-case-meta">
-        <div class="use-case-meta-block">
-          <h5>The pain today</h5>
-          <p>Post-incident reports are written days later by engineers who have already moved on. They're inconsistent, often superficial, and sometimes never sent at all, leaving clients with unresolved concerns.</p>
-        </div>
-        <div class="use-case-meta-block">
-          <h5>How Composure solves it</h5>
-          <p>Composure drafts a professional post-incident report automatically when an incident is closed, using the full incident timeline, communication log, and internal notes. A structured approval workflow ensures it's reviewed before sending.</p>
-        </div>
-      </div>
-      <div class="use-case-impact">
-        <strong>Business impact:</strong> Every incident ends with a professional, timely report. Clients see evidence of your process maturity. The report that used to take days and cause anxiety now takes minutes and builds confidence.
-      </div>
-    </div>
-
-    <!-- UC 5 -->
-    <div class="use-case-card fade-up" style="margin-bottom:var(--sp-6);">
-      <div class="use-case-number">05</div>
-      <h2 style="font-size:var(--text-2xl);margin-bottom:var(--sp-3);">Communicating with enterprise clients professionally</h2>
-      <p style="color:var(--text-muted);margin-bottom:var(--sp-5);">Enterprise clients have multiple stakeholders with different roles, different information needs, and different levels of technical understanding. A single communication style serves none of them well.</p>
-      <div class="use-case-meta">
-        <div class="use-case-meta-block">
-          <h5>The pain today</h5>
-          <p>Most MSPs send one email to all contacts at a client. The Finance Director receives technical jargon. The CTO receives vague reassurance. Neither is served, and the MSP looks less capable as a result.</p>
-        </div>
-        <div class="use-case-meta-block">
-          <h5>How Composure solves it</h5>
-          <p>Composure generates individually tailored messages for each contact based on their role, preferences, and the nature of the event. The CTO receives strategic context. The IT Manager receives technical detail. The Finance Director receives plain-English impact and resolution information.</p>
-        </div>
-      </div>
-      <div class="use-case-impact">
-        <strong>Business impact:</strong> Enterprise clients feel like they're being communicated with professionally and specifically, not receiving a mass email. This is often the difference between winning and losing enterprise contracts.
-      </div>
-    </div>
-
-    <!-- UC 6 -->
-    <div class="use-case-card fade-up" style="margin-bottom:var(--sp-6);">
-      <div class="use-case-number">06</div>
-      <h2 style="font-size:var(--text-2xl);margin-bottom:var(--sp-3);">Reducing churn caused by poor communication</h2>
-      <p style="color:var(--text-muted);margin-bottom:var(--sp-5);">Most MSP churn is not caused by technical failure, it's caused by the feeling that the MSP doesn't care, doesn't communicate, or isn't on top of things. Composure removes this perception permanently.</p>
-      <div class="use-case-meta">
-        <div class="use-case-meta-block">
-          <h5>The pain today</h5>
-          <p>Clients leave at renewal, citing "communication issues" or "not feeling valued". The technical service may have been excellent. The communication experience was not.</p>
-        </div>
-        <div class="use-case-meta-block">
-          <h5>How Composure solves it</h5>
-          <p>Consistent, professional communication at every touchpoint, incidents, maintenance, service updates, builds a perception of reliability and care that makes your MSP the obvious choice to stay with at renewal.</p>
-        </div>
-      </div>
-      <div class="use-case-impact">
-        <strong>Business impact:</strong> Lower churn rate. Higher NPS. Stronger renewals. A reputation for communication that distinguishes you from every MSP competing for the same contracts.
-      </div>
-    </div>
-
   </div>
 </section>
+<script>
+(function(){document.querySelectorAll('.sol-card').forEach(function(c){c.addEventListener('click',function(){c.classList.toggle('is-open');});});})();
+</script>
 
 <!-- WHO IT'S FOR -->
 <section class="section section-dark">
