@@ -2577,6 +2577,7 @@ p { line-height: 1.7; }
   line-height: 1.2;
   max-width: 940px;
   margin: var(--sp-2) auto var(--sp-4);
+  text-wrap: balance;
   background: linear-gradient(105deg, #DCEBFF 0%, #9FC6FF 46%, #8FE3C0 100%);
   -webkit-background-clip: text;
   background-clip: text;
