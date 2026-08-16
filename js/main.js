@@ -1,5 +1,5 @@
 /* ============================================================
-   Composure — Main JavaScript
+   Composure, Main JavaScript
    Navigation, animations, accordions, interactions
    ============================================================ */
 
@@ -128,7 +128,7 @@
     demoForm.addEventListener('submit', function (e) {
       e.preventDefault();
       const btn = demoForm.querySelector('[type="submit"]');
-      btn.textContent = 'Request received — we\'ll be in touch shortly.';
+      btn.textContent = 'Request received, we\'ll be in touch shortly.';
       btn.disabled = true;
       btn.style.background = '#10B981';
     });

@@ -1,5 +1,5 @@
 /* ============================================================
-   Composure — Design System & Shared Styles
+   Composure, Design System & Shared Styles
    Premium SaaS Marketing Website
    ============================================================ */
 
@@ -1011,7 +1011,7 @@ p { line-height: 1.7; }
   pointer-events: auto;
 }
 
-/* ---- "Why different" — minimal columns with thin dividing lines ---- */
+/* ---- "Why different", minimal columns with thin dividing lines ---- */
 .compare-cols {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -1135,7 +1135,7 @@ p { line-height: 1.7; }
   .tutorials-grid { grid-template-columns: 1fr; }
 }
 
-/* Blend the reveal into the dark panel — compact, close to the bubbles */
+/* Blend the reveal into the dark panel, compact, close to the bubbles */
 .audience-hero .audience-stage {
   margin: 0 auto var(--sp-5);
   min-height: 196px;
@@ -2534,7 +2534,7 @@ p { line-height: 1.7; }
 .badge-amber { background: rgba(245,158,11,0.1); color: #D97706;     border: 1px solid rgba(245,158,11,0.2); }
 
 /* ============================================================
-   Responsive — Tablet (≤1024px)
+   Responsive, Tablet (≤1024px)
    ============================================================ */
 @media (max-width: 1024px) {
   .hero-layout {
@@ -2589,7 +2589,7 @@ p { line-height: 1.7; }
 }
 
 /* ============================================================
-   Responsive — Mobile (≤768px)
+   Responsive, Mobile (≤768px)
    ============================================================ */
 @media (max-width: 768px) {
   :root {
