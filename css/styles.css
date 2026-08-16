@@ -2541,7 +2541,7 @@ p { line-height: 1.7; }
    Page Hero (inner pages)
    ============================================================ */
 .page-hero {
-  padding: calc(64px + var(--sp-6)) 0 var(--sp-8);
+  padding: calc(60px + var(--sp-4)) 0 var(--sp-5);
   background: var(--grad-dark);
   text-align: center;
   position: relative;
@@ -2563,7 +2563,7 @@ p { line-height: 1.7; }
 .page-hero h1 {
   color: var(--white);
   max-width: 700px;
-  margin: var(--sp-3) auto var(--sp-4);
+  margin: var(--sp-2) auto var(--sp-3);
 }
 
 .page-hero p {
