@@ -2573,9 +2573,9 @@ p { line-height: 1.7; }
 }
 
 .page-hero h1 {
-  font-size: clamp(1.5rem, 2.8vw, 2.25rem);
-  line-height: 1.25;
-  max-width: 720px;
+  font-size: clamp(1.6rem, 3.2vw, 2.6rem);
+  line-height: 1.2;
+  max-width: 940px;
   margin: var(--sp-2) auto var(--sp-4);
   background: linear-gradient(105deg, #DCEBFF 0%, #9FC6FF 46%, #8FE3C0 100%);
   -webkit-background-clip: text;
@@ -2585,10 +2585,10 @@ p { line-height: 1.7; }
 }
 
 .page-hero p {
-  color: rgba(255,255,255,0.65);
-  font-size: var(--text-lg);
-  line-height: 1.75;
-  max-width: 640px;
+  color: rgba(255,255,255,0.6);
+  font-size: var(--text-sm);
+  line-height: 1.7;
+  max-width: 560px;
   margin: 0 auto var(--sp-6);
 }
 
