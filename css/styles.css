@@ -2208,6 +2208,13 @@ p { line-height: 1.7; }
   gap: var(--sp-4);
   flex-wrap: wrap;
 }
+.cta-banner .btn-primary {
+  background: var(--grad-green);
+  box-shadow: 0 8px 22px rgba(63,181,124,0.35);
+}
+.cta-banner .btn-primary:hover {
+  box-shadow: 0 10px 28px rgba(63,181,124,0.45);
+}
 
 /* ============================================================
    Footer
