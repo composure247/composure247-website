@@ -5,19 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Explore every feature of Composure, the AI-powered client communication platform for MSPs. Incident communications, stakeholder management, post-incident reports, and more.">
   <title>Features, Composure</title>
-  <link rel="stylesheet" href="css/styles.css?v=42">
+  <link rel="stylesheet" href="css/styles.css?v=43">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <style>
-    .features-layout{display:grid;grid-template-columns:220px 1fr;gap:var(--sp-12);align-items:start;padding-top:var(--sp-12);padding-bottom:var(--sp-20);}
-    .features-sidebar{position:sticky;top:88px;}
-    .features-sidebar-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-subtle);margin-bottom:var(--sp-3);}
-    .features-nav-item{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:var(--radius);font-size:13px;font-weight:500;color:var(--text-muted);cursor:pointer;transition:var(--transition);border:none;background:none;text-align:left;width:100%;text-decoration:none;}
+    .features-layout{display:grid;grid-template-columns:248px 1fr;gap:var(--sp-12);align-items:start;padding-top:var(--sp-12);padding-bottom:var(--sp-20);}
+    .features-sidebar{position:sticky;top:88px;display:flex;flex-direction:column;gap:4px;}
+    .features-sidebar-label{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--text-subtle);margin-bottom:var(--sp-2);}
+    .features-nav-item{display:flex;align-items:center;gap:11px;padding:8px 10px;border-radius:12px;font-size:13.5px;font-weight:500;color:var(--text-muted);cursor:pointer;transition:var(--transition);border:1px solid transparent;background:none;text-align:left;width:100%;text-decoration:none;}
+    .features-nav-item .fnav-emoji{display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--white);border:1px solid var(--border);box-shadow:0 1px 2px rgba(13,47,79,0.06);font-size:16px;line-height:1;flex-shrink:0;transition:var(--transition);}
     .features-nav-item:hover{background:var(--surface);color:var(--navy);}
-    .features-nav-item.active{background:var(--accent-glow);color:var(--accent);font-weight:600;}
-    .features-nav-item .fnav-dot{width:6px;height:6px;border-radius:50%;background:currentColor;flex-shrink:0;opacity:.5;}
-    .features-nav-item.active .fnav-dot{opacity:1;}
+    .features-nav-item:hover .fnav-emoji{transform:translateY(-1px);box-shadow:0 4px 10px rgba(13,47,79,0.12);}
+    .features-nav-item.active{background:var(--accent-glow);color:var(--accent);font-weight:600;border-color:rgba(59,127,234,0.18);}
+    .features-nav-item.active .fnav-emoji{border-color:rgba(59,127,234,0.30);box-shadow:0 4px 12px rgba(59,127,234,0.20);}
     .features-content{min-width:0;}
     .feat-section{padding-bottom:var(--sp-16);border-bottom:1px solid var(--border-light);margin-bottom:var(--sp-16);}
     .feat-section:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
@@ -108,13 +109,13 @@
       <!-- SIDEBAR -->
       <aside class="features-sidebar">
         <div class="features-sidebar-label">Feature categories</div>
-        <a href="#incident" class="features-nav-item active" data-section="incident"><span class="fnav-dot"></span>Incident Communication</a>
-        <a href="#stakeholders" class="features-nav-item" data-section="stakeholders"><span class="fnav-dot"></span>Stakeholder Management</a>
-        <a href="#briefing" class="features-nav-item" data-section="briefing"><span class="fnav-dot"></span>Internal Briefing</a>
-        <a href="#planned" class="features-nav-item" data-section="planned"><span class="fnav-dot"></span>Planned Communications</a>
-        <a href="#reporting" class="features-nav-item" data-section="reporting"><span class="fnav-dot"></span>Post-Incident Reports</a>
-        <a href="#governance" class="features-nav-item" data-section="governance"><span class="fnav-dot"></span>Governance &amp; Control</a>
-        <a href="#billing" class="features-nav-item" data-section="billing"><span class="fnav-dot"></span>Billing &amp; Subscription</a>
+        <a href="#incident" class="features-nav-item active" data-section="incident"><span class="fnav-emoji">🚨</span>Incident Communication</a>
+        <a href="#stakeholders" class="features-nav-item" data-section="stakeholders"><span class="fnav-emoji">👥</span>Stakeholder Management</a>
+        <a href="#briefing" class="features-nav-item" data-section="briefing"><span class="fnav-emoji">📣</span>Internal Briefing</a>
+        <a href="#planned" class="features-nav-item" data-section="planned"><span class="fnav-emoji">📅</span>Planned Communications</a>
+        <a href="#reporting" class="features-nav-item" data-section="reporting"><span class="fnav-emoji">📄</span>Post-Incident Reports</a>
+        <a href="#governance" class="features-nav-item" data-section="governance"><span class="fnav-emoji">🛡️</span>Governance &amp; Control</a>
+        <a href="#billing" class="features-nav-item" data-section="billing"><span class="fnav-emoji">💳</span>Billing &amp; Subscription</a>
       </aside>
 
       <!-- CONTENT -->
