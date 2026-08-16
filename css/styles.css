@@ -1140,6 +1140,77 @@ p { line-height: 1.7; }
   .tutorials-grid { grid-template-columns: 1fr; }
 }
 
+/* ---- Commercial value: blue numbered process ---- */
+.value-steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--sp-6);
+}
+.value-step {
+  text-align: center;
+  position: relative;
+  padding: 0 var(--sp-4);
+}
+/* dashed connector between steps */
+.value-step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 32px;
+  left: calc(50% + 46px);
+  right: calc(-50% + 46px);
+  height: 0;
+  border-top: 2px dashed rgba(84,161,255,0.35);
+  z-index: 0;
+}
+.value-num {
+  position: relative;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto var(--sp-4);
+  z-index: 1;
+}
+.value-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: var(--grad-accent);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 12px 28px rgba(84,161,255,0.32);
+}
+.value-badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--navy);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #fff;
+}
+.value-step h3 {
+  font-size: var(--text-lg);
+  margin-bottom: var(--sp-2);
+  color: var(--navy);
+}
+.value-step p {
+  font-size: var(--text-sm);
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+@media (max-width: 760px) {
+  .value-steps { grid-template-columns: 1fr; gap: var(--sp-8); max-width: 420px; margin: 0 auto; }
+  .value-step:not(:last-child)::after { display: none; }
+}
+
 /* Blend the reveal into the dark panel, compact, close to the bubbles */
 .audience-hero .audience-stage {
   margin: 0 auto var(--sp-5);
