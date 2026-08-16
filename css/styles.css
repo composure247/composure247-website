@@ -2168,18 +2168,29 @@ p { line-height: 1.7; }
    CTA Banner
    ============================================================ */
 .cta-banner {
-  background: linear-gradient(160deg, #E4F0FF 0%, #D0E5FF 100%);
+  background: linear-gradient(150deg, #E4FFD8 0%, #DDF3E3 42%, #D0E5FF 100%);
   padding: var(--sp-16) 0;
   text-align: center;
   position: relative;
   overflow: hidden;
 }
-.cta-banner::before { display: none; }
+.cta-banner::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -30%;
+  left: -10%;
+  width: 55%;
+  height: 160%;
+  background: radial-gradient(closest-side, rgba(111,208,138,0.45), rgba(111,208,138,0) 70%);
+  pointer-events: none;
+  z-index: 0;
+}
 
 .cta-banner .eyebrow-tag {
   background: rgba(255,255,255,0.6);
-  color: var(--accent);
-  border: 1px solid rgba(84,161,255,0.25);
+  color: var(--green-deep, #2E9E6B);
+  border: 1px solid rgba(82,201,154,0.35);
 }
 .cta-banner h2 {
   color: var(--navy);
@@ -2219,7 +2230,17 @@ p { line-height: 1.7; }
 }
 
 /* ---- Slim footer ---- */
-.footer--slim { padding: var(--sp-8) 0 var(--sp-6); }
+.footer--slim {
+  padding: var(--sp-8) 0 var(--sp-6);
+  position: relative;
+}
+.footer--slim::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #6FD08A 0%, #52C99A 45%, #54A1FF 100%);
+}
 .footer-slim {
   display: flex;
   align-items: center;
