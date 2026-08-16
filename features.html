@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Explore every feature of Composure, the AI-powered client communication platform for MSPs. Incident communications, stakeholder management, post-incident reports, and more.">
   <title>Features, Composure</title>
-  <link rel="stylesheet" href="css/styles.css?v=43">
+  <link rel="stylesheet" href="css/styles.css?v=44">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
@@ -20,8 +20,9 @@
     .features-nav-item.active{background:var(--accent-glow);color:var(--accent);font-weight:600;border-color:rgba(59,127,234,0.18);}
     .features-nav-item.active .fnav-emoji{border-color:rgba(59,127,234,0.30);box-shadow:0 4px 12px rgba(59,127,234,0.20);}
     .features-content{min-width:0;}
-    .feat-section{padding-bottom:var(--sp-16);border-bottom:1px solid var(--border-light);margin-bottom:var(--sp-16);}
-    .feat-section:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}
+    .feat-section{display:none;}
+    .feat-section.is-shown{display:block;animation:featFade .28s ease;}
+    @keyframes featFade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
     .feat-section-head{display:flex;align-items:center;gap:var(--sp-4);margin-bottom:var(--sp-5);}
     .feat-section-icon{width:44px;height:44px;border-radius:var(--radius);background:var(--accent-glow);border:1px solid rgba(59,127,234,0.18);display:flex;align-items:center;justify-content:center;color:var(--accent);flex-shrink:0;}
     .feat-section-title{font-size:var(--text-2xl);font-weight:700;color:var(--navy);margin:0;}
@@ -38,7 +39,9 @@
     .feat-badge{display:inline-flex;align-items:center;gap:6px;padding:3px 10px;border-radius:100px;font-size:11px;font-weight:600;margin-left:auto;}
     .feat-badge-blue{background:rgba(59,127,234,0.1);color:var(--accent);}
     .feat-badge-green{background:rgba(12,165,216,0.1);color:var(--teal);}
-    @media(max-width:1024px){.features-layout{grid-template-columns:1fr;}.features-sidebar{display:none;}}
+    @media(max-width:1024px){.features-layout{grid-template-columns:1fr;}.features-sidebar{display:none;}
+      .feat-section{display:block;animation:none;padding-bottom:var(--sp-10);border-bottom:1px solid var(--border-light);margin-bottom:var(--sp-10);}
+      .feat-section:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}}
     @media(max-width:768px){.feat-cards{grid-template-columns:1fr;}}
   </style>
 </head>
@@ -122,7 +125,7 @@
       <div class="features-content">
 
         <!-- 1. INCIDENT COMMUNICATION -->
-        <div class="feat-section fade-up" id="incident">
+        <div class="feat-section is-shown" id="incident">
           <div class="feat-section-head">
             <div class="feat-section-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
             <h2 class="feat-section-title">Incident Communication</h2>
@@ -310,17 +313,21 @@
   var navItems=document.querySelectorAll('.features-nav-item[data-section]');
   var sections=document.querySelectorAll('.feat-section');
   if(!navItems.length)return;
-  var observer=new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if(entry.isIntersecting){
-        var id=entry.target.id;
-        navItems.forEach(function(item){item.classList.remove('active');});
-        var active=document.querySelector('.features-nav-item[data-section="'+id+'"]');
-        if(active)active.classList.add('active');
-      }
+  function show(id){
+    var matched=false;
+    sections.forEach(function(s){var on=(s.id===id);s.classList.toggle('is-shown',on);if(on)matched=true;});
+    navItems.forEach(function(item){item.classList.toggle('active',item.getAttribute('data-section')===id);});
+    return matched;
+  }
+  navItems.forEach(function(item){
+    item.addEventListener('click',function(e){
+      e.preventDefault();
+      show(item.getAttribute('data-section'));
+      if(history.replaceState)history.replaceState(null,'','#'+item.getAttribute('data-section'));
     });
-  },{rootMargin:'-20% 0px -70% 0px'});
-  sections.forEach(function(s){observer.observe(s);});
+  });
+  var initial=(location.hash||'').replace('#','');
+  if(!initial||!show(initial))show('incident');
 })();
 </script>
 </body>
