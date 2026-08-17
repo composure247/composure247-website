@@ -602,7 +602,31 @@
       font-weight:500;
     }
     .bc-quote figcaption strong{color:var(--navy);font-weight:600;}
-  </style>
+  
+    /* ── Plan comparison columns ─────────────────────────── */
+    .pc-wrap{overflow-x:auto;padding:6px 0 10px;}
+    .pc-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:16px;min-width:640px;align-items:end;}
+    .pc-col{border-radius:18px;display:flex;flex-direction:column;overflow:hidden;}
+    .pc-labels{background:#0f2740;}
+    .pc-respond{background:linear-gradient(180deg,#7BB4FF 0%,#2F6FD0 100%);box-shadow:0 18px 40px rgba(47,111,208,0.26);}
+    .pc-communicate{position:relative;background:linear-gradient(180deg,#7FE0B8 0%,#2FA877 100%);box-shadow:0 24px 48px rgba(47,168,119,0.32);transform:translateY(-10px);}
+    .pc-head{height:104px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:0 16px;text-align:center;}
+    .pc-labels .pc-head{align-items:flex-start;padding-left:20px;}
+    .pc-communicate .pc-head{padding-top:14px;}
+    .pc-title{color:#fff;font-size:1.05rem;font-weight:700;letter-spacing:-0.01em;}
+    .pc-plan{color:#fff;font-size:1.3rem;font-weight:700;letter-spacing:-0.01em;line-height:1;}
+    .pc-sub{color:rgba(255,255,255,0.82);font-size:12px;font-weight:500;}
+    .pc-row{height:44px;display:flex;align-items:center;justify-content:center;font-size:13px;color:#fff;border-top:1px solid rgba(255,255,255,0.10);}
+    .pc-labels .pc-row{justify-content:flex-start;padding:0 20px;color:rgba(255,255,255,0.74);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-top-color:rgba(255,255,255,0.06);}
+    .pc-mk{width:18px;height:18px;}
+    .pc-x{opacity:0.45;}
+    .pc-txt{font-size:12px;font-weight:700;}
+    .pc-foot{height:82px;display:flex;align-items:center;justify-content:center;padding:0 16px;}
+    .pc-btn{display:flex;align-items:center;justify-content:center;width:100%;padding:11px;border-radius:100px;background:rgba(255,255,255,0.95);color:#1f4e8f;font-weight:700;font-size:13px;transition:var(--transition);}
+    .pc-communicate .pc-btn{color:#1a7a52;}
+    .pc-btn:hover{background:#fff;transform:translateY(-1px);}
+    .pc-badge{position:absolute;top:12px;left:50%;transform:translateX(-50%);z-index:2;background:#fff;color:#1a7a52;font-size:10.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:4px 12px;border-radius:100px;box-shadow:0 6px 14px rgba(0,0,0,0.14);}
+</style>
 </head>
 <body>
 
@@ -874,41 +898,26 @@
       <h2>Compare what's in each plan.</h2>
       <p>Same platform, Communicate just opens up the rest of it. Move between plans whenever you like.</p>
     </div>
-    <div class="fade-up" style="overflow-x:auto;">
-      <table class="comparison-table" style="min-width:680px;">
-        <thead>
-          <tr>
-            <th>Feature</th>
-            <th>Respond</th>
-            <th class="table-header-composure">Communicate<br><span style="font-size:var(--text-xs);font-weight:500;opacity:0.85;">Most popular</span></th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td colspan="3" style="background:var(--surface);font-size:var(--text-xs);font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-subtle);padding:var(--sp-3) var(--sp-6);">Incident communication</td></tr>
-          <tr><td>P0 and P1 incident communications</td><td><svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></td><td class="col-composure"><svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
-          <tr><td>AI-drafted stakeholder messaging</td><td><svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></td><td class="col-composure"><svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
-          <tr><td>Per-contact preview &amp; editing</td><td><svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></td><td class="col-composure"><svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
-          <tr><td>Scheduled holding updates</td><td><svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></td><td class="col-composure"><svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
-          <tr><td>Post-incident report &amp; approval workflow</td><td><svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></td><td class="col-composure"><svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
-
-          <tr><td colspan="3" style="background:var(--surface);font-size:var(--text-xs);font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-subtle);padding:var(--sp-3) var(--sp-6);">Delivery &amp; channels</td></tr>
-          <tr><td>Email + SMS delivery</td><td><svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></td><td class="col-composure"><svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
-          <tr><td>Branded client status page</td><td><svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></td><td class="col-composure"><svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
-          <tr><td>iPhone app (push, approvals, submissions)</td><td><svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></td><td class="col-composure"><svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
-
-          <tr><td colspan="3" style="background:var(--surface);font-size:var(--text-xs);font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-subtle);padding:var(--sp-3) var(--sp-6);">Planned &amp; general communications</td></tr>
-          <tr><td>General communications module</td><td class="cmp-none">–</td><td class="col-composure"><svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
-          <tr><td>Planned maintenance workflows</td><td class="cmp-none">–</td><td class="col-composure"><svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
-          <tr><td>Templates library with personalisation</td><td class="cmp-none">–</td><td class="col-composure"><svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
-          <tr><td>AM / CSM auto-inclusion</td><td class="cmp-none">–</td><td class="col-composure"><svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
-
-          <tr><td colspan="3" style="background:var(--surface);font-size:var(--text-xs);font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-subtle);padding:var(--sp-3) var(--sp-6);">Branding, analytics &amp; support</td></tr>
-          <tr><td>White-label branding</td><td class="cmp-none">–</td><td class="col-composure"><svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
-          <tr><td>Advanced analytics &amp; reporting</td><td class="cmp-none">–</td><td class="col-composure"><svg class="icon-check" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></td></tr>
-          <tr><td>Support level</td><td style="color:var(--text-subtle);">Standard</td><td class="col-composure">Priority</td></tr>
-        </tbody>
-      </table>
+    <div class="pc-wrap fade-up">
+  <div class="pc-grid">
+    <div class="pc-col pc-labels">
+      <div class="pc-head"><div class="pc-title">What you get</div></div>
+      <div class="pc-row">P0 / P1 incident comms</div><div class="pc-row">AI-drafted messaging</div><div class="pc-row">Per-contact editing</div><div class="pc-row">Scheduled holding updates</div><div class="pc-row">Post-incident reports</div><div class="pc-row">Email + SMS delivery</div><div class="pc-row">Branded status page</div><div class="pc-row">iPhone app</div><div class="pc-row">General communications</div><div class="pc-row">Planned maintenance</div><div class="pc-row">Templates library</div><div class="pc-row">AM / CSM auto-included</div><div class="pc-row">White-label branding</div><div class="pc-row">Advanced analytics</div><div class="pc-row">Support level</div>
+      <div class="pc-foot"></div>
     </div>
+    <div class="pc-col pc-respond">
+      <div class="pc-head"><div class="pc-plan">Respond</div><div class="pc-sub">Incident core</div></div>
+      <div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk pc-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><div class="pc-row"><svg class="pc-mk pc-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><div class="pc-row"><svg class="pc-mk pc-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><div class="pc-row"><svg class="pc-mk pc-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><div class="pc-row"><svg class="pc-mk pc-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><div class="pc-row"><svg class="pc-mk pc-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><div class="pc-row"><span class="pc-txt">Standard</span></div>
+      <div class="pc-foot"><a href="start-trial.html" class="pc-btn">Start free trial</a></div>
+    </div>
+    <div class="pc-col pc-communicate">
+      <div class="pc-badge">Most popular</div>
+      <div class="pc-head"><div class="pc-plan">Communicate</div><div class="pc-sub">Full platform</div></div>
+      <div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><span class="pc-txt">Priority</span></div>
+      <div class="pc-foot"><a href="start-trial.html" class="pc-btn">Start free trial</a></div>
+    </div>
+  </div>
+</div>
   </div>
 </section>
 
