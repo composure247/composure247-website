@@ -2982,3 +2982,11 @@ body.theme-dark::after{
 .theme-dark .band-seg-name, .theme-dark .controls-q, .theme-dark .trust-pillbar-item, .theme-dark .period-switch-label.active{ color:#EAF2FF !important; }
 .theme-dark .band-seg:hover{ background:rgba(255,255,255,0.07) !important; }
 .theme-dark .band-seg.active{ background:var(--accent) !important; }
+
+/* ---- theme-dark: pricing business case + comparison table ---- */
+.theme-dark .case-compare, .theme-dark .case-col{ background:rgba(255,255,255,0.035) !important; border-color:rgba(120,170,255,0.12) !important; }
+.theme-dark .case-row-value, .theme-dark .case-col-title, .theme-dark .case-foot-value{ color:rgba(255,255,255,0.80) !important; }
+.theme-dark .case-row-label, .theme-dark .case-sub, .theme-dark .case-foot-label, .theme-dark .case-foot-sub, .theme-dark .case-col-eyebrow{ color:rgba(255,255,255,0.42) !important; }
+.theme-dark .bc-quote{ background:rgba(59,127,234,0.10) !important; border-color:rgba(89,161,255,0.24) !important; color:rgba(255,255,255,0.85) !important; }
+.theme-dark .cmpx-others-bg{ background:rgba(255,255,255,0.04) !important; border-color:rgba(120,170,255,0.14) !important; }
+.theme-dark .cmpx-th{ color:#EAF2FF !important; }
