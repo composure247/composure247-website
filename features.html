@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Explore every feature of Composure, the AI-powered client communication platform for MSPs. Incident communications, stakeholder management, post-incident reports, and more.">
   <title>Features, Composure</title>
-  <link rel="stylesheet" href="css/styles.css?v=52">
+  <link rel="stylesheet" href="css/styles.css?v=53">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
@@ -44,6 +44,76 @@
       .feat-section{display:block;animation:none;padding-bottom:var(--sp-10);border-bottom:1px solid var(--border-light);margin-bottom:var(--sp-10);}
       .feat-section:last-child{border-bottom:none;margin-bottom:0;padding-bottom:0;}}
     @media(max-width:768px){.feat-cards{grid-template-columns:1fr;}}
+  
+    /* == Product demo (ported) == */
+    /* ── Product Demo ───────────────────────────────────── */
+    .demo-section{background:var(--navy);padding:var(--sp-20) 0;position:relative;overflow:hidden;}
+    .demo-section::before{content:'';position:absolute;top:-150px;left:50%;transform:translateX(-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(59,127,234,0.07) 0%,transparent 68%);pointer-events:none;}
+    .demo-section .section-header h2{color:var(--white);}
+    .demo-section .section-header p{color:rgba(255,255,255,0.55);}
+    .demo-steps{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:var(--sp-8);}
+    .demo-step-btn{padding:8px 20px;border-radius:100px;border:1px solid rgba(255,255,255,0.14);background:transparent;color:rgba(255,255,255,0.45);font-size:var(--text-sm);font-weight:500;cursor:pointer;transition:var(--transition);font-family:var(--font);}
+    .demo-step-btn:hover{border-color:rgba(255,255,255,0.35);color:rgba(255,255,255,0.75);}
+    .demo-step-btn.active{background:var(--accent);border-color:var(--accent);color:var(--white);}
+    .demo-window{max-width:880px;margin:0 auto;background:#111d2e;border-radius:16px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,0.5),0 0 0 1px rgba(255,255,255,0.06);}
+    .demo-titlebar{display:flex;align-items:center;gap:12px;padding:12px 20px;background:#0d1824;border-bottom:1px solid rgba(255,255,255,0.06);}
+    .demo-dots{display:flex;gap:6px;}
+    .demo-dot{width:10px;height:10px;border-radius:50%;}
+    .demo-dot:nth-child(1){background:#FF5F57;} .demo-dot:nth-child(2){background:#FFBD2E;} .demo-dot:nth-child(3){background:#28CA41;}
+    .demo-url{flex:1;background:rgba(255,255,255,0.06);border-radius:6px;padding:5px 12px;font-size:11px;color:rgba(255,255,255,0.3);text-align:center;font-family:monospace;}
+    .demo-progress-track{height:3px;background:rgba(255,255,255,0.07);}
+    .demo-progress-fill{height:100%;background:var(--grad-accent);width:0%;transition:width linear;}
+    .demo-body{padding:28px;min-height:360px;}
+    .demo-scene{display:none;animation:dSceneIn 0.35s ease;}
+    .demo-scene.active{display:block;}
+    @keyframes dSceneIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    /* scene 0 */
+    .d-badge{display:inline-flex;align-items:center;gap:8px;padding:5px 14px;background:rgba(239,68,68,0.14);border:1px solid rgba(239,68,68,0.28);border-radius:100px;color:#f87171;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px;}
+    .d-badge::before{content:'';width:7px;height:7px;border-radius:50%;background:#ef4444;animation:dPulse 1.4s infinite;}
+    @keyframes dPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.5)}}
+    .d-incident-title{font-size:20px;font-weight:700;color:var(--white);margin-bottom:5px;}
+    .d-incident-meta{font-size:12px;color:rgba(255,255,255,0.38);margin-bottom:22px;}
+    .d-chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px;}
+    .d-chip{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;}
+    .d-ai-box{display:flex;align-items:center;gap:12px;padding:13px 16px;background:rgba(59,127,234,0.1);border:1px solid rgba(59,127,234,0.22);border-radius:10px;}
+    .d-spinner{width:17px;height:17px;border:2px solid rgba(59,127,234,0.28);border-top-color:var(--accent);border-radius:50%;animation:dSpin .75s linear infinite;flex-shrink:0;}
+    @keyframes dSpin{to{transform:rotate(360deg)}}
+    .d-ai-text{font-size:12px;color:rgba(255,255,255,0.65);} .d-ai-text strong{color:var(--white);display:block;margin-bottom:2px;font-size:13px;}
+    /* scene 1 */
+    .d-tabs{display:flex;gap:0;margin-bottom:18px;border-bottom:1px solid rgba(255,255,255,0.08);}
+    .d-tab{padding:8px 16px;font-size:12px;font-weight:600;color:rgba(255,255,255,0.38);border-bottom:2px solid transparent;margin-bottom:-1px;}
+    .d-tab.active{color:var(--accent);border-bottom-color:var(--accent);}
+    .d-tab .dtick{display:inline-flex;align-items:center;justify-content:center;width:13px;height:13px;background:#10b981;border-radius:50%;color:#fff;font-size:7px;margin-left:5px;}
+    .d-meta{font-size:11px;color:rgba(255,255,255,0.32);margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em;}
+    .d-subject{font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .d-subject span{color:var(--white);font-weight:600;}
+    .d-body{font-size:13px;color:rgba(255,255,255,0.62);line-height:1.75;}
+    .d-cursor{display:inline-block;width:2px;height:13px;background:var(--accent);margin-left:1px;vertical-align:middle;animation:dBlink 1s step-end infinite;}
+    @keyframes dBlink{0%,100%{opacity:1}50%{opacity:0}}
+    /* scene 2 */
+    .d-review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px;}
+    .d-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px;}
+    .d-card-head{display:flex;align-items:center;gap:9px;margin-bottom:9px;}
+    .d-av{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;flex-shrink:0;}
+    .d-card-name{font-size:12px;font-weight:600;color:var(--white);}
+    .d-card-role{font-size:10px;color:rgba(255,255,255,0.38);}
+    .d-tone{display:inline-block;padding:2px 7px;background:rgba(59,127,234,0.14);border-radius:4px;font-size:10px;color:var(--accent);font-weight:600;margin-bottom:7px;}
+    .d-preview{font-size:11px;color:rgba(255,255,255,0.42);line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+    .d-send{display:flex;align-items:center;justify-content:center;gap:8px;padding:11px 28px;background:var(--grad-accent);border-radius:8px;color:#fff;font-size:13px;font-weight:600;box-shadow:var(--shadow-accent);cursor:default;}
+    /* scene 3 */
+    .d-success-head{display:flex;align-items:center;gap:14px;margin-bottom:24px;}
+    .d-success-icon{width:46px;height:46px;background:rgba(16,185,129,0.14);border:1px solid rgba(16,185,129,0.28);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .d-success-title{font-size:18px;font-weight:700;color:var(--white);}
+    .d-success-sub{font-size:12px;color:rgba(255,255,255,0.38);}
+    .d-rows{display:flex;flex-direction:column;gap:9px;margin-bottom:18px;}
+    .d-row{display:flex;align-items:center;gap:12px;padding:11px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:8px;}
+    .d-row-info{flex:1;}
+    .d-row-name{font-size:13px;font-weight:600;color:var(--white);}
+    .d-row-role{font-size:11px;color:rgba(255,255,255,0.38);}
+    .d-row-status{display:flex;align-items:center;gap:5px;font-size:11px;color:#34d399;font-weight:500;white-space:nowrap;}
+    .d-next{display:flex;align-items:center;gap:10px;padding:11px 14px;background:rgba(59,127,234,0.08);border:1px solid rgba(59,127,234,0.14);border-radius:8px;font-size:12px;color:rgba(255,255,255,0.55);}
+    .d-next strong{color:var(--white);}
+    @media(max-width:768px){.d-review-grid{grid-template-columns:1fr;}.demo-step-btn{font-size:11px;padding:6px 13px;}}
   </style>
 </head>
 <body>
@@ -265,6 +335,109 @@
   </div>
 </section>
 
+<!-- SEE IT IN ACTION DEMO -->
+<section class="demo-section">
+  <div class="container">
+    <div class="section-header fade-up" style="text-align:center;margin-bottom:var(--sp-8);">
+      <div class="eyebrow-tag" style="display:inline-flex;margin-bottom:var(--sp-3);">See it in action</div>
+      <h2>From alert to client update<br>in under three minutes</h2>
+      <p style="max-width:500px;margin:var(--sp-3) auto 0;">Watch how Composure handles a P1 incident — detection to personalised stakeholder communications, automatically.</p>
+    </div>
+
+    <div class="demo-steps fade-up stagger-1">
+      <button class="demo-step-btn active" data-step="0">1. Incident detected</button>
+      <button class="demo-step-btn" data-step="1">2. AI drafts messages</button>
+      <button class="demo-step-btn" data-step="2">3. Review &amp; approve</button>
+      <button class="demo-step-btn" data-step="3">4. Delivered</button>
+    </div>
+
+    <div class="demo-window fade-up stagger-2">
+      <div class="demo-titlebar">
+        <div class="demo-dots"><div class="demo-dot"></div><div class="demo-dot"></div><div class="demo-dot"></div></div>
+        <div class="demo-url">app.composure.io — Incident Communications</div>
+        <div style="width:58px;"></div>
+      </div>
+      <div class="demo-progress-track"><div class="demo-progress-fill" id="demoProgress"></div></div>
+      <div class="demo-body">
+
+        <!-- Scene 0: Incident Detected -->
+        <div class="demo-scene active" id="demo-scene-0">
+          <div class="d-badge">P1 — Critical</div>
+          <div class="d-incident-title">Microsoft 365 Authentication Failure</div>
+          <div class="d-incident-meta">Detected: 09:14 UTC &nbsp;·&nbsp; 4 minutes ago &nbsp;·&nbsp; Source: ConnectWise alert</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.35);margin-bottom:9px;text-transform:uppercase;letter-spacing:.06em;">Affected clients (7)</div>
+          <div class="d-chips">
+            <div class="d-chip" style="background:#3B7FEA;">NF</div>
+            <div class="d-chip" style="background:#7C3AED;">MG</div>
+            <div class="d-chip" style="background:#0CA5D8;">AL</div>
+            <div class="d-chip" style="background:#059669;">PL</div>
+            <div class="d-chip" style="background:#D97706;">CR</div>
+            <div class="d-chip" style="background:#DC2626;">VM</div>
+            <div class="d-chip" style="background:#4B5563;">+1</div>
+          </div>
+          <div class="d-ai-box">
+            <div class="d-spinner"></div>
+            <div class="d-ai-text"><strong>Composure is analysing stakeholder profiles</strong>Identifying contacts, roles, and communication tone for 7 clients…</div>
+          </div>
+        </div>
+
+        <!-- Scene 1: AI Drafting -->
+        <div class="demo-scene" id="demo-scene-1">
+          <div class="d-tabs">
+            <div class="d-tab active">Sarah Chen (CTO) <span class="dtick" style="display:inline-flex;align-items:center;justify-content:center;width:13px;height:13px;background:#10b981;border-radius:50%;color:#fff;font-size:7px;margin-left:5px;">✓</span></div>
+            <div class="d-tab">Tom Bradley (IT Mgr)</div>
+            <div class="d-tab">Mark Harris (Finance)</div>
+          </div>
+          <div class="d-meta">Tone: Executive briefing &nbsp;·&nbsp; Channel: Email + Teams &nbsp;·&nbsp; Calibrated for CTO</div>
+          <div class="d-subject">Subject: <span>Service interruption — Microsoft 365 authentication [INC-2847]</span></div>
+          <div class="d-body">Sarah,<br><br>We're writing to notify you of an ongoing service interruption affecting Microsoft 365 authentication across your environment. Our team identified the issue at 09:14 UTC and is actively working with Microsoft's engineering team.<br><br>Current status: Authentication services degraded. Users may be unable to sign in to Microsoft 365 applications.<span class="d-cursor"></span></div>
+        </div>
+
+        <!-- Scene 2: Review & Approve -->
+        <div class="demo-scene" id="demo-scene-2">
+          <div style="font-size:14px;font-weight:600;color:var(--white);margin-bottom:5px;">3 personalised drafts ready for review</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.38);margin-bottom:16px;">Each message is calibrated for the recipient's role, technical knowledge, and preferred communication style.</div>
+          <div class="d-review-grid">
+            <div class="d-card">
+              <div class="d-card-head"><div class="d-av" style="background:#3B7FEA;">SC</div><div><div class="d-card-name">Sarah Chen</div><div class="d-card-role">CTO, Nexus Financial</div></div></div>
+              <div class="d-tone">Executive briefing</div>
+              <div class="d-preview">"We're writing to notify you of an ongoing service interruption affecting Microsoft 365 authentication. Our team identified the issue at 09:14 UTC…"</div>
+            </div>
+            <div class="d-card">
+              <div class="d-card-head"><div class="d-av" style="background:#7C3AED;">TB</div><div><div class="d-card-name">Tom Bradley</div><div class="d-card-role">IT Manager, Nexus Financial</div></div></div>
+              <div class="d-tone">Technical detail</div>
+              <div class="d-preview">"Azure AD auth endpoint responding with 503 errors. Tracking MS365 incident INC-2847. Workaround: legacy auth temporarily re-enabled on affected tenants…"</div>
+            </div>
+            <div class="d-card">
+              <div class="d-card-head"><div class="d-av" style="background:#0CA5D8;">MH</div><div><div class="d-card-name">Mark Harris</div><div class="d-card-role">Finance Director, Nexus Financial</div></div></div>
+              <div class="d-tone">Business impact</div>
+              <div class="d-preview">"A temporary Microsoft 365 issue is affecting staff login. Your team may have limited access to email and Office apps. We're working to restore full service…"</div>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:center;">
+            <div class="d-send"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Approve &amp; send all 3 communications</div>
+          </div>
+        </div>
+
+        <!-- Scene 3: Delivered -->
+        <div class="demo-scene" id="demo-scene-3">
+          <div class="d-success-head">
+            <div class="d-success-icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div><div class="d-success-title">Communications delivered</div><div class="d-success-sub">09:16 UTC — 2 minutes after incident detection</div></div>
+          </div>
+          <div class="d-rows">
+            <div class="d-row"><div class="d-av" style="background:#3B7FEA;">SC</div><div class="d-row-info"><div class="d-row-name">Sarah Chen</div><div class="d-row-role">CTO · Nexus Financial</div></div><div class="d-row-status"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Delivered 09:16 · Email + Teams</div></div>
+            <div class="d-row"><div class="d-av" style="background:#7C3AED;">TB</div><div class="d-row-info"><div class="d-row-name">Tom Bradley</div><div class="d-row-role">IT Manager · Nexus Financial</div></div><div class="d-row-status"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Delivered 09:16 · Email</div></div>
+            <div class="d-row"><div class="d-av" style="background:#0CA5D8;">MH</div><div class="d-row-info"><div class="d-row-name">Mark Harris</div><div class="d-row-role">Finance Director · Nexus Financial</div></div><div class="d-row-status"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Delivered 09:17 · Email + SMS</div></div>
+          </div>
+          <div class="d-next"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Next holding update: <strong>09:45 UTC</strong> — Composure will auto-draft and notify your team for approval</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA BANNER -->
 <section class="cta-banner">
   <div class="container" style="position:relative;z-index:1;">
@@ -326,6 +499,32 @@
   });
   var initial=(location.hash||'').replace('#','');
   if(!initial||!show(initial))show('incident');
+})();
+</script>
+<script>
+(function(){
+  var btns=document.querySelectorAll('.demo-step-btn');
+  var scenes=document.querySelectorAll('.demo-scene');
+  var bar=document.getElementById('demoProgress');
+  if(!btns.length||!bar)return;
+  var cur=0,timer=null,dur=5000;
+  function goTo(n){
+    btns[cur].classList.remove('active');
+    scenes[cur].classList.remove('active');
+    cur=n%btns.length;
+    btns[cur].classList.add('active');
+    scenes[cur].classList.add('active');
+    bar.style.transition='none';
+    bar.style.width='0%';
+    requestAnimationFrame(function(){requestAnimationFrame(function(){
+      bar.style.transition='width '+dur+'ms linear';
+      bar.style.width='100%';
+    });});
+    clearTimeout(timer);
+    timer=setTimeout(function(){goTo((cur+1)%btns.length);},dur);
+  }
+  btns.forEach(function(b,i){b.addEventListener('click',function(){goTo(i);});});
+  goTo(0);
 })();
 </script>
 </body>
