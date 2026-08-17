@@ -3002,3 +3002,36 @@ body.theme-dark::after{
 .theme-dark .form-input, .theme-dark .form-select, .theme-dark .form-textarea{ background:rgba(255,255,255,0.06) !important; border:1px solid rgba(120,170,255,0.20) !important; color:#EAF2FF !important; }
 .theme-dark .form-input::placeholder, .theme-dark .form-textarea::placeholder{ color:rgba(255,255,255,0.40) !important; }
 .theme-dark label, .theme-dark .form-label{ color:rgba(255,255,255,0.72) !important; }
+
+/* ============================================================
+   Light "glossy" theme  (opt-in via <body class="theme-light">)
+   Continuous soft-white background, glossy cards, sky+green accents.
+   ============================================================ */
+body.theme-light{ background:#EEF4FC; color:var(--text-body); }
+body.theme-light::before{
+  content:''; position:fixed; inset:0; z-index:0; pointer-events:none;
+  background:
+    radial-gradient(55% 45% at 10% 2%, rgba(84,161,255,0.16), transparent 60%),
+    radial-gradient(52% 44% at 92% 10%, rgba(101,214,160,0.14), transparent 62%),
+    radial-gradient(60% 50% at 50% 106%, rgba(84,161,255,0.10), transparent 60%);
+}
+.theme-light .nav, .theme-light .page-hero, .theme-light section, .theme-light footer{ position:relative; z-index:1; }
+/* one continuous background */
+.theme-light section, .theme-light .page-hero{ background:transparent !important; }
+/* dark sections flip to light */
+.theme-light .section-dark h2, .theme-light .section-dark h3, .theme-light .section-dark h4{ color:var(--navy) !important; }
+.theme-light .section-dark p{ color:var(--text-muted) !important; }
+/* light hero: saturated brand-gradient headline that reads on white */
+.theme-light .page-hero h1{ background:linear-gradient(100deg,#2E6FE0 0%,#3A93C9 46%,#2FA877 100%) !important; -webkit-background-clip:text !important; background-clip:text !important; -webkit-text-fill-color:transparent !important; }
+.theme-light .page-hero p{ color:var(--text-muted) !important; }
+/* glossy white cards */
+.theme-light .feature-card, .theme-light .card, .theme-light .feature-list-item, .theme-light .value-item, .theme-light .feat-card, .theme-light .tutorial-card{
+  background:linear-gradient(180deg,#FFFFFF,#FAFCFF) !important;
+  border:1px solid rgba(255,255,255,0.9) !important;
+  box-shadow:0 12px 30px rgba(13,47,79,0.08), 0 2px 6px rgba(13,47,79,0.04), inset 0 1px 0 rgba(255,255,255,0.9) !important;
+}
+.theme-light .feature-card:hover, .theme-light .card:hover, .theme-light .feature-list-item:hover, .theme-light .feat-card:hover, .theme-light .tutorial-card:hover{
+  transform:translateY(-4px);
+  box-shadow:0 22px 46px rgba(59,127,234,0.15), 0 2px 8px rgba(13,47,79,0.05) !important;
+  border-color:rgba(89,161,255,0.35) !important;
+}
