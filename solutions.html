@@ -70,13 +70,13 @@
 @media(max-width:900px){.sol-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:600px){.sol-grid{grid-template-columns:1fr;}.sol-more{max-height:none;opacity:1;margin-top:var(--sp-4);}.sol-hint{display:none;}}
     /* ── Product Demo ───────────────────────────────────── */
-    .demo-section{background:var(--navy);padding:var(--sp-20) 0;position:relative;overflow:hidden;}
-    .demo-section::before{content:'';position:absolute;top:-150px;left:50%;transform:translateX(-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(59,127,234,0.07) 0%,transparent 68%);pointer-events:none;}
-    .demo-section .section-header h2{color:var(--white);}
-    .demo-section .section-header p{color:rgba(255,255,255,0.55);}
+    .demo-section{background:linear-gradient(160deg,#E4F0FF 0%,#D0E5FF 100%);padding:var(--sp-20) 0;position:relative;overflow:hidden;}
+    .demo-section::before{content:'';position:absolute;top:-150px;left:50%;transform:translateX(-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(59,127,234,0.10) 0%,transparent 68%);pointer-events:none;}
+    .demo-section .section-header h2{color:var(--navy);}
+    .demo-section .section-header p{color:var(--text-muted);}
     .demo-steps{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:var(--sp-8);}
-    .demo-step-btn{padding:8px 20px;border-radius:100px;border:1px solid rgba(255,255,255,0.14);background:transparent;color:rgba(255,255,255,0.45);font-size:var(--text-sm);font-weight:500;cursor:pointer;transition:var(--transition);font-family:var(--font);}
-    .demo-step-btn:hover{border-color:rgba(255,255,255,0.35);color:rgba(255,255,255,0.75);}
+    .demo-step-btn{padding:8px 20px;border-radius:100px;border:1px solid rgba(13,47,79,0.16);background:rgba(255,255,255,0.5);color:var(--text-muted);font-size:var(--text-sm);font-weight:500;cursor:pointer;transition:var(--transition);font-family:var(--font);}
+    .demo-step-btn:hover{border-color:rgba(13,47,79,0.32);color:var(--navy);}
     .demo-step-btn.active{background:var(--accent);border-color:var(--accent);color:var(--white);}
     .demo-window{max-width:880px;margin:0 auto;background:#111d2e;border-radius:16px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,0.5),0 0 0 1px rgba(255,255,255,0.06);}
     .demo-titlebar{display:flex;align-items:center;gap:12px;padding:12px 20px;background:#0d1824;border-bottom:1px solid rgba(255,255,255,0.06);}
