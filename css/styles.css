@@ -2899,3 +2899,52 @@ p { line-height: 1.7; }
     gap: var(--sp-6);
   }
 }
+
+/* ============================================================
+   Dark "electric" theme  (opt-in via <body class="theme-dark">)
+   Continuous dark background, glass cards, neon accents.
+   ============================================================ */
+body.theme-dark{ background:#060A14; color:rgba(255,255,255,0.72); }
+body.theme-dark::before{
+  content:''; position:fixed; inset:0; z-index:0; pointer-events:none;
+  background:
+    radial-gradient(55% 45% at 12% 6%, rgba(59,127,234,0.20), transparent 60%),
+    radial-gradient(48% 40% at 88% 16%, rgba(122,90,255,0.15), transparent 60%),
+    radial-gradient(60% 50% at 50% 108%, rgba(38,205,178,0.12), transparent 60%);
+}
+body.theme-dark::after{
+  content:''; position:fixed; inset:-60%; z-index:0; pointer-events:none;
+  background:conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(89,161,255,0.05) 10deg, transparent 26deg, transparent 70deg, rgba(122,90,255,0.045) 84deg, transparent 100deg, transparent 190deg, rgba(38,205,178,0.045) 208deg, transparent 226deg, transparent 300deg, rgba(89,161,255,0.045) 320deg, transparent 338deg);
+  animation:rayDrift 75s linear infinite;
+}
+@keyframes rayDrift{ to{ transform:rotate(360deg); } }
+/* keep content above the ambient layers */
+.theme-dark .nav, .theme-dark .page-hero, .theme-dark section, .theme-dark footer{ position:relative; z-index:1; }
+/* one continuous background: strip section fills */
+.theme-dark section{ background:transparent !important; }
+/* light typography */
+.theme-dark h1, .theme-dark h2, .theme-dark h3, .theme-dark h4, .theme-dark h5{ color:#EAF2FF !important; }
+.theme-dark p{ color:rgba(255,255,255,0.58) !important; }
+.theme-dark strong{ color:#EAF2FF; }
+/* glowing eyebrow + badges */
+.theme-dark .eyebrow-tag{ background:rgba(59,127,234,0.14) !important; border:1px solid rgba(89,161,255,0.45) !important; color:#8FC0FF !important; box-shadow:0 0 22px rgba(59,127,234,0.28); }
+.theme-dark .security-badge{ background:rgba(255,255,255,0.05) !important; border:1px solid rgba(120,170,255,0.32) !important; color:rgba(222,236,255,0.92) !important; box-shadow:0 0 18px rgba(59,127,234,0.20); }
+/* glass cards */
+.theme-dark .feature-card, .theme-dark .card, .theme-dark .feature-list-item, .theme-dark .value-item, .theme-dark .tutorial-card{
+  background:rgba(255,255,255,0.035) !important;
+  border:1px solid rgba(120,170,255,0.14) !important;
+  border-radius:16px !important;
+  -webkit-backdrop-filter:blur(10px); backdrop-filter:blur(10px);
+  box-shadow:0 12px 40px rgba(0,0,0,0.32);
+}
+.theme-dark .feature-card:hover, .theme-dark .card:hover, .theme-dark .feature-list-item:hover, .theme-dark .tutorial-card:hover{
+  transform:translateY(-5px); border-color:rgba(89,161,255,0.5) !important;
+  box-shadow:0 20px 54px rgba(59,127,234,0.22), 0 0 0 1px rgba(89,161,255,0.22) !important;
+}
+.theme-dark .feature-card h4, .theme-dark .card h4, .theme-dark .card h3, .theme-dark .feature-list-item h5, .theme-dark .value-item h5, .theme-dark .tutorial-card h3{ color:#EFF5FF !important; }
+/* neon icon chips */
+.theme-dark .feature-icon{ background:rgba(59,127,234,0.14) !important; border:1px solid rgba(89,161,255,0.45) !important; color:#8FC7FF !important; border-radius:12px !important; box-shadow:0 0 20px rgba(59,127,234,0.35), inset 0 0 12px rgba(89,161,255,0.12); }
+/* navy inline panels get an electric edge */
+.theme-dark div[style*="var(--navy)"]{ border:1px solid rgba(89,161,255,0.28) !important; box-shadow:0 0 46px rgba(59,127,234,0.16); }
+.theme-dark .btn-primary{ box-shadow:0 0 26px rgba(59,127,234,0.45) !important; }
+@media (prefers-reduced-motion: reduce){ body.theme-dark::after{ animation:none !important; } }
