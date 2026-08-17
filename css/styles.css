@@ -2921,7 +2921,7 @@ p { line-height: 1.7; }
 /* keep content above the ambient layers */
 .theme-dark .nav, .theme-dark .page-hero, .theme-dark section, .theme-dark footer{ position:relative; z-index:1; }
 /* one continuous background: strip section fills */
-.theme-dark section{ background:transparent !important; }
+.theme-dark section:not(.hero){ background:transparent !important; }
 /* light typography */
 .theme-dark h1, .theme-dark h2, .theme-dark h3, .theme-dark h4, .theme-dark h5{ color:#EAF2FF !important; }
 .theme-dark p{ color:rgba(255,255,255,0.58) !important; }
@@ -3017,7 +3017,7 @@ p { line-height: 1.7; }
 }
 .theme-light .nav, .theme-light .page-hero, .theme-light section, .theme-light footer{ position:relative; z-index:1; }
 /* one continuous background */
-.theme-light section, .theme-light .page-hero{ background:transparent !important; }
+.theme-light section:not(.hero):not(.section-dark):not(.section-futuristic), .theme-light .page-hero{ background:transparent !important; }
 /* dark sections flip to light */
 .theme-light .section-dark h2, .theme-light .section-dark h3, .theme-light .section-dark h4{ color:var(--navy) !important; }
 .theme-light .section-dark p{ color:var(--text-muted) !important; }
@@ -3051,3 +3051,9 @@ p { line-height: 1.7; }
 .theme-dark .nav:not(.scrolled) .btn-ghost{ color:rgba(255,255,255,0.82); }
 .theme-dark .nav:not(.scrolled) .theme-toggle{ color:rgba(255,255,255,0.8); border-color:rgba(255,255,255,0.30); }
 .theme-dark .nav:not(.scrolled) .theme-toggle:hover{ color:#fff; border-color:rgba(255,255,255,0.55); }
+
+/* mobile menu theme toggle */
+.mobile-theme-toggle{ display:flex; align-items:center; justify-content:center; gap:10px; width:100%; padding:13px; border-radius:var(--radius-full); border:1px solid var(--border); background:transparent; color:var(--navy); font-weight:600; font-size:var(--text-sm); cursor:pointer; margin-bottom:12px; }
+.mobile-theme-toggle .ic-sun, .mobile-theme-toggle .ic-moon, .mobile-theme-toggle .mtt-to-light, .mobile-theme-toggle .mtt-to-dark{ display:none; }
+.theme-dark .mobile-theme-toggle .ic-sun, .theme-dark .mobile-theme-toggle .mtt-to-light{ display:inline-flex; }
+.theme-light .mobile-theme-toggle .ic-moon, .theme-light .mobile-theme-toggle .mtt-to-dark{ display:inline-flex; }
