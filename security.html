@@ -9,6 +9,65 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
+  <style>
+    /* ===== Security page: futuristic electric theme (page-scoped) ===== */
+    body{ background:#060A14; color:rgba(255,255,255,0.72); }
+    body::before{
+      content:''; position:fixed; inset:0; z-index:0; pointer-events:none;
+      background:
+        radial-gradient(55% 45% at 12% 6%, rgba(59,127,234,0.22), transparent 60%),
+        radial-gradient(48% 40% at 88% 16%, rgba(122,90,255,0.16), transparent 60%),
+        radial-gradient(60% 50% at 50% 108%, rgba(38,205,178,0.13), transparent 60%);
+    }
+    .nav, .page-hero, .section, footer{ position:relative; z-index:1; }
+    .section, .section-alt, .section-dark, .page-hero{ background:transparent !important; }
+    /* headings + copy light */
+    h2, h3, h4, h5, .section-header h2{ color:#EAF2FF !important; }
+    .section p, .section-header p{ color:rgba(255,255,255,0.56) !important; }
+    /* glowing eyebrow pill */
+    .eyebrow-tag{ background:rgba(59,127,234,0.14) !important; border:1px solid rgba(89,161,255,0.45) !important; color:#8FC0FF !important; box-shadow:0 0 22px rgba(59,127,234,0.28); }
+    /* hero glass badges */
+    .security-badge{ background:rgba(255,255,255,0.05) !important; border:1px solid rgba(120,170,255,0.32) !important; color:rgba(222,236,255,0.92) !important; box-shadow:0 0 18px rgba(59,127,234,0.20); }
+    /* glassmorphic neon feature cards */
+    .feature-card{
+      background:rgba(255,255,255,0.035) !important;
+      border:1px solid rgba(120,170,255,0.14) !important;
+      border-radius:16px !important;
+      backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+      box-shadow:0 12px 40px rgba(0,0,0,0.35);
+      transition:transform .3s cubic-bezier(.16,1,.3,1), box-shadow .3s ease, border-color .3s ease;
+      position:relative; overflow:hidden;
+    }
+    .feature-card:hover{ transform:translateY(-5px); border-color:rgba(89,161,255,0.5) !important; box-shadow:0 20px 54px rgba(59,127,234,0.24), 0 0 0 1px rgba(89,161,255,0.25); }
+    .feature-card h4{ color:#EFF5FF !important; }
+    .feature-card p{ color:rgba(255,255,255,0.55) !important; }
+    /* neon glowing icon chips */
+    .feature-icon{
+      background:rgba(59,127,234,0.14) !important;
+      border:1px solid rgba(89,161,255,0.45) !important;
+      color:#8FC7FF !important;
+      border-radius:12px !important;
+      box-shadow:0 0 20px rgba(59,127,234,0.35), inset 0 0 12px rgba(89,161,255,0.12);
+      animation:secGlow 3.4s ease-in-out infinite;
+    }
+    .feature-card:nth-child(2) .feature-icon{ animation-delay:.5s; }
+    .feature-card:nth-child(3) .feature-icon{ animation-delay:1s; }
+    .feature-card:nth-child(4) .feature-icon{ animation-delay:1.5s; }
+    .feature-card:nth-child(5) .feature-icon{ animation-delay:2s; }
+    .feature-card:nth-child(6) .feature-icon{ animation-delay:2.5s; }
+    @keyframes secGlow{
+      0%,100%{ box-shadow:0 0 16px rgba(59,127,234,0.30), inset 0 0 10px rgba(89,161,255,0.10); }
+      50%{ box-shadow:0 0 30px rgba(89,161,255,0.60), inset 0 0 14px rgba(89,161,255,0.20); }
+    }
+    /* GDPR value items */
+    .value-item h5{ color:#EFF5FF !important; }
+    .value-item p{ color:rgba(255,255,255,0.55) !important; }
+    /* commitments / navy panels: add electric edge */
+    div[style*="var(--navy)"]{ border:1px solid rgba(89,161,255,0.28) !important; box-shadow:0 0 46px rgba(59,127,234,0.16); }
+    /* primary buttons glow */
+    .btn-primary{ box-shadow:0 0 26px rgba(59,127,234,0.45) !important; }
+    @media (prefers-reduced-motion: reduce){ .feature-icon{ animation:none; } }
+  </style>
 </head>
 <body>
 
