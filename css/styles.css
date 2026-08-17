@@ -3069,8 +3069,16 @@ p { line-height: 1.7; }
 /* hero headline stays dark in both themes (light video bg) */
 .theme-dark .hero-headline{ color:var(--navy) !important; }
 /* audience chat-bubble mockups render as designed (white card, dark text) in both themes */
-.theme-dark .card.aud-msg{ background:#fff !important; border:1px solid var(--border-light) !important; box-shadow:var(--shadow-card) !important; }
-.theme-dark .aud-msg [style*="background:var(--off-white)"]{ background:var(--off-white) !important; }
+.theme-dark .card.aud-msg{ background:rgba(255,255,255,0.05) !important; border:1px solid rgba(120,170,255,0.16) !important; box-shadow:0 12px 40px rgba(0,0,0,0.32) !important; }
+.theme-dark .aud-msg [style*="background:var(--off-white)"]{ background:rgba(255,255,255,0.06) !important; }
+.theme-dark .aud-msg [style*="color:var(--navy)"]{ color:#EFF5FF !important; }
+.theme-dark .aud-msg [style*="color:var(--text-muted)"]{ color:rgba(255,255,255,0.6) !important; }
+/* pricing business-case header/footer + homepage testimonials (dark mode) */
+.theme-dark .case-col-head, .theme-dark .case-foot{ background:rgba(255,255,255,0.05) !important; }
+.theme-dark .testimonial-card{ background:rgba(255,255,255,0.04) !important; border:1px solid rgba(120,170,255,0.14) !important; }
+.theme-dark .testimonial-quote{ color:#EAF2FF !important; }
+.theme-dark .testimonial-name{ color:#EAF2FF !important; }
+.theme-dark .testimonial-role{ color:rgba(255,255,255,0.6) !important; }
 
 /* ---- theme-aware footer (solid colour per theme, keep green accent bar) ---- */
 .theme-light .footer--slim{ background:#E3EDFA !important; }
