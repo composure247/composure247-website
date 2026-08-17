@@ -2990,3 +2990,9 @@ body.theme-dark::after{
 .theme-dark .bc-quote{ background:rgba(59,127,234,0.10) !important; border-color:rgba(89,161,255,0.24) !important; color:rgba(255,255,255,0.85) !important; }
 .theme-dark .cmpx-others-bg{ background:rgba(255,255,255,0.04) !important; border-color:rgba(120,170,255,0.14) !important; }
 .theme-dark .cmpx-th{ color:#EAF2FF !important; }
+
+/* ---- theme-dark: solutions cards + demo controls ---- */
+.theme-dark .sol-card{ background:rgba(255,255,255,0.04) !important; border-color:rgba(120,170,255,0.14) !important; }
+.theme-dark .demo-step-btn{ background:rgba(255,255,255,0.06) !important; border:1px solid rgba(120,170,255,0.20) !important; color:rgba(255,255,255,0.7) !important; }
+.theme-dark .demo-step-btn.active{ background:var(--accent) !important; border-color:var(--accent) !important; color:#fff !important; }
+.theme-dark .demo-section .section-header h2, .theme-dark .demo-section .section-header p{ color:inherit; }
