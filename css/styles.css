@@ -3082,3 +3082,11 @@ p { line-height: 1.7; }
 .theme-dark .footer--slim .footer-slim-social a{ color:rgba(255,255,255,0.55) !important; }
 .theme-dark .footer--slim .footer-slim-bottom{ border-top-color:rgba(255,255,255,0.12) !important; color:rgba(255,255,255,0.6) !important; }
 .theme-dark .footer--slim .footer-slim-legal a{ color:rgba(255,255,255,0.6) !important; }
+
+/* light mode: subtle drifting rays for depth (mirrors dark mode, lighter) */
+.theme-light body::after{
+  content:''; position:fixed; inset:-60%; z-index:0; pointer-events:none;
+  background:conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(84,161,255,0.055) 12deg, transparent 30deg, transparent 90deg, rgba(101,214,160,0.05) 108deg, transparent 128deg, transparent 210deg, rgba(84,161,255,0.05) 228deg, transparent 248deg, transparent 320deg, rgba(101,214,160,0.045) 338deg, transparent 356deg);
+  animation:rayDrift 90s linear infinite;
+}
+@media (prefers-reduced-motion: reduce){ .theme-light body::after{ animation:none !important; } }
