@@ -1997,19 +1997,25 @@ p { line-height: 1.7; }
 }
 
 .comparison-table td {
-  padding: var(--sp-4) var(--sp-6);
+  padding: 11px var(--sp-6);
   border-bottom: 1px solid var(--border-light);
   font-size: var(--text-sm);
   color: var(--text-body);
   vertical-align: middle;
 }
 
-.comparison-table tr:last-child td {
-  border-bottom: none;
+.comparison-table th:nth-child(n+2),
+.comparison-table td:nth-child(n+2) {
+  text-align: center;
 }
 
-.comparison-table tr:nth-child(even) td {
-  background: var(--off-white);
+.comparison-table .cmp-none {
+  color: var(--text-subtle);
+  font-weight: 500;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
 }
 
 .comparison-table tr:hover td {
