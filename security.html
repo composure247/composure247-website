@@ -59,8 +59,11 @@
       0%,100%{ box-shadow:0 0 16px rgba(59,127,234,0.30), inset 0 0 10px rgba(89,161,255,0.10); }
       50%{ box-shadow:0 0 30px rgba(89,161,255,0.60), inset 0 0 14px rgba(89,161,255,0.20); }
     }
-    /* GDPR value items -> glass so text shows */
-    .value-item{ background:rgba(255,255,255,0.035) !important; border:1px solid rgba(120,170,255,0.14) !important; border-radius:14px !important; padding:16px 20px !important; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); }
+    /* any white cards -> glass so text shows */
+    .value-item, .feature-list-item, .card{ background:rgba(255,255,255,0.035) !important; border:1px solid rgba(120,170,255,0.14) !important; border-radius:14px !important; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); }
+    .value-item{ padding:16px 20px !important; }
+    .feature-list-item h5, .card h5{ color:#EFF5FF !important; }
+    .feature-list-item p, .card p{ color:rgba(255,255,255,0.55) !important; }
     .value-item .feature-icon{ animation:none !important; }
     .value-item h5{ color:#EFF5FF !important; }
     .value-item p{ color:rgba(255,255,255,0.55) !important; }
