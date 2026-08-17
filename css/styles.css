@@ -2904,15 +2904,15 @@ p { line-height: 1.7; }
    Dark "electric" theme  (opt-in via <body class="theme-dark">)
    Continuous dark background, glass cards, neon accents.
    ============================================================ */
-body.theme-dark{ background:#060A14; color:rgba(255,255,255,0.72); }
-body.theme-dark::before{
+.theme-dark body{ background:#060A14; color:rgba(255,255,255,0.72); }
+.theme-dark body::before{
   content:''; position:fixed; inset:0; z-index:0; pointer-events:none;
   background:
     radial-gradient(55% 45% at 12% 6%, rgba(59,127,234,0.20), transparent 60%),
     radial-gradient(48% 40% at 88% 16%, rgba(122,90,255,0.15), transparent 60%),
     radial-gradient(60% 50% at 50% 108%, rgba(38,205,178,0.12), transparent 60%);
 }
-body.theme-dark::after{
+.theme-dark body::after{
   content:''; position:fixed; inset:-60%; z-index:0; pointer-events:none;
   background:conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(89,161,255,0.05) 10deg, transparent 26deg, transparent 70deg, rgba(122,90,255,0.045) 84deg, transparent 100deg, transparent 190deg, rgba(38,205,178,0.045) 208deg, transparent 226deg, transparent 300deg, rgba(89,161,255,0.045) 320deg, transparent 338deg);
   animation:rayDrift 75s linear infinite;
@@ -2947,7 +2947,7 @@ body.theme-dark::after{
 /* navy inline panels get an electric edge */
 .theme-dark div[style*="var(--navy)"]{ border:1px solid rgba(89,161,255,0.28) !important; box-shadow:0 0 46px rgba(59,127,234,0.16); }
 .theme-dark .btn-primary{ box-shadow:0 0 26px rgba(59,127,234,0.45) !important; }
-@media (prefers-reduced-motion: reduce){ body.theme-dark::after{ animation:none !important; } }
+@media (prefers-reduced-motion: reduce){ .theme-dark body::after{ animation:none !important; } }
 
 /* ---- theme-dark: bespoke page components ---- */
 /* inline light-fill boxes -> glass / tint */
@@ -3007,8 +3007,8 @@ body.theme-dark::after{
    Light "glossy" theme  (opt-in via <body class="theme-light">)
    Continuous soft-white background, glossy cards, sky+green accents.
    ============================================================ */
-body.theme-light{ background:#EEF4FC; color:var(--text-body); }
-body.theme-light::before{
+.theme-light body{ background:#EEF4FC; color:var(--text-body); }
+.theme-light body::before{
   content:''; position:fixed; inset:0; z-index:0; pointer-events:none;
   background:
     radial-gradient(55% 45% at 10% 2%, rgba(84,161,255,0.16), transparent 60%),
@@ -3035,3 +3035,19 @@ body.theme-light::before{
   box-shadow:0 22px 46px rgba(59,127,234,0.15), 0 2px 8px rgba(13,47,79,0.05) !important;
   border-color:rgba(89,161,255,0.35) !important;
 }
+
+/* ---- theme toggle button + theme-driven nav ---- */
+.theme-toggle{ display:inline-flex; align-items:center; justify-content:center; width:38px; height:38px; border-radius:50%; border:1px solid var(--border); background:transparent; color:var(--text-muted); cursor:pointer; transition:var(--transition); flex-shrink:0; }
+.theme-toggle:hover{ color:var(--navy); border-color:var(--border-strong); }
+.theme-toggle .ic-sun, .theme-toggle .ic-moon{ display:none; }
+.theme-dark .theme-toggle .ic-sun{ display:block; }
+.theme-light .theme-toggle .ic-moon{ display:block; }
+/* nav adapts to the active theme (replaces static data-dark-hero on themed pages) */
+.theme-dark .nav:not(.scrolled) .nav-logo{ color:#fff; }
+.theme-dark .nav:not(.scrolled) .nav-link{ color:rgba(255,255,255,0.82); }
+.theme-dark .nav:not(.scrolled) .nav-link:hover{ color:#fff; background:rgba(255,255,255,0.12); }
+.theme-dark .nav:not(.scrolled) .nav-link.active{ color:#fff; background:rgba(255,255,255,0.18); box-shadow:inset 0 0 0 1px rgba(255,255,255,0.28); }
+.theme-dark .nav:not(.scrolled) .btn-secondary{ color:#fff; border-color:rgba(255,255,255,0.45); }
+.theme-dark .nav:not(.scrolled) .btn-ghost{ color:rgba(255,255,255,0.82); }
+.theme-dark .nav:not(.scrolled) .theme-toggle{ color:rgba(255,255,255,0.8); border-color:rgba(255,255,255,0.30); }
+.theme-dark .nav:not(.scrolled) .theme-toggle:hover{ color:#fff; border-color:rgba(255,255,255,0.55); }

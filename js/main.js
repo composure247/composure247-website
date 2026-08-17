@@ -149,3 +149,13 @@
   });
 
 })();
+
+/* Light/dark theme toggle */
+document.addEventListener('click', function (e) {
+  var t = e.target.closest && e.target.closest('[data-theme-toggle]');
+  if (!t) return;
+  var h = document.documentElement, dark = h.classList.contains('theme-dark');
+  h.classList.remove('theme-dark', 'theme-light');
+  h.classList.add(dark ? 'theme-light' : 'theme-dark');
+  try { localStorage.setItem('composure-theme', dark ? 'light' : 'dark'); } catch (_) {}
+});

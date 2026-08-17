@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
+  <script>(function(){try{var t=localStorage.getItem("composure-theme")||"dark";document.documentElement.classList.add("theme-"+t);}catch(e){document.documentElement.classList.add("theme-dark");}})();</script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="How Composure compares to PagerDuty, Statuspage, ConnectWise, ServiceNow, and generic email tools, and why none of them were built for MSP client communication.">
   <title>Why Composure, Composure</title>
-  <link rel="stylesheet" href="css/styles.css?v=60">
+  <link rel="stylesheet" href="css/styles.css?v=61">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
@@ -59,10 +61,10 @@
     .cmpx-legend>span{margin-right:4px;}
 </style>
 </head>
-<body class="theme-dark">
+<body>
 
 <!-- NAV -->
-<nav class="nav" data-dark-hero>
+<nav class="nav">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo"><svg class="logo-mark" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Composure"><path d="M31.96 12.64 A13 13 0 1 0 31.96 29.36"/><line x1="19" y1="15.5" x2="19" y2="26.5"/><line x1="25" y1="15.5" x2="25" y2="26.5"/></svg>Composure</a>
     <div class="nav-links">
@@ -74,7 +76,7 @@
       <a href="about.html" class="nav-link">About</a>
       <a href="resources.html" class="nav-link">Resources</a>
     </div>
-    <div class="nav-actions">
+    <div class="nav-actions"><button class="theme-toggle" type="button" aria-label="Toggle light or dark mode" data-theme-toggle><svg class="ic-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="ic-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
       <a href="contact.html" class="btn btn-ghost btn-sm">Contact</a>
       <a href="start-trial.html" class="btn btn-secondary btn-sm">Free trial</a>
     </div>
