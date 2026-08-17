@@ -2996,3 +2996,9 @@ body.theme-dark::after{
 .theme-dark .demo-step-btn{ background:rgba(255,255,255,0.06) !important; border:1px solid rgba(120,170,255,0.20) !important; color:rgba(255,255,255,0.7) !important; }
 .theme-dark .demo-step-btn.active{ background:var(--accent) !important; border-color:var(--accent) !important; color:#fff !important; }
 .theme-dark .demo-section .section-header h2, .theme-dark .demo-section .section-header p{ color:inherit; }
+
+/* ---- theme-dark: forms + contact/audience cards ---- */
+.theme-dark .contact-form-card, .theme-dark .audience-card{ background:rgba(255,255,255,0.04) !important; border:1px solid rgba(120,170,255,0.14) !important; }
+.theme-dark .form-input, .theme-dark .form-select, .theme-dark .form-textarea{ background:rgba(255,255,255,0.06) !important; border:1px solid rgba(120,170,255,0.20) !important; color:#EAF2FF !important; }
+.theme-dark .form-input::placeholder, .theme-dark .form-textarea::placeholder{ color:rgba(255,255,255,0.40) !important; }
+.theme-dark label, .theme-dark .form-label{ color:rgba(255,255,255,0.72) !important; }
