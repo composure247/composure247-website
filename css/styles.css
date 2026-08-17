@@ -3057,3 +3057,6 @@ p { line-height: 1.7; }
 .mobile-theme-toggle .ic-sun, .mobile-theme-toggle .ic-moon, .mobile-theme-toggle .mtt-to-light, .mobile-theme-toggle .mtt-to-dark{ display:none; }
 .theme-dark .mobile-theme-toggle .ic-sun, .theme-dark .mobile-theme-toggle .mtt-to-light{ display:inline-flex; }
 .theme-light .mobile-theme-toggle .ic-moon, .theme-light .mobile-theme-toggle .mtt-to-dark{ display:inline-flex; }
+
+/* homepage hero: keep text as designed in both themes (video bg is always light) */
+.theme-dark .hero p, .theme-dark .hero .hero-sub, .theme-dark .hero li{ color:var(--text-muted) !important; }
