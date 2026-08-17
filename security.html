@@ -59,14 +59,45 @@
       0%,100%{ box-shadow:0 0 16px rgba(59,127,234,0.30), inset 0 0 10px rgba(89,161,255,0.10); }
       50%{ box-shadow:0 0 30px rgba(89,161,255,0.60), inset 0 0 14px rgba(89,161,255,0.20); }
     }
-    /* GDPR value items */
+    /* GDPR value items -> glass so text shows */
+    .value-item{ background:rgba(255,255,255,0.035) !important; border:1px solid rgba(120,170,255,0.14) !important; border-radius:14px !important; padding:16px 20px !important; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); }
+    .value-item .feature-icon{ animation:none !important; }
     .value-item h5{ color:#EFF5FF !important; }
     .value-item p{ color:rgba(255,255,255,0.55) !important; }
     /* commitments / navy panels: add electric edge */
     div[style*="var(--navy)"]{ border:1px solid rgba(89,161,255,0.28) !important; box-shadow:0 0 46px rgba(59,127,234,0.16); }
     /* primary buttons glow */
     .btn-primary{ box-shadow:0 0 26px rgba(59,127,234,0.45) !important; }
-    @media (prefers-reduced-motion: reduce){ .feature-icon{ animation:none; } }
+
+    /* ── slow drifting light rays ── */
+    body::after{
+      content:''; position:fixed; inset:-60%; z-index:0; pointer-events:none;
+      background:conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(89,161,255,0.06) 10deg, transparent 26deg, transparent 70deg, rgba(122,90,255,0.05) 84deg, transparent 100deg, transparent 190deg, rgba(38,205,178,0.05) 208deg, transparent 226deg, transparent 300deg, rgba(89,161,255,0.05) 320deg, transparent 338deg);
+      animation:rayDrift 75s linear infinite;
+    }
+    @keyframes rayDrift{ to{ transform:rotate(360deg); } }
+
+    /* ── hero glowing shield ── */
+    .sec-hero-shield{ position:relative; width:96px; height:96px; margin:0 auto var(--sp-5); border-radius:26px; display:flex; align-items:center; justify-content:center; color:#A6D2FF; background:radial-gradient(circle at 50% 34%, rgba(59,127,234,0.42), rgba(9,17,34,0.65)); border:1.5px solid rgba(89,161,255,0.6); box-shadow:0 0 50px rgba(59,127,234,0.55), inset 0 0 26px rgba(89,161,255,0.30); animation:shieldPulse 3.2s ease-in-out infinite; }
+    .sec-hero-shield svg{ width:46px; height:46px; filter:drop-shadow(0 0 8px rgba(130,185,255,0.85)); }
+    .sec-hero-shield::before{ content:''; position:absolute; inset:-11px; border-radius:34px; border:1px solid rgba(89,161,255,0.30); animation:ringPulse 3.2s ease-in-out infinite; }
+    @keyframes shieldPulse{ 0%,100%{ box-shadow:0 0 40px rgba(59,127,234,0.5), inset 0 0 20px rgba(89,161,255,0.25);} 50%{ box-shadow:0 0 68px rgba(89,161,255,0.85), inset 0 0 30px rgba(89,161,255,0.42);} }
+    @keyframes ringPulse{ 0%,100%{ transform:scale(1); opacity:0.55;} 50%{ transform:scale(1.09); opacity:0.12;} }
+
+    /* ── vertical security stepper ── */
+    .sec-steps{ position:relative; max-width:720px; margin:var(--sp-6) auto 0; display:flex; flex-direction:column; gap:24px; }
+    .sec-steps::before{ content:''; position:absolute; left:29px; top:34px; bottom:34px; width:2px; background:linear-gradient(180deg, rgba(89,161,255,0.65), rgba(89,161,255,0.12)); box-shadow:0 0 14px rgba(59,127,234,0.7); }
+    .sec-step{ position:relative; display:flex; gap:22px; align-items:center; }
+    .sec-node{ position:relative; z-index:1; width:60px; height:60px; flex-shrink:0; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#9FD0FF; background:radial-gradient(circle at 50% 38%, rgba(59,127,234,0.38), rgba(9,17,34,0.92)); border:1.5px solid rgba(89,161,255,0.6); box-shadow:0 0 24px rgba(59,127,234,0.55), inset 0 0 14px rgba(89,161,255,0.22); animation:secGlow 3.4s ease-in-out infinite; }
+    .sec-node svg{ width:24px; height:24px; }
+    .sec-step:nth-child(2) .sec-node{ animation-delay:.5s; } .sec-step:nth-child(3) .sec-node{ animation-delay:1s; } .sec-step:nth-child(4) .sec-node{ animation-delay:1.5s; } .sec-step:nth-child(5) .sec-node{ animation-delay:2s; } .sec-step:nth-child(6) .sec-node{ animation-delay:2.5s; }
+    .sec-step-card{ flex:1; background:rgba(255,255,255,0.04); border:1px solid rgba(120,170,255,0.16); border-radius:14px; padding:16px 22px; backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); box-shadow:0 10px 30px rgba(0,0,0,0.35); transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+    .sec-step:hover .sec-step-card{ transform:translateX(5px); border-color:rgba(89,161,255,0.5); box-shadow:0 0 0 1px rgba(89,161,255,0.25), 0 16px 42px rgba(59,127,234,0.22); }
+    .sec-step-card h4{ color:#EFF5FF !important; margin:0 0 4px; font-size:var(--text-base); }
+    .sec-step-card p{ color:rgba(255,255,255,0.58) !important; font-size:var(--text-sm); margin:0; line-height:1.6; }
+    @media (max-width:600px){ .sec-step-card{ padding:14px 16px; } .sec-steps::before{ left:27px; } .sec-node{ width:52px; height:52px; } }
+
+    @media (prefers-reduced-motion: reduce){ .feature-icon, .sec-node, .sec-hero-shield, .sec-hero-shield::before, body::after{ animation:none !important; } }
   </style>
 </head>
 <body>
@@ -101,6 +132,7 @@
 <!-- PAGE HERO -->
 <section class="page-hero">
   <div class="container" style="position:relative;z-index:1;">
+    <div class="sec-hero-shield"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11.5 14.5 16 9.5"/></svg></div>
     <div class="eyebrow-tag" style="display:inline-flex;margin-bottom:var(--sp-3);">Security &amp; trust</div>
     <h1>Security built for the MSP environment</h1>
     <p>Composure handles sensitive client communications and service data. We take that responsibility seriously, with enterprise-grade security, UK and EU data residency, and governance controls designed for professional MSP operations.</p>
@@ -121,53 +153,30 @@
       <p>We understand that MSPs handle sensitive client information and that data residency matters to both you and your clients. Composure is built on infrastructure entirely within the UK and EU.</p>
     </div>
 
-    <div class="grid-3" style="gap:var(--sp-5);">
-      <div class="feature-card fade-up stagger-1">
-        <div class="feature-icon" style="margin-bottom:var(--sp-4);">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-        </div>
-        <h4 style="margin-bottom:var(--sp-2);">UK &amp; EU data residency</h4>
-        <p style="font-size:var(--text-sm);color:var(--text-muted);">All customer data is stored and processed exclusively in certified UK and EU data centres. No data is transferred to or stored in any jurisdiction outside the EEA.</p>
+    <div class="sec-steps">
+      <div class="sec-step fade-up">
+        <div class="sec-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+        <div class="sec-step-card"><h4>UK &amp; EU data residency</h4><p>All customer data is stored and processed exclusively in certified UK and EU data centres. No data is transferred to or stored in any jurisdiction outside the EEA.</p></div>
       </div>
-
-      <div class="feature-card fade-up stagger-2">
-        <div class="feature-icon" style="margin-bottom:var(--sp-4);">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-        </div>
-        <h4 style="margin-bottom:var(--sp-2);">Encryption at rest</h4>
-        <p style="font-size:var(--text-sm);color:var(--text-muted);">All data stored by Composure is encrypted at rest using AES-256 encryption. Database encryption, file storage encryption, and backup encryption are all applied consistently.</p>
+      <div class="sec-step fade-up">
+        <div class="sec-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <div class="sec-step-card"><h4>Encryption at rest</h4><p>All data stored by Composure is encrypted at rest using AES-256 encryption. Database, file storage, and backup encryption are all applied consistently.</p></div>
       </div>
-
-      <div class="feature-card fade-up stagger-3">
-        <div class="feature-icon" style="margin-bottom:var(--sp-4);">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-        </div>
-        <h4 style="margin-bottom:var(--sp-2);">Encryption in transit</h4>
-        <p style="font-size:var(--text-sm);color:var(--text-muted);">All data transferred between Composure and your browsers, our APIs, and delivery channels is protected by TLS 1.3. We enforce HTTPS across all endpoints.</p>
+      <div class="sec-step fade-up">
+        <div class="sec-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <div class="sec-step-card"><h4>Encryption in transit</h4><p>All data transferred between Composure and your browsers, our APIs, and delivery channels is protected by TLS 1.3. We enforce HTTPS across all endpoints.</p></div>
       </div>
-
-      <div class="feature-card fade-up stagger-1">
-        <div class="feature-icon" style="margin-bottom:var(--sp-4);">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="23 11 17 17 14 14"/></svg>
-        </div>
-        <h4 style="margin-bottom:var(--sp-2);">Role-based access control</h4>
-        <p style="font-size:var(--text-sm);color:var(--text-muted);">Granular role-based access controls ensure that team members can only access the data and functionality their role requires. Permissions are configurable per user.</p>
+      <div class="sec-step fade-up">
+        <div class="sec-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><polyline points="23 11 17 17 14 14"/></svg></div>
+        <div class="sec-step-card"><h4>Role-based access control</h4><p>Granular role-based access controls ensure team members can only access the data and functionality their role requires. Permissions are configurable per user.</p></div>
       </div>
-
-      <div class="feature-card fade-up stagger-2">
-        <div class="feature-icon" style="margin-bottom:var(--sp-4);">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-        </div>
-        <h4 style="margin-bottom:var(--sp-2);">Multi-factor authentication</h4>
-        <p style="font-size:var(--text-sm);color:var(--text-muted);">Multi-factor authentication is available and strongly recommended for all Composure accounts. Admins can enforce MFA for all users within their organisation.</p>
+      <div class="sec-step fade-up">
+        <div class="sec-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg></div>
+        <div class="sec-step-card"><h4>Multi-factor authentication</h4><p>Multi-factor authentication is available and strongly recommended for all accounts. Admins can enforce MFA for all users within their organisation.</p></div>
       </div>
-
-      <div class="feature-card fade-up stagger-3">
-        <div class="feature-icon" style="margin-bottom:var(--sp-4);">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-        </div>
-        <h4 style="margin-bottom:var(--sp-2);">Immutable audit logging</h4>
-        <p style="font-size:var(--text-sm);color:var(--text-muted);">Every action taken within Composure, communications sent, edits made, approvals given, logins performed, is recorded in an immutable audit log. Retained for a minimum of 12 months.</p>
+      <div class="sec-step fade-up">
+        <div class="sec-node"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+        <div class="sec-step-card"><h4>Immutable audit logging</h4><p>Every action, communications sent, edits made, approvals given, logins performed, is recorded in an immutable audit log. Retained for a minimum of 12 months.</p></div>
       </div>
     </div>
   </div>
