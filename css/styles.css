@@ -1235,8 +1235,8 @@ p { line-height: 1.7; }
 }
 .audience-hero .aud-hint { display: none; }
 .audience-hero .aud-msg.card {
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.05) !important;
+  border: 1px solid rgba(255,255,255,0.12) !important;
   box-shadow: none;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
