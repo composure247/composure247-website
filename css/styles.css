@@ -707,36 +707,75 @@ p { line-height: 1.7; }
 }
 
 /* ---- Green video hero (full-bleed video, devices right, text left) ---- */
-.hero--green-video {
-  min-height: 640px;
-  display: flex;
-  align-items: center;
+/* ---- Split-screen hero: text half left, feathered video half right ---- */
+.hero--splitscreen {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;   /* split shifted left, video wider */
+  min-height: 460px;
   position: relative;
   overflow: hidden;
-  background: #CFE8BF;
+  /* shared background so the feathered video blends into the text side */
+  background:
+    radial-gradient(680px 420px at 16% 82%, rgba(139,209,158,0.16), transparent 64%),
+    linear-gradient(120deg, #EAF2FC 0%, #F2F7FB 58%, #EAF6EE 100%);
 }
-.hero-bg-video {
+.hero-split-text {
+  display: flex;
+  align-items: center;
+  padding-block: var(--sp-6);
+  padding-left: max(var(--sp-8), calc((100vw - var(--container-wide)) / 2 + var(--sp-6)));
+  padding-right: var(--sp-10);
+  background: transparent;
+  position: relative;
+  z-index: 2;
+}
+.hero-split-text .hero-content { max-width: 520px; }
+.hero-split-text .hero-headline { font-size: clamp(2rem, 3.4vw, 2.9rem); margin: var(--sp-3) 0 var(--sp-4); }
+.hero-split-text .hero-sub { margin-bottom: var(--sp-5); }
+.hero-split-media {
+  position: relative;
+  overflow: hidden;
+  /* pull the video slightly left so it tucks under the feathered seam */
+  margin-left: -3%;
+}
+.hero-split-media .hero-video {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: right center;
-  z-index: 0;
+  object-position: 68% center;
+  /* feather left edge (and softly top/bottom) so it melts into the page */
+  -webkit-mask-image:
+    linear-gradient(90deg, transparent 0%, rgba(0,0,0,1) 22%),
+    linear-gradient(180deg, transparent 0%, rgba(0,0,0,1) 8%, rgba(0,0,0,1) 92%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image:
+    linear-gradient(90deg, transparent 0%, rgba(0,0,0,1) 22%),
+    linear-gradient(180deg, transparent 0%, rgba(0,0,0,1) 8%, rgba(0,0,0,1) 92%, transparent 100%);
+  mask-composite: intersect;
 }
-/* light left area only, so the headline stays readable (no edge blend) */
-.hero--green-video::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(240,247,243,0.88) 0%, rgba(240,247,243,0.5) 28%, rgba(240,247,243,0) 54%);
-  z-index: 1;
-  pointer-events: none;
+.theme-dark .hero--splitscreen {
+  background:
+    radial-gradient(680px 420px at 16% 82%, rgba(59,127,234,0.18), transparent 64%),
+    linear-gradient(120deg, #0C1A2B 0%, #0F2438 58%, #0C1A2B 100%);
 }
-.hero--green-video .container { position: relative; z-index: 2; width: 100%; }
-.hero--green-video .hero-layout { grid-template-columns: 1fr; }
-.hero--green-video .hero-visual { display: none; }
-.hero--green-video .hero-content { max-width: 600px; }
+@media (max-width: 900px) {
+  .hero--splitscreen { grid-template-columns: 1fr; }
+  .hero-split-media { order: -1; min-height: 260px; margin-left: 0; }
+  .hero-split-media .hero-video {
+    object-position: center;
+    -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 82%, transparent 100%);
+    mask-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 82%, transparent 100%);
+  }
+  .hero-split-text {
+    padding: var(--sp-10) var(--sp-6);
+    text-align: center;
+    justify-content: center;
+  }
+  .hero-split-text .hero-ctas,
+  .hero-split-text .hero-note { justify-content: center; }
+}
 
 /* ---- Full-bleed image hero (Altera-style) ---- */
 .hero--image {
