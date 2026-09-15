@@ -1,0 +1,34 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git init *)",
+      "Bash(git remote *)",
+      "Bash(git fetch *)",
+      "Bash(git ls-tree *)",
+      "Bash(git reset *)",
+      "Bash(git checkout *)",
+      "Bash(git push *)",
+      "Bash(gh auth *)",
+      "Read(//Users/chloea/.ssh/**)",
+      "Bash(ssh -T -o StrictHostKeyChecking=no -o ConnectTimeout=5 git@github.com)",
+      "Bash(npm install *)",
+      "Bash(vercel --version)",
+      "Bash(vercel whoami *)",
+      "Bash(vercel project *)",
+      "Bash(grep -viE \"telemetry|roadmap|opt-out|visiting|NOTE|learn more|^>|^$|Vercel CLI 54\")",
+      "Bash(echo \"EXIT:$?\")",
+      "Bash(VERCEL_TELEMETRY_DISABLED=1 vercel login)",
+      "Bash(VERCEL_TELEMETRY_DISABLED=1 vercel whoami)",
+      "Bash(grep -viE \"telemetry|roadmap|opt-out|visiting|NOTE|learn more|^>|Vercel CLI|Node.js|^\\\\s*$\")",
+      "Bash(VERCEL_TELEMETRY_DISABLED=1 vercel project ls)",
+      "Bash(VERCEL_TELEMETRY_DISABLED=1 vercel link --yes --project composure247-website)",
+      "Bash(VERCEL_TELEMETRY_DISABLED=1 vercel project inspect composure247-website)",
+      "Bash(VERCEL_TELEMETRY_DISABLED=1 vercel git connect)",
+      "Bash(VERCEL_TELEMETRY_DISABLED=1 vercel git connect https://github.com/composure247/composure247-website)",
+      "Bash(VERCEL_TELEMETRY_DISABLED=1 vercel ls composure247-website)",
+      "Bash(git commit *)",
+      "Bash(VERCEL_TELEMETRY_DISABLED=1 vercel inspect https://composure247-website-keoucbnfi-composure247-9356s-projects.vercel.app)",
+      "Bash(git add *)"
+    ]
+  }
+}

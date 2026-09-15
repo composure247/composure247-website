@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
+  <script>(function(){try{var t=localStorage.getItem("composure-theme")||"light";document.documentElement.classList.add("theme-"+t);}catch(e){document.documentElement.classList.add("theme-light");}})();</script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="See how Composure solves the real communication challenges MSPs face every day — from major incidents to planned maintenance, post-incident reports to enterprise client management.">
-  <title>Solutions — Composure</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <meta name="description" content="See how Composure solves the real communication challenges MSPs face every day, from major incidents to planned maintenance, post-incident reports to enterprise client management.">
+  <title>Solutions, Composure</title>
+  <link rel="stylesheet" href="css/styles.css?v=69">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
 </head>
 <body>
 
 <!-- NAV -->
-<nav class="nav" data-dark-hero>
+<nav class="nav">
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo"><img src="images/logo.png" alt="Composure" class="nav-logo-img">Composure</a>
+    <a href="index.html" class="nav-logo"><svg class="logo-mark" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Composure"><path d="M31.96 12.64 A13 13 0 1 0 31.96 29.36"/><line x1="19" y1="15.5" x2="19" y2="26.5"/><line x1="25" y1="15.5" x2="25" y2="26.5"/></svg>Composure</a>
     <div class="nav-links">
       <a href="features.html" class="nav-link">Features</a>
       <a href="solutions.html" class="nav-link active">Solutions</a>
@@ -24,199 +27,209 @@
       <a href="about.html" class="nav-link">About</a>
       <a href="resources.html" class="nav-link">Resources</a>
     </div>
-    <div class="nav-actions">
+    <div class="nav-actions"><button class="theme-toggle" type="button" aria-label="Toggle light or dark mode" data-theme-toggle><svg class="ic-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="ic-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
       <a href="contact.html" class="btn btn-ghost btn-sm">Contact</a>
       <a href="start-trial.html" class="btn btn-secondary btn-sm">Free trial</a>
-      <a href="contact.html" class="btn btn-primary btn-sm">Book a demo</a>
     </div>
     <button class="nav-mobile-toggle" aria-label="Open menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
   </div>
 </nav>
 <div class="mobile-nav-overlay"></div>
 <div class="mobile-nav">
-  <div class="mobile-nav-header"><a href="index.html" class="nav-logo" style="font-size:1.1rem;"><img src="images/logo.png" alt="Composure" class="nav-logo-img">Composure</a><button class="mobile-nav-close btn btn-ghost" style="padding:8px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+  <div class="mobile-nav-header"><a href="index.html" class="nav-logo" style="font-size:1.1rem;"><svg class="logo-mark" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Composure"><path d="M31.96 12.64 A13 13 0 1 0 31.96 29.36"/><line x1="19" y1="15.5" x2="19" y2="26.5"/><line x1="25" y1="15.5" x2="25" y2="26.5"/></svg>Composure</a><button class="mobile-nav-close btn btn-ghost" style="padding:8px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
   <div class="mobile-nav-links"><a href="features.html" class="mobile-nav-link">Features</a><a href="solutions.html" class="mobile-nav-link">Solutions</a><a href="pricing.html" class="mobile-nav-link">Pricing</a><a href="comparison.html" class="mobile-nav-link">Why Composure</a><a href="security.html" class="mobile-nav-link">Security</a><a href="about.html" class="mobile-nav-link">About</a><a href="contact.html" class="mobile-nav-link">Contact</a></div>
-  <div class="mobile-nav-actions"><a href="contact.html" class="btn btn-primary" style="text-align:center;">Book a demo</a><a href="start-trial.html" class="btn btn-secondary" style="text-align:center;">Start free trial</a></div>
+  <div class="mobile-nav-actions"><button class="mobile-theme-toggle" type="button" aria-label="Toggle light or dark mode" data-theme-toggle><svg class="ic-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="ic-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span class="mtt-to-light">Light mode</span><span class="mtt-to-dark">Dark mode</span></button><a href="start-trial.html" class="btn btn-secondary" style="text-align:center;">Start free trial</a></div>
 </div>
 
 <!-- PAGE HERO -->
 <section class="page-hero">
   <div class="container" style="position:relative;z-index:1;">
     <div class="eyebrow-tag" style="display:inline-flex;margin-bottom:var(--sp-3);">Use cases and solutions</div>
-    <h1>Real MSP scenarios.<br>Solved by Composure.</h1>
-    <p>Every MSP faces the same communication challenges. Composure is built around those scenarios — so the solution is already there when you need it.</p>
-    <div style="display:flex;gap:var(--sp-4);justify-content:center;flex-wrap:wrap;">
-      <a href="contact.html" class="btn btn-white btn-lg">Book a demo</a>
-      <a href="start-trial.html" class="btn btn-outline-white btn-lg">Start free trial</a>
-    </div>
+    <h1 style="white-space:nowrap;">Real MSP scenarios. Solved by Composure.</h1>
+    <p>Every MSP faces the same communication challenges. Composure is built around those scenarios, so the solution is already there when you need it.</p>
   </div>
 </section>
 
 <!-- USE CASES -->
+<style>
+.sol-header{text-align:center;max-width:720px;margin:0 auto var(--sp-10);}
+.sol-header h2{color:var(--navy);}
+@media(max-width:820px){.page-hero h1{white-space:normal !important;}}
+.sol-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:38px var(--sp-6);align-items:start;}
+.sol-card{position:relative;background:var(--white);border:1px solid var(--border-light);border-radius:16px;padding:36px var(--sp-6) var(--sp-6);text-align:center;transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s ease,border-color .3s ease;cursor:pointer;}
+.sol-card:hover,.sol-card.is-open{transform:translateY(-4px);box-shadow:0 18px 40px rgba(13,47,79,0.12);border-color:rgba(59,127,234,0.28);z-index:2;}
+.sol-badge{position:absolute;top:-24px;left:50%;transform:translateX(-50%);width:52px;height:52px;border-radius:50%;background:var(--grad-accent);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;font-weight:700;box-shadow:0 10px 22px rgba(59,127,234,0.38);}
+.sol-card:nth-child(even) .sol-badge{background:var(--grad-green);box-shadow:0 10px 22px rgba(63,181,124,0.38);}
+.sol-card h3{font-size:var(--text-lg);color:var(--navy);margin:var(--sp-3) 0 var(--sp-2);line-height:1.25;}
+.sol-desc{font-size:var(--text-sm);color:var(--text-muted);line-height:1.6;margin:0;}
+.sol-hint{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:600;color:var(--accent);margin-top:var(--sp-4);max-height:24px;overflow:hidden;transition:max-height .3s ease,opacity .3s ease,margin .3s ease;}
+.sol-card:hover .sol-hint,.sol-card.is-open .sol-hint{max-height:0;opacity:0;margin-top:0;}
+.sol-more{max-height:0;overflow:hidden;opacity:0;text-align:left;transition:max-height .45s cubic-bezier(.16,1,.3,1),opacity .3s ease,margin .3s ease;}
+.sol-card:hover .sol-more,.sol-card.is-open .sol-more{max-height:600px;opacity:1;margin-top:var(--sp-4);}
+.sol-block{border-top:1px solid var(--border-light);padding-top:var(--sp-3);margin-top:var(--sp-3);}
+.sol-block:first-child{border-top:none;padding-top:0;margin-top:0;}
+.sol-block h5{font-size:10.5px;text-transform:uppercase;letter-spacing:.07em;color:var(--accent);font-weight:700;margin:0 0 4px;}
+.sol-card:nth-child(even) .sol-block h5{color:#2E9E6B;}
+.sol-block p{font-size:12.5px;color:var(--text-muted);line-height:1.6;margin:0;}
+@media(max-width:900px){.sol-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:600px){.sol-grid{grid-template-columns:1fr;}.sol-more{max-height:none;opacity:1;margin-top:var(--sp-4);}.sol-hint{display:none;}}
+    /* ── Product Demo ───────────────────────────────────── */
+    .demo-section{background:linear-gradient(160deg,#E4F0FF 0%,#D0E5FF 100%);padding:var(--sp-20) 0;position:relative;overflow:hidden;}
+    .demo-section::before{content:'';position:absolute;top:-150px;left:50%;transform:translateX(-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(59,127,234,0.10) 0%,transparent 68%);pointer-events:none;}
+    .demo-section .section-header{max-width:960px;}
+    .demo-section .section-header h2{color:var(--navy);}
+    .demo-section .section-header p{color:var(--text-muted);}
+    @media(max-width:820px){.demo-section .section-header h2{white-space:normal !important;}}
+    .demo-steps{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:var(--sp-8);}
+    .demo-step-btn{padding:8px 20px;border-radius:100px;border:1px solid rgba(13,47,79,0.16);background:rgba(255,255,255,0.5);color:var(--text-muted);font-size:var(--text-sm);font-weight:500;cursor:pointer;transition:var(--transition);font-family:var(--font);}
+    .demo-step-btn:hover{border-color:rgba(13,47,79,0.32);color:var(--navy);}
+    .demo-step-btn.active{background:var(--accent);border-color:var(--accent);color:var(--white);}
+    .demo-window{max-width:880px;margin:0 auto;background:#111d2e;border-radius:16px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,0.5),0 0 0 1px rgba(255,255,255,0.06);}
+    .demo-titlebar{display:flex;align-items:center;gap:12px;padding:12px 20px;background:#0d1824;border-bottom:1px solid rgba(255,255,255,0.06);}
+    .demo-dots{display:flex;gap:6px;}
+    .demo-dot{width:10px;height:10px;border-radius:50%;}
+    .demo-dot:nth-child(1){background:#FF5F57;} .demo-dot:nth-child(2){background:#FFBD2E;} .demo-dot:nth-child(3){background:#28CA41;}
+    .demo-url{flex:1;background:rgba(255,255,255,0.06);border-radius:6px;padding:5px 12px;font-size:11px;color:rgba(255,255,255,0.3);text-align:center;font-family:monospace;}
+    .demo-progress-track{height:3px;background:rgba(255,255,255,0.07);}
+    .demo-progress-fill{height:100%;background:var(--grad-accent);width:0%;transition:width linear;}
+    .demo-body{padding:28px;min-height:360px;}
+    .demo-scene{display:none;animation:dSceneIn 0.35s ease;}
+    .demo-scene.active{display:block;}
+    @keyframes dSceneIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+    /* scene 0 */
+    .d-badge{display:inline-flex;align-items:center;gap:8px;padding:5px 14px;background:rgba(239,68,68,0.14);border:1px solid rgba(239,68,68,0.28);border-radius:100px;color:#f87171;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-bottom:14px;}
+    .d-badge::before{content:'';width:7px;height:7px;border-radius:50%;background:#ef4444;animation:dPulse 1.4s infinite;}
+    @keyframes dPulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(1.5)}}
+    .d-incident-title{font-size:20px;font-weight:700;color:var(--white);margin-bottom:5px;}
+    .d-incident-meta{font-size:12px;color:rgba(255,255,255,0.38);margin-bottom:22px;}
+    .d-chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px;}
+    .d-chip{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;}
+    .d-ai-box{display:flex;align-items:center;gap:12px;padding:13px 16px;background:rgba(59,127,234,0.1);border:1px solid rgba(59,127,234,0.22);border-radius:10px;}
+    .d-spinner{width:17px;height:17px;border:2px solid rgba(59,127,234,0.28);border-top-color:var(--accent);border-radius:50%;animation:dSpin .75s linear infinite;flex-shrink:0;}
+    @keyframes dSpin{to{transform:rotate(360deg)}}
+    .d-ai-text{font-size:12px;color:rgba(255,255,255,0.65);} .d-ai-text strong{color:var(--white);display:block;margin-bottom:2px;font-size:13px;}
+    /* scene 1 */
+    .d-tabs{display:flex;gap:0;margin-bottom:18px;border-bottom:1px solid rgba(255,255,255,0.08);}
+    .d-tab{padding:8px 16px;font-size:12px;font-weight:600;color:rgba(255,255,255,0.38);border-bottom:2px solid transparent;margin-bottom:-1px;}
+    .d-tab.active{color:var(--accent);border-bottom-color:var(--accent);}
+    .d-tab .dtick{display:inline-flex;align-items:center;justify-content:center;width:13px;height:13px;background:#10b981;border-radius:50%;color:#fff;font-size:7px;margin-left:5px;}
+    .d-meta{font-size:11px;color:rgba(255,255,255,0.32);margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em;}
+    .d-subject{font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.07);}
+    .d-subject span{color:var(--white);font-weight:600;}
+    .d-body{font-size:13px;color:rgba(255,255,255,0.62);line-height:1.75;}
+    .d-cursor{display:inline-block;width:2px;height:13px;background:var(--accent);margin-left:1px;vertical-align:middle;animation:dBlink 1s step-end infinite;}
+    @keyframes dBlink{0%,100%{opacity:1}50%{opacity:0}}
+    /* scene 2 */
+    .d-review-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px;}
+    .d-card{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px;}
+    .d-card-head{display:flex;align-items:center;gap:9px;margin-bottom:9px;}
+    .d-av{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;flex-shrink:0;}
+    .d-card-name{font-size:12px;font-weight:600;color:var(--white);}
+    .d-card-role{font-size:10px;color:rgba(255,255,255,0.38);}
+    .d-tone{display:inline-block;padding:2px 7px;background:rgba(59,127,234,0.14);border-radius:4px;font-size:10px;color:var(--accent);font-weight:600;margin-bottom:7px;}
+    .d-preview{font-size:11px;color:rgba(255,255,255,0.42);line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+    .d-send{display:flex;align-items:center;justify-content:center;gap:8px;padding:11px 28px;background:var(--grad-accent);border-radius:8px;color:#fff;font-size:13px;font-weight:600;box-shadow:var(--shadow-accent);cursor:default;}
+    /* scene 3 */
+    .d-success-head{display:flex;align-items:center;gap:14px;margin-bottom:24px;}
+    .d-success-icon{width:46px;height:46px;background:rgba(16,185,129,0.14);border:1px solid rgba(16,185,129,0.28);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .d-success-title{font-size:18px;font-weight:700;color:var(--white);}
+    .d-success-sub{font-size:12px;color:rgba(255,255,255,0.38);}
+    .d-rows{display:flex;flex-direction:column;gap:9px;margin-bottom:18px;}
+    .d-row{display:flex;align-items:center;gap:12px;padding:11px 14px;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.06);border-radius:8px;}
+    .d-row-info{flex:1;}
+    .d-row-name{font-size:13px;font-weight:600;color:var(--white);}
+    .d-row-role{font-size:11px;color:rgba(255,255,255,0.38);}
+    .d-row-status{display:flex;align-items:center;gap:5px;font-size:11px;color:#34d399;font-weight:500;white-space:nowrap;}
+    .d-next{display:flex;align-items:center;gap:10px;padding:11px 14px;background:rgba(59,127,234,0.08);border:1px solid rgba(59,127,234,0.14);border-radius:8px;font-size:12px;color:rgba(255,255,255,0.55);}
+    .d-next strong{color:var(--white);}
+    @media(max-width:768px){.d-review-grid{grid-template-columns:1fr;}.demo-step-btn{font-size:11px;padding:6px 13px;}}
+</style>
 <section class="section">
   <div class="container">
+    <div class="sol-header fade-up">
+      <div class="eyebrow-tag" style="display:inline-flex;margin-bottom:var(--sp-3);">How MSPs use Composure</div>
+      <h2>Six scenarios Composure was built for</h2>
+      <p style="color:var(--text-muted);margin-top:var(--sp-2);font-size:var(--text-sm);">Hover any scenario to see the pain today and how Composure solves it.</p>
+    </div>
+    <div class="sol-grid fade-up">
 
-    <!-- UC 1 -->
-    <div class="use-case-card fade-up" style="margin-bottom:var(--sp-6);">
-      <div class="use-case-number">01</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-8);align-items:start;">
-        <div>
-          <h2 style="font-size:var(--text-2xl);margin-bottom:var(--sp-3);">Major incident response — P0 and P1</h2>
-          <p style="color:var(--text-muted);">A critical outage affects multiple clients. Engineers are working under pressure. The last thing anyone needs is to be writing client communications.</p>
-          <div class="use-case-meta">
-            <div class="use-case-meta-block">
-              <h5>The pain today</h5>
-              <p>Engineers are heads-down on resolution. Client communications are either not happening, or being written manually under extreme pressure — leading to delayed, inconsistent, and sometimes damaging updates.</p>
-            </div>
-            <div class="use-case-meta-block">
-              <h5>How Composure solves it</h5>
-              <p>The moment a P1 is raised, Composure drafts role-calibrated communications for every affected stakeholder, schedules proactive holding updates, and keeps Account Managers briefed — all without engineering involvement.</p>
-            </div>
-          </div>
-          <div class="use-case-impact">
-            <strong>Business impact:</strong> Engineers stay focused on resolution. Clients receive professional, timely updates. AMs are never caught off guard. Trust is preserved even during your hardest moments.
-          </div>
+      <div class="sol-card">
+        <div class="sol-badge">1</div>
+        <h3>Major incident response</h3>
+        <p class="sol-desc">A critical outage hits multiple clients while engineers work under pressure, exactly when nobody has time to write client updates.</p>
+        <span class="sol-hint">Hover for detail <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        <div class="sol-more">
+          <div class="sol-block"><h5>The pain today</h5><p>Engineers are heads-down on resolution. Client communications are delayed, inconsistent, or damaging, written manually under extreme pressure.</p></div>
+          <div class="sol-block"><h5>How Composure solves it</h5><p>The moment a P1 is raised, Composure drafts role-calibrated messages for every stakeholder, schedules holding updates, and briefs Account Managers, with no engineering involvement.</p></div>
+          <div class="sol-block"><h5>Business impact</h5><p>Engineers stay focused on resolution. Clients receive timely updates. AMs are never caught off guard.</p></div>
         </div>
-        <div style="background:var(--surface);border-radius:var(--radius-lg);padding:var(--sp-6);">
-          <div style="font-size:var(--text-xs);font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:var(--text-subtle);margin-bottom:var(--sp-4);">Composure in action</div>
-          <div style="display:flex;flex-direction:column;gap:var(--sp-3);">
-            <div style="display:flex;align-items:center;gap:var(--sp-3);"><div style="width:28px;height:28px;background:rgba(239,68,68,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#DC2626" stroke-width="2.5" stroke-linecap="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><span style="font-size:var(--text-sm);">P1 incident raised — Composure activates</span></div>
-            <div style="display:flex;align-items:center;gap:var(--sp-3);"><div style="width:28px;height:28px;background:var(--accent-glow);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div><span style="font-size:var(--text-sm);">AI drafts messages for all stakeholders</span></div>
-            <div style="display:flex;align-items:center;gap:var(--sp-3);"><div style="width:28px;height:28px;background:var(--accent-glow);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div><span style="font-size:var(--text-sm);">AMs receive internal briefing immediately</span></div>
-            <div style="display:flex;align-items:center;gap:var(--sp-3);"><div style="width:28px;height:28px;background:var(--success-bg);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div><span style="font-size:var(--text-sm);">Communications approved and sent — under 3 minutes</span></div>
-            <div style="display:flex;align-items:center;gap:var(--sp-3);"><div style="width:28px;height:28px;background:var(--success-bg);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5" stroke-linecap="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><span style="font-size:var(--text-sm);">Holding updates scheduled automatically</span></div>
-          </div>
+      </div>
+
+      <div class="sol-card">
+        <div class="sol-badge">2</div>
+        <h3>Planned maintenance and migrations</h3>
+        <p class="sol-desc">Maintenance windows, migrations, and cutovers need careful, multi-round communication before, during, and after the event.</p>
+        <span class="sol-hint">Hover for detail <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        <div class="sol-more">
+          <div class="sol-block"><h5>The pain today</h5><p>Maintenance comms are written ad hoc, often late, and inconsistent. Contacts miss the notice, and the completion confirmation rarely gets sent.</p></div>
+          <div class="sol-block"><h5>How Composure solves it</h5><p>Build a full sequence, notice, reminder, work beginning, completion, and schedule it in advance. Every contact gets the right message at the right time.</p></div>
+          <div class="sol-block"><h5>Business impact</h5><p>No client is caught off guard. Your team spends minutes, not hours, on maintenance comms.</p></div>
+        </div>
+      </div>
+
+      <div class="sol-card">
+        <div class="sol-badge">3</div>
+        <h3>Keeping Account Managers ahead</h3>
+        <p class="sol-desc">When a client calls their Account Manager mid-incident and the AM does not know what is happening, trust collapses instantly.</p>
+        <span class="sol-hint">Hover for detail <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        <div class="sol-more">
+          <div class="sol-block"><h5>The pain today</h5><p>AMs are the last to know. They have no talking points, no status, and no context, making a bad situation worse.</p></div>
+          <div class="sol-block"><h5>How Composure solves it</h5><p>Composure briefs AMs the moment client comms go out, status, messages sent, talking points, and engineer contact, in one secure internal update.</p></div>
+          <div class="sol-block"><h5>Business impact</h5><p>AMs handle client calls with confidence. Client trust holds even under pressure.</p></div>
+        </div>
+      </div>
+
+      <div class="sol-card">
+        <div class="sol-badge">4</div>
+        <h3>Post-incident reporting</h3>
+        <p class="sol-desc">One of the most commercially important communications an MSP produces, and the most consistently neglected.</p>
+        <span class="sol-hint">Hover for detail <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        <div class="sol-more">
+          <div class="sol-block"><h5>The pain today</h5><p>Reports are written days later by engineers who have already moved on, inconsistent, superficial, and sometimes never sent at all.</p></div>
+          <div class="sol-block"><h5>How Composure solves it</h5><p>Composure drafts a professional report the moment an incident closes, from the full timeline and communication log, with a structured approval workflow.</p></div>
+          <div class="sol-block"><h5>Business impact</h5><p>Every incident ends with a timely, professional report that builds client confidence.</p></div>
+        </div>
+      </div>
+
+      <div class="sol-card">
+        <div class="sol-badge">5</div>
+        <h3>Enterprise client communication</h3>
+        <p class="sol-desc">Enterprise clients have multiple stakeholders with different roles and information needs. A single communication style serves none of them.</p>
+        <span class="sol-hint">Hover for detail <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        <div class="sol-more">
+          <div class="sol-block"><h5>The pain today</h5><p>Most MSPs send one email to all contacts. The Finance Director gets jargon, the CTO gets vague reassurance, and neither is served.</p></div>
+          <div class="sol-block"><h5>How Composure solves it</h5><p>Composure tailors each message by role, the CTO gets strategic context, the IT Manager gets technical detail, the Finance Director gets plain-English impact.</p></div>
+          <div class="sol-block"><h5>Business impact</h5><p>Enterprise clients feel communicated with specifically. This is often the difference in winning contracts.</p></div>
+        </div>
+      </div>
+
+      <div class="sol-card">
+        <div class="sol-badge">6</div>
+        <h3>Reducing churn</h3>
+        <p class="sol-desc">Most MSP churn is not technical, it is the feeling that the MSP does not care or is not on top of things.</p>
+        <span class="sol-hint">Hover for detail <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg></span>
+        <div class="sol-more">
+          <div class="sol-block"><h5>The pain today</h5><p>Clients leave at renewal citing communication issues, even when the technical service was excellent.</p></div>
+          <div class="sol-block"><h5>How Composure solves it</h5><p>Consistent, professional communication at every touchpoint builds a perception of reliability that makes you the obvious choice to stay with.</p></div>
+          <div class="sol-block"><h5>Business impact</h5><p>Lower churn rate. Higher NPS. Stronger renewals.</p></div>
         </div>
       </div>
     </div>
-
-    <!-- UC 2 -->
-    <div class="use-case-card fade-up" style="margin-bottom:var(--sp-6);">
-      <div class="use-case-number">02</div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:var(--sp-8);align-items:start;">
-        <div>
-          <h2 style="font-size:var(--text-2xl);margin-bottom:var(--sp-3);">Planned maintenance and migrations</h2>
-          <p style="color:var(--text-muted);">Maintenance windows, server migrations, cloud cutovers, and platform upgrades all require careful, timely client communication — often across multiple rounds before, during, and after the event.</p>
-          <div class="use-case-meta">
-            <div class="use-case-meta-block">
-              <h5>The pain today</h5>
-              <p>Maintenance communications are written ad hoc, often late, and frequently inconsistent across clients. Important contacts miss the initial notice. The post-maintenance confirmation rarely gets sent.</p>
-            </div>
-            <div class="use-case-meta-block">
-              <h5>How Composure solves it</h5>
-              <p>Build a full maintenance communication sequence — initial notice, reminder, work beginning, update, completion — and schedule the entire sequence in advance. Every contact receives the right message at the right time.</p>
-            </div>
-          </div>
-          <div class="use-case-impact">
-            <strong>Business impact:</strong> No client is caught off guard by maintenance. Professionalism is demonstrated through proactive communication. Your team spends minutes, not hours, on maintenance comms.
-          </div>
-        </div>
-        <div style="background:var(--navy);border-radius:var(--radius-lg);padding:var(--sp-6);">
-          <div style="font-size:var(--text-xs);font-weight:700;letter-spacing:0.06em;text-transform:uppercase;color:rgba(255,255,255,0.4);margin-bottom:var(--sp-4);">Maintenance communication sequence</div>
-          <div style="display:flex;flex-direction:column;gap:var(--sp-3);">
-            <div style="background:rgba(255,255,255,0.06);border-radius:var(--radius);padding:var(--sp-3);border:1px solid rgba(255,255,255,0.1);">
-              <div style="font-size:var(--text-xs);color:rgba(255,255,255,0.4);margin-bottom:4px;">7 days before</div>
-              <div style="font-size:var(--text-sm);color:var(--white);font-weight:500;">Initial maintenance notice — all stakeholders</div>
-            </div>
-            <div style="background:rgba(255,255,255,0.06);border-radius:var(--radius);padding:var(--sp-3);border:1px solid rgba(255,255,255,0.1);">
-              <div style="font-size:var(--text-xs);color:rgba(255,255,255,0.4);margin-bottom:4px;">1 day before</div>
-              <div style="font-size:var(--text-sm);color:var(--white);font-weight:500;">Reminder with preparation checklist</div>
-            </div>
-            <div style="background:rgba(59,127,234,0.2);border-radius:var(--radius);padding:var(--sp-3);border:1px solid rgba(59,127,234,0.3);">
-              <div style="font-size:var(--text-xs);color:rgba(59,127,234,0.8);margin-bottom:4px;">Window start</div>
-              <div style="font-size:var(--text-sm);color:var(--white);font-weight:500;">Work beginning — services may be affected</div>
-            </div>
-            <div style="background:rgba(16,185,129,0.12);border-radius:var(--radius);padding:var(--sp-3);border:1px solid rgba(16,185,129,0.25);">
-              <div style="font-size:var(--text-xs);color:rgba(16,185,129,0.8);margin-bottom:4px;">Completion</div>
-              <div style="font-size:var(--text-sm);color:var(--white);font-weight:500;">Work complete — all services restored ✓</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- UC 3 -->
-    <div class="use-case-card fade-up" style="margin-bottom:var(--sp-6);">
-      <div class="use-case-number">03</div>
-      <h2 style="font-size:var(--text-2xl);margin-bottom:var(--sp-3);">Keeping Account Managers ahead of the client</h2>
-      <p style="color:var(--text-muted);margin-bottom:var(--sp-5);">When a client calls their Account Manager during an incident and the AM doesn't know what's happening, trust collapses immediately. Composure ensures your relationship team is always one step ahead.</p>
-      <div class="use-case-meta">
-        <div class="use-case-meta-block">
-          <h5>The pain today</h5>
-          <p>AMs are the last to know. They find out about incidents when clients call them. They have no talking points, no status, and no context — making a bad situation significantly worse.</p>
-        </div>
-        <div class="use-case-meta-block">
-          <h5>How Composure solves it</h5>
-          <p>Composure generates an internal AM briefing at the same moment client communications go out. AMs receive the incident status, client-facing messages sent, key talking points, and engineer contact — all in a single, secure internal communication.</p>
-        </div>
-      </div>
-      <div class="use-case-impact">
-        <strong>Business impact:</strong> AMs handle client calls with confidence and composure. Client trust is maintained. The relationship layer of your business functions as it should, even under pressure.
-      </div>
-    </div>
-
-    <!-- UC 4 -->
-    <div class="use-case-card fade-up" style="margin-bottom:var(--sp-6);">
-      <div class="use-case-number">04</div>
-      <h2 style="font-size:var(--text-2xl);margin-bottom:var(--sp-3);">Post-incident reporting that actually gets done</h2>
-      <p style="color:var(--text-muted);margin-bottom:var(--sp-5);">Post-incident reports are one of the most commercially important communications an MSP can produce — and one of the most consistently neglected.</p>
-      <div class="use-case-meta">
-        <div class="use-case-meta-block">
-          <h5>The pain today</h5>
-          <p>Post-incident reports are written days later by engineers who have already moved on. They're inconsistent, often superficial, and sometimes never sent at all — leaving clients with unresolved concerns.</p>
-        </div>
-        <div class="use-case-meta-block">
-          <h5>How Composure solves it</h5>
-          <p>Composure drafts a professional post-incident report automatically when an incident is closed — using the full incident timeline, communication log, and internal notes. A structured approval workflow ensures it's reviewed before sending.</p>
-        </div>
-      </div>
-      <div class="use-case-impact">
-        <strong>Business impact:</strong> Every incident ends with a professional, timely report. Clients see evidence of your process maturity. The report that used to take days and cause anxiety now takes minutes and builds confidence.
-      </div>
-    </div>
-
-    <!-- UC 5 -->
-    <div class="use-case-card fade-up" style="margin-bottom:var(--sp-6);">
-      <div class="use-case-number">05</div>
-      <h2 style="font-size:var(--text-2xl);margin-bottom:var(--sp-3);">Communicating with enterprise clients professionally</h2>
-      <p style="color:var(--text-muted);margin-bottom:var(--sp-5);">Enterprise clients have multiple stakeholders with different roles, different information needs, and different levels of technical understanding. A single communication style serves none of them well.</p>
-      <div class="use-case-meta">
-        <div class="use-case-meta-block">
-          <h5>The pain today</h5>
-          <p>Most MSPs send one email to all contacts at a client. The Finance Director receives technical jargon. The CTO receives vague reassurance. Neither is served, and the MSP looks less capable as a result.</p>
-        </div>
-        <div class="use-case-meta-block">
-          <h5>How Composure solves it</h5>
-          <p>Composure generates individually tailored messages for each contact based on their role, preferences, and the nature of the event. The CTO receives strategic context. The IT Manager receives technical detail. The Finance Director receives plain-English impact and resolution information.</p>
-        </div>
-      </div>
-      <div class="use-case-impact">
-        <strong>Business impact:</strong> Enterprise clients feel like they're being communicated with professionally and specifically — not receiving a mass email. This is often the difference between winning and losing enterprise contracts.
-      </div>
-    </div>
-
-    <!-- UC 6 -->
-    <div class="use-case-card fade-up" style="margin-bottom:var(--sp-6);">
-      <div class="use-case-number">06</div>
-      <h2 style="font-size:var(--text-2xl);margin-bottom:var(--sp-3);">Reducing churn caused by poor communication</h2>
-      <p style="color:var(--text-muted);margin-bottom:var(--sp-5);">Most MSP churn is not caused by technical failure — it's caused by the feeling that the MSP doesn't care, doesn't communicate, or isn't on top of things. Composure removes this perception permanently.</p>
-      <div class="use-case-meta">
-        <div class="use-case-meta-block">
-          <h5>The pain today</h5>
-          <p>Clients leave at renewal, citing "communication issues" or "not feeling valued". The technical service may have been excellent. The communication experience was not.</p>
-        </div>
-        <div class="use-case-meta-block">
-          <h5>How Composure solves it</h5>
-          <p>Consistent, professional communication at every touchpoint — incidents, maintenance, service updates — builds a perception of reliability and care that makes your MSP the obvious choice to stay with at renewal.</p>
-        </div>
-      </div>
-      <div class="use-case-impact">
-        <strong>Business impact:</strong> Lower churn rate. Higher NPS. Stronger renewals. A reputation for communication that distinguishes you from every MSP competing for the same contracts.
-      </div>
-    </div>
-
   </div>
 </section>
+<script>
+(function(){document.querySelectorAll('.sol-card').forEach(function(c){c.addEventListener('click',function(){c.classList.toggle('is-open');});});})();
+</script>
 
 <!-- WHO IT'S FOR -->
 <section class="section section-dark">
@@ -250,32 +263,164 @@
   </div>
 </section>
 
-<!-- CTA BANNER -->
-<section class="cta-banner">
-  <div class="container" style="position:relative;z-index:1;">
-    <h2 class="fade-up">See Composure handle your specific scenarios</h2>
-    <p class="fade-up stagger-1">Book a 30-minute demo and show us your MSP's communication challenges. We'll show you exactly how Composure addresses them.</p>
-    <div class="cta-banner-actions fade-up stagger-2">
-      <a href="contact.html" class="btn btn-white btn-lg">Book a demo</a>
-      <a href="start-trial.html" class="btn btn-outline-white btn-lg">Start 14-day free trial</a>
+<!-- SEE IT IN ACTION DEMO -->
+<section class="demo-section">
+  <div class="container">
+    <div class="section-header fade-up" style="text-align:center;margin-bottom:var(--sp-8);">
+      <div class="eyebrow-tag" style="display:inline-flex;margin-bottom:var(--sp-3);">See it in action</div>
+      <h2 style="white-space:nowrap;">From alert to client update in under three minutes</h2>
+      <p style="max-width:500px;margin:var(--sp-3) auto 0;">Watch how Composure handles a P1 incident, detection to personalised stakeholder communications, automatically.</p>
+    </div>
+
+    <div class="demo-steps fade-up stagger-1">
+      <button class="demo-step-btn active" data-step="0">1. Incident detected</button>
+      <button class="demo-step-btn" data-step="1">2. AI drafts messages</button>
+      <button class="demo-step-btn" data-step="2">3. Review &amp; approve</button>
+      <button class="demo-step-btn" data-step="3">4. Delivered</button>
+    </div>
+
+    <div class="demo-window fade-up stagger-2">
+      <div class="demo-titlebar">
+        <div class="demo-dots"><div class="demo-dot"></div><div class="demo-dot"></div><div class="demo-dot"></div></div>
+        <div class="demo-url">app.composure.io, Incident Communications</div>
+        <div style="width:58px;"></div>
+      </div>
+      <div class="demo-progress-track"><div class="demo-progress-fill" id="demoProgress"></div></div>
+      <div class="demo-body">
+
+        <!-- Scene 0: Incident Detected -->
+        <div class="demo-scene active" id="demo-scene-0">
+          <div class="d-badge">P1, Critical</div>
+          <div class="d-incident-title">Microsoft 365 Authentication Failure</div>
+          <div class="d-incident-meta">Detected: 09:14 UTC &nbsp;·&nbsp; 4 minutes ago &nbsp;·&nbsp; Source: ConnectWise alert</div>
+          <div style="font-size:11px;color:rgba(255,255,255,0.35);margin-bottom:9px;text-transform:uppercase;letter-spacing:.06em;">Affected clients (7)</div>
+          <div class="d-chips">
+            <div class="d-chip" style="background:#3B7FEA;">NF</div>
+            <div class="d-chip" style="background:#7C3AED;">MG</div>
+            <div class="d-chip" style="background:#0CA5D8;">AL</div>
+            <div class="d-chip" style="background:#059669;">PL</div>
+            <div class="d-chip" style="background:#D97706;">CR</div>
+            <div class="d-chip" style="background:#DC2626;">VM</div>
+            <div class="d-chip" style="background:#4B5563;">+1</div>
+          </div>
+          <div class="d-ai-box">
+            <div class="d-spinner"></div>
+            <div class="d-ai-text"><strong>Composure is analysing stakeholder profiles</strong>Identifying contacts, roles, and communication tone for 7 clients…</div>
+          </div>
+        </div>
+
+        <!-- Scene 1: AI Drafting -->
+        <div class="demo-scene" id="demo-scene-1">
+          <div class="d-tabs">
+            <div class="d-tab active">Sarah Chen (CTO) <span class="dtick" style="display:inline-flex;align-items:center;justify-content:center;width:13px;height:13px;background:#10b981;border-radius:50%;color:#fff;font-size:7px;margin-left:5px;">✓</span></div>
+            <div class="d-tab">Tom Bradley (IT Mgr)</div>
+            <div class="d-tab">Mark Harris (Finance)</div>
+          </div>
+          <div class="d-meta">Tone: Executive briefing &nbsp;·&nbsp; Channel: Email + Teams &nbsp;·&nbsp; Calibrated for CTO</div>
+          <div class="d-subject">Subject: <span>Service interruption, Microsoft 365 authentication [INC-2847]</span></div>
+          <div class="d-body">Sarah,<br><br>We're writing to notify you of an ongoing service interruption affecting Microsoft 365 authentication across your environment. Our team identified the issue at 09:14 UTC and is actively working with Microsoft's engineering team.<br><br>Current status: Authentication services degraded. Users may be unable to sign in to Microsoft 365 applications.<span class="d-cursor"></span></div>
+        </div>
+
+        <!-- Scene 2: Review & Approve -->
+        <div class="demo-scene" id="demo-scene-2">
+          <div style="font-size:14px;font-weight:600;color:var(--white);margin-bottom:5px;">3 personalised drafts ready for review</div>
+          <div style="font-size:12px;color:rgba(255,255,255,0.38);margin-bottom:16px;">Each message is calibrated for the recipient's role, technical knowledge, and preferred communication style.</div>
+          <div class="d-review-grid">
+            <div class="d-card">
+              <div class="d-card-head"><div class="d-av" style="background:#3B7FEA;">SC</div><div><div class="d-card-name">Sarah Chen</div><div class="d-card-role">CTO, Nexus Financial</div></div></div>
+              <div class="d-tone">Executive briefing</div>
+              <div class="d-preview">"We're writing to notify you of an ongoing service interruption affecting Microsoft 365 authentication. Our team identified the issue at 09:14 UTC…"</div>
+            </div>
+            <div class="d-card">
+              <div class="d-card-head"><div class="d-av" style="background:#7C3AED;">TB</div><div><div class="d-card-name">Tom Bradley</div><div class="d-card-role">IT Manager, Nexus Financial</div></div></div>
+              <div class="d-tone">Technical detail</div>
+              <div class="d-preview">"Azure AD auth endpoint responding with 503 errors. Tracking MS365 incident INC-2847. Workaround: legacy auth temporarily re-enabled on affected tenants…"</div>
+            </div>
+            <div class="d-card">
+              <div class="d-card-head"><div class="d-av" style="background:#0CA5D8;">MH</div><div><div class="d-card-name">Mark Harris</div><div class="d-card-role">Finance Director, Nexus Financial</div></div></div>
+              <div class="d-tone">Business impact</div>
+              <div class="d-preview">"A temporary Microsoft 365 issue is affecting staff login. Your team may have limited access to email and Office apps. We're working to restore full service…"</div>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:center;">
+            <div class="d-send"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Approve &amp; send all 3 communications</div>
+          </div>
+        </div>
+
+        <!-- Scene 3: Delivered -->
+        <div class="demo-scene" id="demo-scene-3">
+          <div class="d-success-head">
+            <div class="d-success-icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+            <div><div class="d-success-title">Communications delivered</div><div class="d-success-sub">09:16 UTC, 2 minutes after incident detection</div></div>
+          </div>
+          <div class="d-rows">
+            <div class="d-row"><div class="d-av" style="background:#3B7FEA;">SC</div><div class="d-row-info"><div class="d-row-name">Sarah Chen</div><div class="d-row-role">CTO · Nexus Financial</div></div><div class="d-row-status"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Delivered 09:16 · Email + Teams</div></div>
+            <div class="d-row"><div class="d-av" style="background:#7C3AED;">TB</div><div class="d-row-info"><div class="d-row-name">Tom Bradley</div><div class="d-row-role">IT Manager · Nexus Financial</div></div><div class="d-row-status"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Delivered 09:16 · Email</div></div>
+            <div class="d-row"><div class="d-av" style="background:#0CA5D8;">MH</div><div class="d-row-info"><div class="d-row-name">Mark Harris</div><div class="d-row-role">Finance Director · Nexus Financial</div></div><div class="d-row-status"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Delivered 09:17 · Email + SMS</div></div>
+          </div>
+          <div class="d-next"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Next holding update: <strong>09:45 UTC</strong>, Composure will auto-draft and notify your team for approval</div>
+        </div>
+
+      </div>
     </div>
   </div>
 </section>
 
 <!-- FOOTER -->
-<footer class="footer">
+<footer class="footer footer--slim" aria-label="Site footer">
   <div class="container">
-    <div class="footer-grid">
-      <div class="footer-brand"><div class="footer-logo"><img src="images/logo.png" alt="Composure" class="nav-logo-img">Composure</div><p>The AI-powered client communication platform for Managed Service Providers.</p></div>
-      <div><div class="footer-col-title">Product</div><div class="footer-links"><a href="features.html" class="footer-link">Features</a><a href="pricing.html" class="footer-link">Pricing</a><a href="comparison.html" class="footer-link">Why Composure</a><a href="security.html" class="footer-link">Security</a></div></div>
-      <div><div class="footer-col-title">Solutions</div><div class="footer-links"><a href="solutions.html" class="footer-link">Incident Communication</a><a href="solutions.html" class="footer-link">Planned Maintenance</a><a href="solutions.html" class="footer-link">Post-Incident Reports</a></div></div>
-      <div><div class="footer-col-title">Company</div><div class="footer-links"><a href="about.html" class="footer-link">About</a><a href="contact.html" class="footer-link">Contact</a><a href="resources.html" class="footer-link">Resources</a></div></div>
-      <div><div class="footer-col-title">Legal</div><div class="footer-links"><a href="#" class="footer-link">Privacy Policy</a><a href="#" class="footer-link">Terms of Service</a><a href="#" class="footer-link">Cookie Policy</a></div></div>
+    <div class="footer-slim">
+      <a href="index.html" class="footer-logo"><svg class="logo-mark" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Composure"><path d="M31.96 12.64 A13 13 0 1 0 31.96 29.36"/><line x1="19" y1="15.5" x2="19" y2="26.5"/><line x1="25" y1="15.5" x2="25" y2="26.5"/></svg>Composure</a>
+      <nav class="footer-slim-links">
+        <a href="features.html">Features</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="security.html">Security</a>
+        <a href="comparison.html">Why Composure</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="footer-slim-social">
+        <a href="#" aria-label="LinkedIn"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+      </div>
     </div>
-    <div class="footer-bottom"><div class="footer-bottom-left">&copy; 2025 Composure. All rights reserved.</div><div class="footer-bottom-links"><a href="#" class="footer-bottom-link">Privacy</a><a href="#" class="footer-bottom-link">Terms</a><a href="#" class="footer-bottom-link">Cookies</a></div></div>
+    <div class="footer-slim-bottom">
+      <span>&copy; 2026 Composure247. A product of CITSYS Limited, registered in England and Wales, company number 07254892.</span>
+      <div class="footer-slim-legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
   </div>
 </footer>
 
 <script src="js/main.js"></script>
+<script>
+(function(){
+  var btns=document.querySelectorAll('.demo-step-btn');
+  var scenes=document.querySelectorAll('.demo-scene');
+  var bar=document.getElementById('demoProgress');
+  if(!btns.length||!bar)return;
+  var cur=0,timer=null,dur=5000;
+  function goTo(n){
+    btns[cur].classList.remove('active');
+    scenes[cur].classList.remove('active');
+    cur=n%btns.length;
+    btns[cur].classList.add('active');
+    scenes[cur].classList.add('active');
+    bar.style.transition='none';
+    bar.style.width='0%';
+    requestAnimationFrame(function(){requestAnimationFrame(function(){
+      bar.style.transition='width '+dur+'ms linear';
+      bar.style.width='100%';
+    });});
+    clearTimeout(timer);
+    timer=setTimeout(function(){goTo((cur+1)%btns.length);},dur);
+  }
+  btns.forEach(function(b,i){b.addEventListener('click',function(){goTo(i);});});
+  goTo(0);
+})();
+</script>
 </body>
 </html>
