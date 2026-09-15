@@ -707,47 +707,54 @@ p { line-height: 1.7; }
 }
 
 /* ---- Green video hero (full-bleed video, devices right, text left) ---- */
-/* ---- Split hero: text left, framed video right (no overlap) ---- */
-.hero--split-video {
-  min-height: 480px;
+/* ---- Split-screen hero: text half left, full-bleed video half right ---- */
+.hero--splitscreen {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 540px;
+  position: relative;
+  overflow: hidden;
+}
+.hero-split-text {
   display: flex;
   align-items: center;
-  position: relative;
-  overflow: hidden;
+  padding-block: var(--sp-12);
+  padding-left: max(var(--sp-6), calc((100vw - var(--container)) / 2 + var(--sp-6)));
+  padding-right: var(--sp-12);
   background:
-    radial-gradient(900px 520px at 85% 30%, rgba(84,161,255,0.14), transparent 62%),
-    radial-gradient(760px 480px at 15% 80%, rgba(139,209,158,0.14), transparent 64%),
-    linear-gradient(120deg, #EAF2FC 0%, #F2F7FB 55%, #EAF6EE 100%);
+    radial-gradient(680px 420px at 20% 80%, rgba(139,209,158,0.16), transparent 64%),
+    linear-gradient(120deg, #EAF2FC 0%, #F2F7FB 60%, #EAF6EE 100%);
 }
-.hero--split-video .container { position: relative; z-index: 2; width: 100%; }
-.hero--split-video .hero-layout { gap: var(--sp-12); align-items: center; }
-.hero--split-video .hero-content { max-width: 600px; }
-.hero--split-video .hero-headline { font-size: clamp(2rem, 3.6vw, 2.9rem); margin: var(--sp-3) 0 var(--sp-4); }
-.hero--split-video .hero-sub { margin-bottom: var(--sp-5); }
-.hero-video-frame {
+.hero-split-text .hero-content { max-width: 560px; }
+.hero-split-text .hero-headline { font-size: clamp(2rem, 3.4vw, 2.9rem); margin: var(--sp-3) 0 var(--sp-4); }
+.hero-split-text .hero-sub { margin-bottom: var(--sp-5); }
+.hero-split-media {
   position: relative;
-  width: 100%;
-  border-radius: var(--radius-2xl);
   overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.6);
-  box-shadow: 0 30px 70px -20px rgba(12,26,43,0.35), 0 8px 24px -12px rgba(12,26,43,0.25);
 }
-.hero-video-frame .hero-video {
-  display: block;
+.hero-split-media .hero-video {
+  position: absolute;
+  inset: 0;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 100%;
   object-fit: cover;
   object-position: center;
 }
-.theme-dark .hero--split-video {
+.theme-dark .hero-split-text {
   background:
-    radial-gradient(900px 520px at 85% 30%, rgba(84,161,255,0.20), transparent 62%),
-    radial-gradient(760px 480px at 15% 80%, rgba(59,127,234,0.16), transparent 64%),
-    linear-gradient(120deg, #0C1A2B 0%, #0F2438 55%, #0C1A2B 100%);
+    radial-gradient(680px 420px at 20% 80%, rgba(59,127,234,0.18), transparent 64%),
+    linear-gradient(120deg, #0C1A2B 0%, #0F2438 60%, #0C1A2B 100%);
 }
-.theme-dark .hero-video-frame {
-  border-color: rgba(84,161,255,0.25);
-  box-shadow: 0 30px 70px -20px rgba(0,0,0,0.6), 0 0 0 1px rgba(84,161,255,0.12);
+@media (max-width: 900px) {
+  .hero--splitscreen { grid-template-columns: 1fr; }
+  .hero-split-media { order: -1; min-height: 260px; }
+  .hero-split-text {
+    padding: var(--sp-10) var(--sp-6);
+    text-align: center;
+    justify-content: center;
+  }
+  .hero-split-text .hero-ctas,
+  .hero-split-text .hero-note { justify-content: center; }
 }
 
 /* ---- Full-bleed image hero (Altera-style) ---- */
