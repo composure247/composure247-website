@@ -707,36 +707,45 @@ p { line-height: 1.7; }
 }
 
 /* ---- Green video hero (full-bleed video, devices right, text left) ---- */
-.hero--green-video {
+/* ---- Split hero: text left, framed video right (no overlap) ---- */
+.hero--split-video {
   min-height: 640px;
   display: flex;
   align-items: center;
   position: relative;
   overflow: hidden;
-  background: #CFE8BF;
+  background:
+    radial-gradient(900px 520px at 85% 30%, rgba(84,161,255,0.14), transparent 62%),
+    radial-gradient(760px 480px at 15% 80%, rgba(139,209,158,0.14), transparent 64%),
+    linear-gradient(120deg, #EAF2FC 0%, #F2F7FB 55%, #EAF6EE 100%);
 }
-.hero-bg-video {
-  position: absolute;
-  inset: 0;
+.hero--split-video .container { position: relative; z-index: 2; width: 100%; }
+.hero--split-video .hero-content { max-width: 560px; }
+.hero-video-frame {
+  position: relative;
   width: 100%;
-  height: 100%;
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.6);
+  box-shadow: 0 30px 70px -20px rgba(12,26,43,0.35), 0 8px 24px -12px rgba(12,26,43,0.25);
+}
+.hero-video-frame .hero-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
-  object-position: right center;
-  z-index: 0;
+  object-position: center;
 }
-/* light left area only, so the headline stays readable (no edge blend) */
-.hero--green-video::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(90deg, rgba(240,247,243,0.88) 0%, rgba(240,247,243,0.5) 28%, rgba(240,247,243,0) 54%);
-  z-index: 1;
-  pointer-events: none;
+.theme-dark .hero--split-video {
+  background:
+    radial-gradient(900px 520px at 85% 30%, rgba(84,161,255,0.20), transparent 62%),
+    radial-gradient(760px 480px at 15% 80%, rgba(59,127,234,0.16), transparent 64%),
+    linear-gradient(120deg, #0C1A2B 0%, #0F2438 55%, #0C1A2B 100%);
 }
-.hero--green-video .container { position: relative; z-index: 2; width: 100%; }
-.hero--green-video .hero-layout { grid-template-columns: 1fr; }
-.hero--green-video .hero-visual { display: none; }
-.hero--green-video .hero-content { max-width: 600px; }
+.theme-dark .hero-video-frame {
+  border-color: rgba(84,161,255,0.25);
+  box-shadow: 0 30px 70px -20px rgba(0,0,0,0.6), 0 0 0 1px rgba(84,161,255,0.12);
+}
 
 /* ---- Full-bleed image hero (Altera-style) ---- */
 .hero--image {
