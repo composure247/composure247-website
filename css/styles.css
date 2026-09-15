@@ -709,7 +709,7 @@ p { line-height: 1.7; }
 /* ---- Green video hero (full-bleed video, devices right, text left) ---- */
 /* ---- Split hero: text left, framed video right (no overlap) ---- */
 .hero--split-video {
-  min-height: 640px;
+  min-height: 480px;
   display: flex;
   align-items: center;
   position: relative;
@@ -720,7 +720,10 @@ p { line-height: 1.7; }
     linear-gradient(120deg, #EAF2FC 0%, #F2F7FB 55%, #EAF6EE 100%);
 }
 .hero--split-video .container { position: relative; z-index: 2; width: 100%; }
-.hero--split-video .hero-content { max-width: 560px; }
+.hero--split-video .hero-layout { gap: var(--sp-12); align-items: center; }
+.hero--split-video .hero-content { max-width: 600px; }
+.hero--split-video .hero-headline { font-size: clamp(2rem, 3.6vw, 2.9rem); margin: var(--sp-3) 0 var(--sp-4); }
+.hero--split-video .hero-sub { margin-bottom: var(--sp-5); }
 .hero-video-frame {
   position: relative;
   width: 100%;
@@ -732,7 +735,7 @@ p { line-height: 1.7; }
 .hero-video-frame .hero-video {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
   object-position: center;
 }
