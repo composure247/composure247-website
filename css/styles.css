@@ -714,10 +714,9 @@ p { line-height: 1.7; }
   min-height: 460px;
   position: relative;
   overflow: hidden;
-  /* shared background so the feathered video blends into the text side */
-  background:
-    radial-gradient(680px 420px at 16% 82%, rgba(139,209,158,0.16), transparent 64%),
-    linear-gradient(120deg, #EAF2FC 0%, #F2F7FB 58%, #EAF6EE 100%);
+  /* transparent so the hero shares the page's one continuous background
+     (no seam where the nav meets the hero); the feathered video blends into it */
+  background: transparent;
 }
 .hero-split-text {
   display: flex;
@@ -756,9 +755,7 @@ p { line-height: 1.7; }
   mask-composite: intersect;
 }
 .theme-dark .hero--splitscreen {
-  background:
-    radial-gradient(680px 420px at 16% 82%, rgba(59,127,234,0.18), transparent 64%),
-    linear-gradient(120deg, #0C1A2B 0%, #0F2438 58%, #0C1A2B 100%);
+  background: transparent;
 }
 @media (max-width: 900px) {
   .hero--splitscreen { grid-template-columns: 1fr; }
