@@ -5,7 +5,7 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Start your 30-day free trial of Composure, the AI-powered client communication platform for MSPs. No credit card required.">
+  <meta name="description" content="Start your 30-day free trial of Composure Communicate, the incident communications platform for MSPs. No card needed.">
   <title>Start Your Free Trial, Composure</title>
   <link rel="stylesheet" href="css/styles.css?v=78">
   <style>
@@ -28,57 +28,6 @@
     }
     @media (max-width:560px){.trial-form-card{padding:var(--sp-6);}}
 
-    /* Plan select tiles */
-    .plan-tiles{
-      display:grid;
-      grid-template-columns:1fr 1fr 1fr;
-      gap:10px;
-      margin-top:6px;
-    }
-    @media (max-width:560px){.plan-tiles{grid-template-columns:1fr;}}
-    .plan-tile{
-      position:relative;
-      cursor:pointer;
-      border:1px solid var(--border);
-      border-radius:var(--radius-lg);
-      padding:14px;
-      background:var(--white);
-      transition:border-color .2s var(--ease),background .2s var(--ease),box-shadow .2s var(--ease);
-    }
-    .plan-tile input{
-      position:absolute;
-      opacity:0;
-      pointer-events:none;
-    }
-    .plan-tile-name{
-      font-family:var(--font-display);
-      font-size:0.95rem;
-      font-weight:600;
-      color:var(--navy);
-      letter-spacing:-0.01em;
-      margin-bottom:2px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:8px;
-    }
-    .plan-tile-rec{
-      font-size:9.5px;
-      font-weight:700;
-      letter-spacing:0.06em;
-      text-transform:uppercase;
-      color:var(--accent);
-      background:var(--accent-glow);
-      padding:2px 7px;
-      border-radius:var(--radius-full);
-    }
-    .plan-tile-desc{font-size:12.5px;color:var(--text-muted);line-height:1.4;}
-    .plan-tile:hover{border-color:var(--accent);background:var(--accent-glow);}
-    .plan-tile.selected{
-      border-color:var(--accent);
-      background:var(--accent-glow);
-      box-shadow:0 0 0 1px var(--accent);
-    }
 
     .trial-side-card{
       background:var(--surface);
@@ -144,128 +93,57 @@
 <div style="padding-top:68px;background:var(--off-white);border-bottom:1px solid var(--border-light);">
   <div class="container" style="padding-top:var(--sp-12);padding-bottom:var(--sp-10);text-align:center;">
     <div class="eyebrow-tag" style="margin-bottom:var(--sp-3);">Free 30-day trial</div>
-    <h1 style="max-width:660px;margin:0 auto var(--sp-3);">Let's get your trial set up.</h1>
-    <p style="font-size:var(--text-lg);color:var(--text-muted);max-width:560px;margin:0 auto;">Tell us a bit about your MSP and your account will be ready in minutes. No credit card required, cancel any time.</p>
+    <h1 style="max-width:660px;margin:0 auto var(--sp-3);">Start your 30-day free trial of Communicate.</h1>
+    <p style="font-size:var(--text-lg);color:var(--text-muted);max-width:560px;margin:0 auto;">No card needed. Sign up in the app, follow the setup guide, and go live when you are ready.</p>
   </div>
 </div>
 
-<!-- TRIAL FORM -->
+<!-- TRIAL SIGN-UP -->
 <section class="section">
   <div class="container">
     <div class="trial-layout">
 
-      <!-- FORM -->
+      <!-- SIGN-UP CALL TO ACTION -->
       <div class="fade-up">
         <div class="trial-form-card">
           <h2 style="margin-bottom:var(--sp-2);">Start your free trial</h2>
-          <p style="font-size:var(--text-sm);color:var(--text-muted);margin-bottom:var(--sp-6);">A few details and you're in. We'll set up your workspace and take you straight to the app.</p>
+          <p style="font-size:var(--text-sm);color:var(--text-muted);margin-bottom:var(--sp-6);">Your 30-day trial runs on Communicate, our full plan. You create your account yourself in the app. No card needed.</p>
 
-          <form id="trial-form" novalidate data-formspree-id="xykleokw">
-            <input type="hidden" name="form_type" value="Free Trial Signup">
-
-            <div class="form-grid-2">
-              <div class="form-group">
-                <label class="form-label" for="first-name">First name *</label>
-                <input class="form-input" type="text" id="first-name" name="first_name" placeholder="James" required>
-              </div>
-              <div class="form-group">
-                <label class="form-label" for="last-name">Last name *</label>
-                <input class="form-input" type="text" id="last-name" name="last_name" placeholder="Moody" required>
-              </div>
+          <div class="trial-step">
+            <div class="trial-step-num">1</div>
+            <div>
+              <h5>Create your account</h5>
+              <p>Go to <a href="https://app.composure247.com/signup" style="color:var(--accent);font-weight:600;">app.composure247.com/signup</a> and fill in a short form about you and your MSP.</p>
             </div>
-
-            <div class="form-group">
-              <label class="form-label" for="work-email">Work email *</label>
-              <input class="form-input" type="email" id="work-email" name="email" placeholder="james@clearcloud.co.uk" required>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="phone">Phone <span style="color:var(--text-subtle);font-weight:400;">(optional)</span></label>
-              <input class="form-input" type="tel" id="phone" name="phone" placeholder="+44 7700 900123">
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="company">Company name *</label>
-              <input class="form-input" type="text" id="company" name="company" placeholder="ClearCloud IT" required>
-            </div>
-
-            <div class="form-grid-2">
-              <div class="form-group">
-                <label class="form-label" for="employees">Size of your team *</label>
-                <select class="form-select" id="employees" name="employees" required>
-                  <option value="">Select range</option>
-                  <option value="1-10">1–10 employees</option>
-                  <option value="11-25">11–25 employees</option>
-                  <option value="26-50">26–50 employees</option>
-                  <option value="51-100">51–100 employees</option>
-                  <option value="101-250">101–250 employees</option>
-                  <option value="250+">250+ employees</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label class="form-label" for="clients">Number of clients you manage *</label>
-                <select class="form-select" id="clients" name="clients" required>
-                  <option value="">Select band</option>
-                  <option value="Starter (1-25)">1–25 clients (Starter)</option>
-                  <option value="Growth (26-100)">26–100 clients (Growth)</option>
-                  <option value="Scale (101-500)">101–500 clients (Scale)</option>
-                  <option value="Enterprise (500+)">500+ clients (Enterprise)</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" style="margin-bottom:var(--sp-2);">Which version would you like to try? *</label>
-              <div class="plan-tiles">
-                <label class="plan-tile" data-plan="Respond">
-                  <input type="radio" name="plan" value="Respond" required>
-                  <div class="plan-tile-name">Respond</div>
-                  <div class="plan-tile-desc">Incident comms only, fast P0 / P1 response.</div>
-                </label>
-                <label class="plan-tile selected" data-plan="Communicate">
-                  <input type="radio" name="plan" value="Communicate" checked>
-                  <div class="plan-tile-name">Communicate <span class="plan-tile-rec">Most popular</span></div>
-                  <div class="plan-tile-desc">Full platform, every comm, white-labelled.</div>
-                </label>
-                <label class="plan-tile" data-plan="Both">
-                  <input type="radio" name="plan" value="Show me both">
-                  <div class="plan-tile-name">Not sure</div>
-                  <div class="plan-tile-desc">Show me both during the trial.</div>
-                </label>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label class="form-label" for="message">Anything we should know? <span style="color:var(--text-subtle);font-weight:400;">(optional)</span></label>
-              <textarea class="form-textarea" id="message" name="message" placeholder="e.g. PSA we're using, integrations we'd want, or specific scenarios we want to test."></textarea>
-            </div>
-
-            <button type="submit" id="trial-submit" class="btn btn-primary btn-lg" style="width:100%;text-align:center;">
-              Start my free trial
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </button>
-
-            <div id="form-error" style="display:none;margin-top:var(--sp-3);padding:var(--sp-3) var(--sp-4);background:#FEF2F2;border:1px solid #FECACA;border-radius:var(--radius);font-size:var(--text-sm);color:#DC2626;">
-              Something went wrong, please try again or email us directly at <a href="mailto:sales@composure247.com" style="color:#DC2626;font-weight:600;">sales@composure247.com</a>.
-            </div>
-
-            <p style="font-size:var(--text-xs);color:var(--text-subtle);text-align:center;margin-top:var(--sp-3);">By submitting this form, you agree to our <a href="/legal/privacy" style="color:var(--accent);">Privacy Notice</a>. No card required, cancel any time.</p>
-          </form>
-
-          <!-- Success state -->
-          <div id="form-success" style="display:none;text-align:center;padding:var(--sp-10) var(--sp-6);">
-            <div style="width:72px;height:72px;background:var(--success-bg);border:1px solid rgba(16,185,129,0.20);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto var(--sp-5);">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--success)" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-            </div>
-            <h3 style="margin-bottom:var(--sp-2);">All set <span id="success-firstname"></span>, taking you to Composure...</h3>
-            <p style="font-size:var(--text-sm);color:var(--text-muted);max-width:380px;margin:0 auto var(--sp-4);">Setting up your trial workspace. You'll be redirected to the app in a moment.</p>
-            <div style="display:inline-flex;align-items:center;gap:var(--sp-2);font-size:var(--text-sm);color:var(--text-muted);">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 1 1-6.219-8.56"/></svg>
-              Redirecting to <span id="redirect-target" style="font-family:monospace;color:var(--accent);"></span>
-            </div>
-            <p style="font-size:var(--text-xs);color:var(--text-subtle);margin-top:var(--sp-5);">Not redirected? <a id="manual-redirect" href="#" style="color:var(--accent);font-weight:600;">Click here</a>.</p>
           </div>
+          <div class="trial-step">
+            <div class="trial-step-num">2</div>
+            <div>
+              <h5>Confirm your email</h5>
+              <p>We email you a link. Click it to confirm your address.</p>
+            </div>
+          </div>
+          <div class="trial-step">
+            <div class="trial-step-num">3</div>
+            <div>
+              <h5>Secure your sign-in</h5>
+              <p>Set a password and set up an authenticator app. Admins always sign in with both.</p>
+            </div>
+          </div>
+          <div class="trial-step">
+            <div class="trial-step-num">4</div>
+            <div>
+              <h5>Follow the setup guide</h5>
+              <p>An 8-step guide walks you through adding your customers, contacts and team. Allow about an hour.</p>
+            </div>
+          </div>
+
+          <a href="https://app.composure247.com/signup" class="btn btn-primary btn-lg" style="width:100%;text-align:center;margin-top:var(--sp-6);">
+            Start my free trial
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          </a>
+
+          <p style="font-size:var(--text-xs);color:var(--text-subtle);text-align:center;margin-top:var(--sp-3);">The trial is covered by our <a href="/legal/trial" style="color:var(--accent);">Free Trial Agreement</a> and <a href="/legal/privacy" style="color:var(--accent);">Privacy Notice</a>. Questions first? Email <a href="mailto:sales@composure247.com" style="color:var(--accent);">sales@composure247.com</a>.</p>
         </div>
       </div>
 
@@ -277,40 +155,40 @@
           <div class="trial-step">
             <div class="trial-step-num">1</div>
             <div>
-              <h5>Account ready in minutes</h5>
-              <p>Submit this form and we'll provision your workspace. You'll go straight to Composure.</p>
+              <h5>Nothing reaches your customers yet</h5>
+              <p>Your trial starts with customer notifications paused, so you can set up and test safely. You turn them on when you go live.</p>
             </div>
           </div>
           <div class="trial-step">
             <div class="trial-step-num">2</div>
             <div>
               <h5>30 days, full access</h5>
-              <p>Every Communicate feature, including white label, for the full trial.</p>
+              <p>Every Communicate feature for the full trial. During the trial, sending is capped at 200 emails and 20 texts a day.</p>
             </div>
           </div>
           <div class="trial-step">
             <div class="trial-step-num">3</div>
             <div>
               <h5>We won't charge you</h5>
-              <p>No credit card required. We'll only ask for payment when you choose to continue.</p>
+              <p>No card needed. We'll only ask for payment when you choose to continue.</p>
             </div>
           </div>
           <div class="trial-step">
             <div class="trial-step-num">4</div>
             <div>
-              <h5>Cancel any time</h5>
-              <p>Your data exports cleanly in JSON or CSV. No hidden retention, no awkward calls.</p>
+              <h5>Your data, on request</h5>
+              <p>Ask us and we'll export your data. Retention is set out in our <a href="/legal/terms" style="color:var(--accent);">Terms</a> and <a href="/legal/dpa" style="color:var(--accent);">DPA</a>.</p>
             </div>
           </div>
 
           <div class="trial-bullets">
             <div class="trial-bullet">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-              No credit card required
+              No card needed
             </div>
             <div class="trial-bullet">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-              No setup fee, no minimum term
+              Monthly or annual plans; cancel with 30 days' notice before renewal
             </div>
             <div class="trial-bullet">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
@@ -318,7 +196,7 @@
             </div>
             <div class="trial-bullet">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
-              ISO 27001-aligned by default
+              Built for UK GDPR
             </div>
           </div>
         </div>
@@ -326,7 +204,7 @@
         <!-- Demo nudge -->
         <div style="margin-top:var(--sp-5);padding:var(--sp-5);border:1px solid var(--border-light);border-radius:var(--radius-xl);background:var(--white);">
           <h5 style="margin-bottom:var(--sp-2);">Prefer a guided walkthrough first?</h5>
-          <p style="font-size:var(--text-sm);color:var(--text-muted);margin-bottom:var(--sp-4);">If you'd rather see it before signing up, book a 30-minute demo and we'll walk through it for your scenarios.</p>
+          <p style="font-size:var(--text-sm);color:var(--text-muted);margin-bottom:var(--sp-4);">If you'd rather see it before signing up, <a href="contact.html" style="color:var(--accent);font-weight:600;">book a 30-minute demo</a> and we'll walk through it for your scenarios.</p>
         </div>
       </div>
 
@@ -366,85 +244,5 @@
 </footer>
 
 <script src="js/main.js"></script>
-<script>
-(function () {
-  /* ============================================================
-     Trial-app redirect target
-     CHANGE THIS when the SaaS app is live, it's where users
-     are sent after submitting the trial form.
-     ============================================================ */
-  var TRIAL_APP_URL = 'https://app.composure247.com/signup';
-  var REDIRECT_DELAY_MS = 2200;
-
-  /* Plan-tile selection visual */
-  document.querySelectorAll('.plan-tile').forEach(function (tile) {
-    tile.addEventListener('click', function () {
-      document.querySelectorAll('.plan-tile').forEach(function (t) { t.classList.remove('selected'); });
-      tile.classList.add('selected');
-    });
-  });
-
-  /* Form submission */
-  var form = document.getElementById('trial-form');
-  if (!form) return;
-  var formId = form.dataset.formspreeId;
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault();
-
-    var btn = document.getElementById('trial-submit');
-    var errorEl = document.getElementById('form-error');
-    var successEl = document.getElementById('form-success');
-    var firstNameEl = document.getElementById('success-firstname');
-    var redirectTargetEl = document.getElementById('redirect-target');
-    var manualRedirectEl = document.getElementById('manual-redirect');
-
-    var firstName = (form.querySelector('[name="first_name"]') || {}).value || '';
-    var email = (form.querySelector('[name="email"]') || {}).value || '';
-    var company = (form.querySelector('[name="company"]') || {}).value || '';
-    var plan = (form.querySelector('[name="plan"]:checked') || {}).value || '';
-    var clients = (form.querySelector('[name="clients"]') || {}).value || '';
-
-    btn.disabled = true;
-    btn.textContent = 'Setting up your trial…';
-    errorEl.style.display = 'none';
-
-    /* Build the redirect URL with prefill params so the SaaS app
-       can welcome the user with their data already populated. */
-    var params = new URLSearchParams({
-      email: email,
-      first_name: firstName,
-      company: company,
-      plan: plan,
-      clients: clients
-    });
-    var finalRedirect = TRIAL_APP_URL + '?' + params.toString();
-
-    fetch('https://formspree.io/f/' + formId, {
-      method: 'POST',
-      headers: { 'Accept': 'application/json' },
-      body: new FormData(form)
-    })
-    .then(function (res) {
-      if (res.ok) {
-        if (firstNameEl) firstNameEl.textContent = firstName ? ', ' + firstName : '';
-        if (redirectTargetEl) redirectTargetEl.textContent = TRIAL_APP_URL.replace(/^https?:\/\//, '');
-        if (manualRedirectEl) manualRedirectEl.href = finalRedirect;
-        form.style.display = 'none';
-        successEl.style.display = 'block';
-        successEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        setTimeout(function () { window.location.href = finalRedirect; }, REDIRECT_DELAY_MS);
-      } else {
-        return res.json().then(function (data) { throw data; });
-      }
-    })
-    .catch(function () {
-      errorEl.style.display = 'block';
-      btn.disabled = false;
-      btn.innerHTML = 'Start my free trial <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>';
-    });
-  });
-})();
-</script>
 </body>
 </html>
