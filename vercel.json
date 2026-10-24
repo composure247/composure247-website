@@ -1,6 +1,16 @@
 {
+  "redirects": [
+    { "source": "/privacy", "destination": "/legal/privacy", "permanent": true },
+    { "source": "/privacy.html", "destination": "/legal/privacy", "permanent": true }
+  ],
   "rewrites": [
-    { "source": "/privacy", "destination": "/privacy.html" },
-    { "source": "/support", "destination": "/support.html" }
+    { "source": "/support", "destination": "/support.html" },
+    { "source": "/security", "destination": "/security.html" },
+    { "source": "/subprocessors", "destination": "/subprocessors.html" },
+    { "source": "/legal", "destination": "/legal.html" },
+    { "source": "/legal/terms", "destination": "/legal-terms.html" },
+    { "source": "/legal/trial", "destination": "/legal-trial.html" },
+    { "source": "/legal/dpa", "destination": "/legal-dpa.html" },
+    { "source": "/legal/privacy", "destination": "/legal-privacy.html" }
   ]
 }
