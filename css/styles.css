@@ -755,14 +755,17 @@ p { line-height: 1.7; }
   height: 100%;
   object-fit: cover;
   object-position: 68% center;
-  /* feather left edge (and softly top/bottom) so it melts into the page */
+  /* 25% smaller than the column (Keith, 24 Oct), scaled about the centre so the phone clears the right edge */
+  transform: scale(0.75);
+  transform-origin: center;
+  /* feather every edge so the smaller frame melts into the page */
   -webkit-mask-image:
-    linear-gradient(90deg, transparent 0%, rgba(0,0,0,1) 22%),
-    linear-gradient(180deg, transparent 0%, rgba(0,0,0,1) 8%, rgba(0,0,0,1) 92%, transparent 100%);
+    linear-gradient(90deg, transparent 0%, rgba(0,0,0,1) 22%, rgba(0,0,0,1) 90%, transparent 100%),
+    linear-gradient(180deg, transparent 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, transparent 100%);
   -webkit-mask-composite: source-in;
   mask-image:
-    linear-gradient(90deg, transparent 0%, rgba(0,0,0,1) 22%),
-    linear-gradient(180deg, transparent 0%, rgba(0,0,0,1) 8%, rgba(0,0,0,1) 92%, transparent 100%);
+    linear-gradient(90deg, transparent 0%, rgba(0,0,0,1) 22%, rgba(0,0,0,1) 90%, transparent 100%),
+    linear-gradient(180deg, transparent 0%, rgba(0,0,0,1) 10%, rgba(0,0,0,1) 90%, transparent 100%);
   mask-composite: intersect;
 }
 .theme-dark .hero--splitscreen {
@@ -772,6 +775,7 @@ p { line-height: 1.7; }
   .hero--splitscreen { grid-template-columns: 1fr; }
   .hero-split-media { order: -1; min-height: 260px; margin-left: 0; }
   .hero-split-media .hero-video {
+    transform: none;
     object-position: center;
     -webkit-mask-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 82%, transparent 100%);
     mask-image: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 82%, transparent 100%);
