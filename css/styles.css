@@ -349,9 +349,9 @@ p { line-height: 1.7; }
   align-items: center;
   gap: var(--sp-2);
   font-size: var(--text-xl);
-  font-weight: 800;
+  font-weight: 600; /* matches the app's Composure247 wordmark */
   color: var(--navy);
-  letter-spacing: -0.03em;
+  letter-spacing: -0.025em;
   flex-shrink: 0;
 }
 
@@ -392,7 +392,7 @@ p { line-height: 1.7; }
   width: 34px;
   height: 34px;
   flex-shrink: 0;
-  color: inherit;
+  display: block;
 }
 
 .nav-links {
@@ -2332,7 +2332,7 @@ p { line-height: 1.7; }
   align-items: center;
   gap: 8px;
   color: #fff;
-  font-weight: 800;
+  font-weight: 600;
   font-size: var(--text-lg);
   letter-spacing: -0.02em;
 }
@@ -2444,7 +2444,7 @@ p { line-height: 1.7; }
 .footer-logo {
   color: var(--white);
   font-size: var(--text-xl);
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.03em;
   display: flex;
   align-items: center;
