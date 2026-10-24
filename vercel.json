@@ -45,6 +45,10 @@
       "destination": "/legal-privacy.html"
     },
     {
+      "source": "/legal/privacy/v1.0",
+      "destination": "/legal-privacy-v1.0.html"
+    },
+    {
       "source": "/:page([a-z-]+)",
       "destination": "/:page.html"
     }
