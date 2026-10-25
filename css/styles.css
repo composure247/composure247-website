@@ -1139,7 +1139,10 @@ p { line-height: 1.7; }
   grid-template-columns: repeat(3, 1fr);
   gap: var(--sp-8) var(--sp-6);
 }
-.tutorial-card { display: flex; flex-direction: column; }
+.tutorial-card { display: flex; flex-direction: column; padding: 12px 12px var(--sp-5); border-radius: 16px; }
+/* Text inset from the card edge; the thumbnail keeps the 12px frame (25 Oct: text sat flush against the box) */
+.tutorial-card .tutorial-tag, .tutorial-card h3, .tutorial-card p { padding: 0 var(--sp-3); }
+.tutorial-card p { margin: 0; }
 .tutorial-thumb,
 .tutorial-video {
   width: 100%;
