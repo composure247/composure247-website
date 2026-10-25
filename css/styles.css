@@ -1212,6 +1212,18 @@ p { line-height: 1.7; }
   color: var(--text-muted);
   line-height: 1.6;
 }
+/* A real video is shown whole, never cropped: object-fit: cover (right for the .tutorial-thumb images) carried
+   into full screen and cut the edges off on any screen that isn't 16:9, such as a MacBook's 16:10 (Keith, 25 Oct). */
+.tutorial-video { object-fit: contain; }
+.tutorial-video:fullscreen,
+.tutorial-video:-webkit-full-screen {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: auto;
+  border-radius: 0;
+  object-fit: contain;
+  background: #000;
+}
 /* The watchable videos: two columns, so four sit as a 2x2 rather than 3 + 1 (25 Oct) */
 .tutorials-grid--two { grid-template-columns: repeat(2, 1fr); }
 @media (max-width: 900px) {
