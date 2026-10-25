@@ -2825,6 +2825,10 @@ p { line-height: 1.7; }
 .badge-blue  { background: var(--accent-glow); color: var(--accent); border: 1px solid rgba(59,127,234,0.2); }
 .badge-green { background: var(--success-bg);  color: #059669;       border: 1px solid rgba(16,185,129,0.2); }
 .badge-amber { background: rgba(245,158,11,0.1); color: #D97706;     border: 1px solid rgba(245,158,11,0.2); }
+/* Light mode: the badge text above scored 2.6:1 (amber) and 3.0:1 (green) on the pale page. Darker shades of the
+   same colours pass WCAG AA (4.8:1 and 5.5:1). Dark mode has its own badge colours further down. (Keith, 25 Oct) */
+.theme-light .badge-amber { color: #A14A06; }
+.theme-light .badge-green { color: #03684D; }
 
 /* ============================================================
    Responsive, Tablet (≤1024px)
