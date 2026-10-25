@@ -3150,8 +3150,8 @@ p { line-height: 1.7; }
 .theme-dark .hero p, .theme-dark .hero .hero-sub, .theme-dark .hero li{ color:var(--text-muted) !important; }
 
 /* ---- dark-mode homepage fixes ---- */
-/* hero headline stays dark in both themes (light video bg) */
-.theme-dark .hero-headline{ color:var(--navy) !important; }
+/* The split-screen hero sits on the dark page in dark mode, so the headline takes the dark-theme heading colour.
+   (It was pinned to navy for the old full-width light video hero, which made it dark-on-dark; 25 Oct.) */
 /* audience chat-bubble mockups render as designed (white card, dark text) in both themes */
 .theme-dark .card.aud-msg{ background:rgba(255,255,255,0.05) !important; border:1px solid rgba(120,170,255,0.16) !important; box-shadow:0 12px 40px rgba(0,0,0,0.32) !important; }
 .theme-dark .aud-msg [style*="background:var(--off-white)"]{ background:rgba(255,255,255,0.06) !important; }
@@ -3163,6 +3163,37 @@ p { line-height: 1.7; }
 .theme-dark .testimonial-quote{ color:#EAF2FF !important; }
 .theme-dark .testimonial-name{ color:#EAF2FF !important; }
 .theme-dark .testimonial-role{ color:rgba(255,255,255,0.6) !important; }
+
+/* ---- dark-mode contrast sweep (25 Oct) ----
+   Components that hard-code navy/body text or a white card were left light-on-light or dark-on-dark.
+   Found by a contrast audit of every page in dark mode; each rule below names where it shows. */
+/* body-text tokens are only ever used for text, so remap them once rather than chase every component */
+.theme-dark{ --text:#EAF2FF; --text-body:rgba(255,255,255,0.72); }
+/* ...except inside the homepage email/SMS mockups, which stay white cards in both themes */
+.theme-dark .comms-card{ --text:#0D2F4F; --text-body:#2B4A68; }
+/* bold lead-ins in lists and cards: comparison "Excellent", pricing tiers and business case, legal index */
+.theme-dark .vs-point strong, .theme-dark .tier-feat strong, .theme-dark .case-row-value strong,
+.theme-dark .legal-index a.doc-card strong, .theme-dark .tier-features-label{ color:#EAF2FF !important; }
+.theme-dark .legal th{ color:#EAF2FF !important; border-bottom-color:rgba(120,170,255,0.24) !important; }
+.theme-dark .legal td{ border-color:rgba(120,170,255,0.14) !important; }
+/* homepage stats */
+.theme-dark .stat-number{ color:#EAF2FF; }
+/* "Coming soon" integration badges */
+.theme-dark .badge-green{ background:rgba(38,205,178,0.12) !important; color:#7FE0C0 !important; border-color:rgba(38,205,178,0.30) !important; }
+/* audience tone chips on the homepage mockups */
+.theme-dark .contact-status{ filter:brightness(1.6); }
+/* start-trial page: both cards were white/pale with the dark theme's light text on them */
+.theme-dark .trial-form-card, .theme-dark .trial-side-card{ background:rgba(255,255,255,0.04) !important; border:1px solid rgba(120,170,255,0.16) !important; box-shadow:0 12px 40px rgba(0,0,0,0.32) !important; }
+.theme-dark .trial-step-num{ background:rgba(59,127,234,0.14) !important; border-color:rgba(89,161,255,0.45) !important; color:#8FC7FF !important; }
+/* phone menu: the panel was white, so light links and the outline "Start free trial" vanished on it */
+.theme-dark .mobile-nav{ background:#0A1526; border-left:1px solid rgba(120,170,255,0.16); }
+.theme-dark .mobile-nav .nav-logo{ color:#EAF2FF; }
+.theme-dark .mobile-nav-link:hover{ background:rgba(255,255,255,0.06); color:#fff; }
+.theme-dark .mobile-nav-close{ background:rgba(255,255,255,0.08) !important; color:#EAF2FF !important; }
+.theme-dark .mobile-theme-toggle{ color:#EAF2FF; border-color:rgba(255,255,255,0.30); }
+.theme-dark .mobile-nav .btn-ghost{ color:rgba(255,255,255,0.82); }
+/* solutions demo browser bar */
+.theme-dark .demo-url{ color:rgba(255,255,255,0.55) !important; }
 
 /* ---- theme-aware footer (solid colour per theme, keep green accent bar) ---- */
 .theme-light .footer--slim{ background:#E3EDFA !important; }
