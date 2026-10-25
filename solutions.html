@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="See how Composure solves the real communication challenges MSPs face every day, from major incidents to planned maintenance, post-incident reports to enterprise client management.">
   <title>Solutions, Composure</title>
-  <link rel="stylesheet" href="css/styles.css?v=80">
+  <link rel="stylesheet" href="css/styles.css?v=81">
   <!-- Vercel Web Analytics: cookie-free visit counts, served from our own domain (Privacy Notice v1.1, 7.4) -->
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
@@ -92,7 +92,9 @@
     .demo-url{flex:1;background:rgba(255,255,255,0.06);border-radius:6px;padding:5px 12px;font-size:11px;color:rgba(255,255,255,0.3);text-align:center;font-family:monospace;}
     .demo-progress-track{height:3px;background:rgba(255,255,255,0.07);}
     .demo-progress-fill{height:100%;background:var(--grad-accent);width:0%;transition:width linear;}
-    .demo-body{padding:28px;min-height:360px;}
+    .demo-body{padding:0;background:#F8FAFC;}
+    .demo-shot{display:block;width:100%;height:auto;}
+    .demo-caption{margin:0;padding:12px 20px;font-size:var(--text-sm);color:rgba(255,255,255,0.8);background:#0d1824;text-align:center;}
     .demo-scene{display:none;animation:dSceneIn 0.35s ease;}
     .demo-scene.active{display:block;}
     @keyframes dSceneIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
@@ -282,85 +284,27 @@
     <div class="demo-window fade-up stagger-2">
       <div class="demo-titlebar">
         <div class="demo-dots"><div class="demo-dot"></div><div class="demo-dot"></div><div class="demo-dot"></div></div>
-        <div class="demo-url">app.composure247.com, Incident Communications</div>
+        <div class="demo-url">app.composure247.com</div>
         <div style="width:58px;"></div>
       </div>
       <div class="demo-progress-track"><div class="demo-progress-fill" id="demoProgress"></div></div>
       <div class="demo-body">
-
-        <!-- Scene 0: Incident Raised -->
         <div class="demo-scene active" id="demo-scene-0">
-          <div class="d-badge">P1, High</div>
-          <div class="d-incident-title">Microsoft 365 Authentication Failure</div>
-          <div class="d-incident-meta">Raised: 09:14 UTC &nbsp;·&nbsp; 4 minutes ago &nbsp;·&nbsp; Source: HaloPSA ticket</div>
-          <div style="font-size:11px;color:rgba(255,255,255,0.35);margin-bottom:9px;text-transform:uppercase;letter-spacing:.06em;">Affected clients (7)</div>
-          <div class="d-chips">
-            <div class="d-chip" style="background:#3B7FEA;">NF</div>
-            <div class="d-chip" style="background:#7C3AED;">MG</div>
-            <div class="d-chip" style="background:#0CA5D8;">AL</div>
-            <div class="d-chip" style="background:#059669;">PL</div>
-            <div class="d-chip" style="background:#D97706;">CR</div>
-            <div class="d-chip" style="background:#DC2626;">VM</div>
-            <div class="d-chip" style="background:#4B5563;">+1</div>
-          </div>
-          <div class="d-ai-box">
-            <div class="d-spinner"></div>
-            <div class="d-ai-text"><strong>Composure is drafting updates</strong>Calibrating an update to each contact's role for 7 clients…</div>
-          </div>
+          <img class="demo-shot" src="images/product/demo-1-raised.webp" width="1045" height="760" alt="A P1 is raised for two customers in the New Incident panel: affected customers, the service desk ticket number, title, description and severity.">
+          <p class="demo-caption">Raise the incident once, for every affected customer.</p>
         </div>
-
-        <!-- Scene 1: AI Drafting -->
         <div class="demo-scene" id="demo-scene-1">
-          <div class="d-tabs">
-            <div class="d-tab active">Sarah Chen (CTO) <span class="dtick" style="display:inline-flex;align-items:center;justify-content:center;width:13px;height:13px;background:#10b981;border-radius:50%;color:#fff;font-size:7px;margin-left:5px;">✓</span></div>
-            <div class="d-tab">Tom Bradley (IT Mgr)</div>
-            <div class="d-tab">Mark Harris (Finance)</div>
-          </div>
-          <div class="d-meta">Tone: Executive briefing &nbsp;·&nbsp; Channel: Email + SMS &nbsp;·&nbsp; Calibrated for CTO</div>
-          <div class="d-subject">Subject: <span>Service interruption, Microsoft 365 authentication [INC-2847]</span></div>
-          <div class="d-body">Sarah,<br><br>We're writing to notify you of an ongoing service interruption affecting Microsoft 365 authentication across your environment. Our team identified the issue at 09:14 UTC and is actively working with Microsoft's engineering team.<br><br>Current status: Authentication services degraded. Users may be unable to sign in to Microsoft 365 applications.<span class="d-cursor"></span></div>
+          <img class="demo-shot" src="images/product/demo-2-drafts.webp" width="1045" height="760" loading="lazy" alt="Composure has drafted a separate update for each contact: a technical one for the Group CTO and a plain-English one for the Managing Partner.">
+          <p class="demo-caption">A separate draft for every contact, written for their role.</p>
         </div>
-
-        <!-- Scene 2: Review & Approve -->
         <div class="demo-scene" id="demo-scene-2">
-          <div style="font-size:14px;font-weight:600;color:var(--white);margin-bottom:5px;">3 personalised drafts ready for review</div>
-          <div style="font-size:12px;color:rgba(255,255,255,0.38);margin-bottom:16px;">Each draft is calibrated to the recipient's role. A person reviews and sends every one.</div>
-          <div class="d-review-grid">
-            <div class="d-card">
-              <div class="d-card-head"><div class="d-av" style="background:#3B7FEA;">SC</div><div><div class="d-card-name">Sarah Chen</div><div class="d-card-role">CTO, Nexus Financial</div></div></div>
-              <div class="d-tone">Executive briefing</div>
-              <div class="d-preview">"We're writing to notify you of an ongoing service interruption affecting Microsoft 365 authentication. Our team identified the issue at 09:14 UTC…"</div>
-            </div>
-            <div class="d-card">
-              <div class="d-card-head"><div class="d-av" style="background:#7C3AED;">TB</div><div><div class="d-card-name">Tom Bradley</div><div class="d-card-role">IT Manager, Nexus Financial</div></div></div>
-              <div class="d-tone">Technical detail</div>
-              <div class="d-preview">"Users cannot currently sign in to email and Office apps. Our engineers have isolated the cause and are applying a fix. Sessions already open are not affected…"</div>
-            </div>
-            <div class="d-card">
-              <div class="d-card-head"><div class="d-av" style="background:#0CA5D8;">MH</div><div><div class="d-card-name">Mark Harris</div><div class="d-card-role">Finance Director, Nexus Financial</div></div></div>
-              <div class="d-tone">Business impact</div>
-              <div class="d-preview">"A temporary Microsoft 365 issue is affecting staff login. Your team may have limited access to email and Office apps. We're working to restore full service…"</div>
-            </div>
-          </div>
-          <div style="display:flex;justify-content:center;">
-            <div class="d-send"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Approve &amp; send all 3 communications</div>
-          </div>
+          <img class="demo-shot" src="images/product/demo-3-review.webp" width="1045" height="760" loading="lazy" alt="The Incident Manager reviews the drafts and confirms: Send to 2 contacts?">
+          <p class="demo-caption">A person reviews every draft, edits if needed, and confirms the send.</p>
         </div>
-
-        <!-- Scene 3: Sent -->
         <div class="demo-scene" id="demo-scene-3">
-          <div class="d-success-head">
-            <div class="d-success-icon"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
-            <div><div class="d-success-title">Updates sent</div><div class="d-success-sub">09:16 UTC, 2 minutes after the incident was raised</div></div>
-          </div>
-          <div class="d-rows">
-            <div class="d-row"><div class="d-av" style="background:#3B7FEA;">SC</div><div class="d-row-info"><div class="d-row-name">Sarah Chen</div><div class="d-row-role">CTO · Nexus Financial</div></div><div class="d-row-status"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Sent 09:16 · Email + SMS</div></div>
-            <div class="d-row"><div class="d-av" style="background:#7C3AED;">TB</div><div class="d-row-info"><div class="d-row-name">Tom Bradley</div><div class="d-row-role">IT Manager · Nexus Financial</div></div><div class="d-row-status"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Sent 09:16 · Email</div></div>
-            <div class="d-row"><div class="d-av" style="background:#0CA5D8;">MH</div><div class="d-row-info"><div class="d-row-name">Mark Harris</div><div class="d-row-role">Finance Director · Nexus Financial</div></div><div class="d-row-status"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>Sent 09:17 · Email + SMS</div></div>
-          </div>
-          <div class="d-next"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>Next update due: <strong>09:45</strong>. Composure reminds your team 5 minutes before, and escalates if it's missed.</div>
+          <img class="demo-shot" src="images/product/demo-4-sent.webp" width="1045" height="760" loading="lazy" alt="Both updates are marked Sent, and the confirmation reads Sent to 2 contacts.">
+          <p class="demo-caption">Sent. Each customer's update clock restarts, and the account team is briefed.</p>
         </div>
-
       </div>
     </div>
   </div>
