@@ -3096,6 +3096,12 @@ p { line-height: 1.7; }
    Continuous soft-white background, glossy cards, sky+green accents.
    ============================================================ */
 .theme-light body{ background:#E7EFFA; color:var(--text-body); }
+/* Accessibility (Keith, 25 Oct): on the pale page the brand blue scored 2.0-2.6:1 as text and the subtle grey 2.1:1.
+   Light mode uses a deeper blue (4.65:1 on the palest tag background) and a darker subtle grey. The dark bands
+   inside light pages keep the bright brand blue, which reads well on navy. */
+.theme-light{ --accent:#175FC2; --text-subtle:#5F7B98; }
+.theme-light .section-dark, .theme-light .section-futuristic, .theme-light .footer,
+.theme-light [style*="background:var(--navy)"]{ --accent:#54A1FF; --text-subtle:#93A9C0; }
 .theme-light body::before{
   content:''; position:fixed; inset:0; z-index:0; pointer-events:none;
   background:
