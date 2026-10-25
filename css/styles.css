@@ -3185,6 +3185,13 @@ p { line-height: 1.7; }
 /* start-trial page: both cards were white/pale with the dark theme's light text on them */
 .theme-dark .trial-form-card, .theme-dark .trial-side-card{ background:rgba(255,255,255,0.04) !important; border:1px solid rgba(120,170,255,0.16) !important; box-shadow:0 12px 40px rgba(0,0,0,0.32) !important; }
 .theme-dark .trial-step-num{ background:rgba(59,127,234,0.14) !important; border-color:rgba(89,161,255,0.45) !important; color:#8FC7FF !important; }
+/* phone menu: the panel was white, so light links and the outline "Start free trial" vanished on it */
+.theme-dark .mobile-nav{ background:#0A1526; border-left:1px solid rgba(120,170,255,0.16); }
+.theme-dark .mobile-nav .nav-logo{ color:#EAF2FF; }
+.theme-dark .mobile-nav-link:hover{ background:rgba(255,255,255,0.06); color:#fff; }
+.theme-dark .mobile-nav-close{ background:rgba(255,255,255,0.08) !important; color:#EAF2FF !important; }
+.theme-dark .mobile-theme-toggle{ color:#EAF2FF; border-color:rgba(255,255,255,0.30); }
+.theme-dark .mobile-nav .btn-ghost{ color:rgba(255,255,255,0.82); }
 /* solutions demo browser bar */
 .theme-dark .demo-url{ color:rgba(255,255,255,0.55) !important; }
 
