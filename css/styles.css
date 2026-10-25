@@ -1212,11 +1212,13 @@ p { line-height: 1.7; }
   color: var(--text-muted);
   line-height: 1.6;
 }
+/* The watchable videos: two columns, so four sit as a 2x2 rather than 3 + 1 (25 Oct) */
+.tutorials-grid--two { grid-template-columns: repeat(2, 1fr); }
 @media (max-width: 900px) {
   .tutorials-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 560px) {
-  .tutorials-grid { grid-template-columns: 1fr; }
+  .tutorials-grid, .tutorials-grid--two { grid-template-columns: 1fr; }
 }
 
 /* ---- Commercial value: blue numbered process ---- */
