@@ -33,6 +33,11 @@
   --accent-dark: #3B8DF0;
   --accent-hover:#2F86F5;
   --accent-glow: rgba(84, 161, 255, 0.15);
+  /* Fills that carry white text (buttons, tags, active tabs). The brand blue above is too light for white
+     text (2.6:1); these keep the hue and pass WCAG AA (4.9:1 and 5.5:1). Brand blue stays for links,
+     icons and accents. (Keith, 25 Oct) */
+  --accent-solid:       #1F6FD8;
+  --accent-solid-hover: #1A66CC;
   --teal:        #54A1FF;
   --teal-light:  rgba(84, 161, 255, 0.10);
 
@@ -453,13 +458,13 @@ p { line-height: 1.7; }
 }
 
 .btn-primary {
-  background: var(--accent);
+  background: var(--accent-solid);
   color: var(--white);
   box-shadow: var(--shadow-accent);
 }
 
 .btn-primary:hover {
-  background: var(--accent-dark);
+  background: var(--accent-solid-hover);
   box-shadow: 0 10px 36px rgba(59, 127, 234, 0.32);
   transform: translateY(-1px);
 }
@@ -1677,7 +1682,7 @@ p { line-height: 1.7; }
 }
 
 .mockup-btn-primary {
-  background: var(--accent);
+  background: var(--accent-solid);
   color: var(--white);
 }
 
@@ -2113,7 +2118,7 @@ p { line-height: 1.7; }
 }
 
 .table-header-composure {
-  background: var(--accent) !important;
+  background: var(--accent-solid) !important;
   color: var(--white) !important;
 }
 
@@ -2176,7 +2181,7 @@ p { line-height: 1.7; }
 }
 
 .faq-item.open .faq-icon {
-  background: var(--accent);
+  background: var(--accent-solid);
   color: var(--white);
   transform: rotate(45deg);
 }
@@ -2309,7 +2314,8 @@ p { line-height: 1.7; }
   flex-wrap: wrap;
 }
 .cta-banner .btn-primary {
-  background: var(--grad-green);
+  /* darker than --grad-green so the white label passes AA (5.0:1 at the light end) */
+  background: linear-gradient(135deg, #1F7F4D 0%, #1A7345 100%);
   box-shadow: 0 8px 22px rgba(63,181,124,0.35);
 }
 .cta-banner .btn-primary:hover {
@@ -3062,7 +3068,8 @@ p { line-height: 1.7; }
 .theme-dark .band-segments, .theme-dark .trust-pillbar, .theme-dark .period-switch-track{ background:rgba(255,255,255,0.05) !important; border-color:rgba(120,170,255,0.18) !important; }
 .theme-dark .band-seg-name, .theme-dark .controls-q, .theme-dark .trust-pillbar-item, .theme-dark .period-switch-label.active{ color:#EAF2FF !important; }
 .theme-dark .band-seg:hover{ background:rgba(255,255,255,0.07) !important; }
-.theme-dark .band-seg.active{ background:var(--accent) !important; }
+.theme-dark .band-seg.active{ background:var(--accent-solid) !important; }
+.theme-dark .band-seg.active .band-seg-range{ opacity:0.9; }
 
 /* ---- theme-dark: pricing business case + comparison table ---- */
 .theme-dark .case-compare, .theme-dark .case-col{ background:rgba(255,255,255,0.035) !important; border-color:rgba(120,170,255,0.12) !important; }
@@ -3075,7 +3082,7 @@ p { line-height: 1.7; }
 /* ---- theme-dark: solutions cards + demo controls ---- */
 .theme-dark .sol-card{ background:rgba(255,255,255,0.04) !important; border-color:rgba(120,170,255,0.14) !important; }
 .theme-dark .demo-step-btn{ background:rgba(255,255,255,0.06) !important; border:1px solid rgba(120,170,255,0.20) !important; color:rgba(255,255,255,0.7) !important; }
-.theme-dark .demo-step-btn.active{ background:var(--accent) !important; border-color:var(--accent) !important; color:#fff !important; }
+.theme-dark .demo-step-btn.active{ background:var(--accent-solid) !important; border-color:var(--accent-solid) !important; color:#fff !important; }
 .theme-dark .demo-section .section-header h2, .theme-dark .demo-section .section-header p{ color:inherit; }
 
 /* ---- theme-dark: forms + contact/audience cards ---- */
