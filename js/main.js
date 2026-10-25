@@ -159,3 +159,43 @@ document.addEventListener('click', function (e) {
   h.classList.add(dark ? 'theme-light' : 'theme-dark');
   try { localStorage.setItem('composure-theme', dark ? 'light' : 'dark'); } catch (_) {}
 });
+
+/* Image pop-out (25 Oct 2026): product screenshots open full size over the page, not in a new tab.
+   Click anywhere or press Esc to go back. Links keep their href, so without JavaScript the image still opens. */
+(function () {
+  var box = null, lastFocus = null;
+  function close() {
+    if (!box) return;
+    box.classList.remove('is-open');
+    document.documentElement.classList.remove('lightbox-lock');
+    var b = box; box = null;
+    setTimeout(function () { b.remove(); }, 180);
+    if (lastFocus && lastFocus.focus) lastFocus.focus();
+  }
+  function open(src, alt) {
+    lastFocus = document.activeElement;
+    box = document.createElement('div');
+    box.className = 'lightbox';
+    box.setAttribute('role', 'dialog');
+    box.setAttribute('aria-modal', 'true');
+    box.setAttribute('aria-label', 'Enlarged image');
+    box.innerHTML = '<button type="button" class="lightbox-close" aria-label="Close">&times;</button>' +
+      '<img alt=""><p class="lightbox-hint">Click anywhere or press Esc to close</p>';
+    var img = box.querySelector('img');
+    img.src = src; img.alt = alt || '';
+    box.addEventListener('click', close);
+    document.body.appendChild(box);
+    document.documentElement.classList.add('lightbox-lock');
+    requestAnimationFrame(function () { box && box.classList.add('is-open'); });
+    box.querySelector('.lightbox-close').focus();
+  }
+  document.addEventListener('click', function (e) {
+    if (e.defaultPrevented || e.button || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    var t = e.target.closest && e.target.closest('a[href$=".webp"], a[href$=".png"], a[href$=".jpg"], img[data-zoom]');
+    if (!t || (box && box.contains(t))) return;
+    e.preventDefault();
+    var inner = t.tagName === 'IMG' ? t : t.querySelector('img');
+    open(t.tagName === 'IMG' ? (t.getAttribute('data-zoom') || t.currentSrc || t.src) : t.href, inner ? inner.alt : '');
+  });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+})();
