@@ -2888,6 +2888,22 @@ p { line-height: 1.7; }
 /* ============================================================
    Responsive, Mobile (≤768px)
    ============================================================ */
+/* Nav fit (26 Oct): with "Log in" added the desktop nav needed ~1320px, so every window from 769px to 1320px
+   scrolled sideways (260px at 1024). Tighter spacing on smaller laptops; the menu button from 1180px down,
+   keeping Log in and Free trial in the bar (Contact is in the menu). */
+@media (max-width: 1320px) {
+  .nav-inner { gap: var(--sp-4); }
+  .nav-links { gap: 0; }
+  .nav-link { padding: var(--sp-2) 9px; }
+  .nav-actions { gap: var(--sp-2); }
+}
+@media (max-width: 1180px) {
+  .nav-links { display: none; }
+  .nav-actions a.btn-ghost[href="contact.html"] { display: none; }
+  .nav-mobile-toggle { display: flex; }
+  .mobile-nav, .mobile-nav-overlay { display: block; }
+}
+
 @media (max-width: 768px) {
   :root {
     --text-5xl: 2.25rem;
@@ -3245,3 +3261,7 @@ p { line-height: 1.7; }
 .lightbox-close:hover, .lightbox-close:focus-visible { background: rgba(255, 255, 255, 0.2); outline: none; }
 html.lightbox-lock, html.lightbox-lock body { overflow: hidden; }
 .demo-shot[data-zoom] { cursor: zoom-in; }
+
+/* Comparison page "layer" diagram: three columns on wide screens, stacked on phones (it pushed the page 177px wide at 390px, 26 Oct) */
+.layer-diagram { grid-template-columns: 1fr 1fr 1fr; }
+@media (max-width: 768px) { .layer-diagram { grid-template-columns: 1fr; padding: var(--sp-5) !important; } }
