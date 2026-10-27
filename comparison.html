@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="How Composure compares to PagerDuty, Statuspage, ConnectWise, ServiceNow, and generic email tools, and why none of them were built for MSP client communication.">
   <title>Why Composure, Composure</title>
-  <link rel="stylesheet" href="css/styles.css?v=86">
+  <link rel="stylesheet" href="css/styles.css?v=87">
   <style>
     .vs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--sp-6); }
     .vs-card {
@@ -20,17 +20,17 @@
       box-shadow: var(--shadow-card);
       transition: transform .3s cubic-bezier(.16,1,.3,1), box-shadow .3s ease, border-color .3s ease;
     }
-    .vs-card:hover { transform: translateY(-4px); box-shadow: 0 20px 44px rgba(13,47,79,0.10); border-color: rgba(59,127,234,0.22); }
-    .vs-card::after { content:''; position:absolute; top:-70px; right:-70px; width:180px; height:180px; border-radius:50%; background: radial-gradient(circle, rgba(59,127,234,0.07), transparent 70%); pointer-events:none; }
+    .vs-card:hover { transform: translateY(-4px); box-shadow: 0 20px 44px rgba(18,68,118,0.10); border-color: rgba(74,147,224,0.22); }
+    .vs-card::after { content:''; position:absolute; top:-70px; right:-70px; width:180px; height:180px; border-radius:50%; background: radial-gradient(circle, rgba(74,147,224,0.07), transparent 70%); pointer-events:none; }
     .vs-card-header { position:relative; z-index:1; display: flex; align-items: flex-start; gap: var(--sp-4); margin-bottom: var(--sp-5); padding-bottom: var(--sp-5); border-bottom: 1px solid var(--border-light); }
     .vs-tool-name { font-size: var(--text-lg); font-weight: 700; color: var(--navy); margin-bottom: 4px; letter-spacing:-0.01em; }
     .vs-verdict { font-size: var(--text-xs); font-weight: 500; color: var(--text-muted); line-height: 1.5; }
     .vs-point { position:relative; z-index:1; display: flex; gap: 12px; align-items: flex-start; margin-bottom: var(--sp-3); font-size: var(--text-sm); line-height:1.55; }
     .vs-point strong { color: var(--navy); }
     .vs-tick, .vs-cross { width:22px; height:22px; padding:4px; box-sizing:border-box; border-radius:50%; flex-shrink:0; margin-top:1px; }
-    .vs-tick { color: var(--success); background: rgba(16,185,129,0.12); }
+    .vs-tick { color: var(--success); background: rgba(31,169,140,0.12); }
     .vs-cross { color: #E0655E; background: rgba(224,101,94,0.12); }
-    .vs-composure { position:relative; z-index:1; overflow:hidden; margin-top: var(--sp-5); padding: var(--sp-4) var(--sp-5) var(--sp-4) calc(var(--sp-5) + 6px); background: linear-gradient(135deg, rgba(59,127,234,0.10), rgba(82,201,154,0.12)); border-radius: 12px; font-size: var(--text-sm); line-height:1.55; color: var(--text-body); }
+    .vs-composure { position:relative; z-index:1; overflow:hidden; margin-top: var(--sp-5); padding: var(--sp-4) var(--sp-5) var(--sp-4) calc(var(--sp-5) + 6px); background: linear-gradient(135deg, rgba(74,147,224,0.10), rgba(86,207,181,0.12)); border-radius: 12px; font-size: var(--text-sm); line-height:1.55; color: var(--text-body); }
     .vs-composure::before { content:''; position:absolute; left:0; top:0; bottom:0; width:4px; background: var(--grad-accent); }
     .big-comparison { overflow-x: auto; }
     .big-comparison-table { min-width: 760px; }
@@ -40,10 +40,10 @@
     .cmpx-wrap{overflow-x:auto;padding:14px 0 6px;}
     .cmpx{display:grid;grid-template-columns:1.6fr 1.15fr 1fr 1fr 1fr 1fr;column-gap:14px;position:relative;min-width:880px;}
     .cmpx-panel{z-index:0;}
-    .cmpx-labels-bg{background:#0f2740;border-radius:16px;}
+    .cmpx-labels-bg{background:#0E3A62;border-radius:16px;}
     .cmpx-others-bg{background:var(--white);border:1px solid var(--border-light);border-radius:16px;}
-    .cmpx-hl{z-index:1;background:linear-gradient(180deg,#7BB4FF 0%,#2F6FD0 100%);border-radius:16px;box-shadow:0 22px 46px rgba(47,111,208,0.30);}
-    .cmpx-cell{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;padding:13px 12px;font-size:13px;text-align:center;border-top:1px solid rgba(13,47,79,0.07);}
+    .cmpx-hl{z-index:1;background:linear-gradient(180deg,#8FC2F4 0%,#2F74D6 100%);border-radius:16px;box-shadow:0 22px 46px rgba(47,116,214,0.30);}
+    .cmpx-cell{position:relative;z-index:2;display:flex;align-items:center;justify-content:center;padding:13px 12px;font-size:13px;text-align:center;border-top:1px solid rgba(18,68,118,0.07);}
     .cmpx-cell.hd{border-top:none;min-height:92px;}
     .cmpx-lb{justify-content:flex-start;text-align:left;color:rgba(255,255,255,0.82);border-top-color:rgba(255,255,255,0.09);padding-left:22px;line-height:1.3;}
     .cmpx-lb.hd{color:#fff;font-weight:700;font-size:1.05rem;}
@@ -123,7 +123,7 @@
         <p style="font-size:var(--text-sm);color:rgba(255,255,255,0.5);margin-top:var(--sp-3);">Manage the technical side</p>
       </div>
       <div style="text-align:center;padding:var(--sp-4);border-left:1px solid rgba(255,255,255,0.1);border-right:1px solid rgba(255,255,255,0.1);">
-        <div style="font-size:var(--text-sm);font-weight:700;color:rgba(59,127,234,0.9);margin-bottom:var(--sp-3);text-transform:uppercase;letter-spacing:0.06em;">Composure</div>
+        <div style="font-size:var(--text-sm);font-weight:700;color:rgba(74,147,224,0.9);margin-bottom:var(--sp-3);text-transform:uppercase;letter-spacing:0.06em;">Composure</div>
         <div style="width:56px;height:56px;background:var(--accent-solid);border-radius:var(--radius-lg);margin:0 auto var(--sp-3);display:flex;align-items:center;justify-content:center;">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
         </div>
@@ -132,9 +132,9 @@
       <div style="text-align:center;padding:var(--sp-4);">
         <div style="font-size:var(--text-sm);font-weight:700;color:rgba(255,255,255,0.5);margin-bottom:var(--sp-3);text-transform:uppercase;letter-spacing:0.06em;">Your clients receive</div>
         <div style="display:flex;flex-direction:column;gap:var(--sp-2);">
-          <span class="badge" style="justify-content:center;background:rgba(16,185,129,0.18);color:#6EE7B7;border:1px solid rgba(110,231,183,0.35);">Role-calibrated messages</span>
-          <span class="badge" style="justify-content:center;background:rgba(16,185,129,0.18);color:#6EE7B7;border:1px solid rgba(110,231,183,0.35);">Professional updates</span>
-          <span class="badge" style="justify-content:center;background:rgba(16,185,129,0.18);color:#6EE7B7;border:1px solid rgba(110,231,183,0.35);">Timely communications</span>
+          <span class="badge" style="justify-content:center;background:rgba(31,169,140,0.18);color:#9EEAD6;border:1px solid rgba(158,234,214,0.35);">Role-calibrated messages</span>
+          <span class="badge" style="justify-content:center;background:rgba(31,169,140,0.18);color:#9EEAD6;border:1px solid rgba(158,234,214,0.35);">Professional updates</span>
+          <span class="badge" style="justify-content:center;background:rgba(31,169,140,0.18);color:#9EEAD6;border:1px solid rgba(158,234,214,0.35);">Timely communications</span>
         </div>
         <p style="font-size:var(--text-sm);color:rgba(255,255,255,0.5);margin-top:var(--sp-3);">Trust maintained, confidence built</p>
       </div>
@@ -155,8 +155,8 @@
       <!-- PagerDuty -->
       <div class="vs-card">
         <div class="vs-card-header">
-          <div style="width:44px;height:44px;background:rgba(34,197,94,0.1);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="2" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+          <div style="width:44px;height:44px;background:rgba(31,169,140,0.1);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1FA98C" stroke-width="2" stroke-linecap="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
           </div>
           <div>
             <div class="vs-tool-name">PagerDuty &amp; OpsGenie</div>
@@ -189,8 +189,8 @@
       <!-- ConnectWise / Autotask -->
       <div class="vs-card">
         <div class="vs-card-header">
-          <div style="width:44px;height:44px;background:rgba(99,102,241,0.1);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#6366F1" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+          <div style="width:44px;height:44px;background:rgba(74,147,224,0.1);border-radius:var(--radius);display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4A93E0" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
           </div>
           <div>
             <div class="vs-tool-name">ConnectWise &amp; Autotask (PSA Tools)</div>
