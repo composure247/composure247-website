@@ -3,21 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <meta name="description" content="Composure security, compliance, and data protection details. UK and EU data residency, encryption, GDPR compliance, audit trails, and enterprise-grade governance.">
   <title>Security &amp; Trust, Composure</title>
-  <link rel="stylesheet" href="css/styles.css?v=69">
+  <link rel="stylesheet" href="css/styles.css?v=78">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <style>
     /* ===== Security page: futuristic electric theme (page-scoped) ===== */
-    body{ background:#060A14; color:rgba(255,255,255,0.72); }
+    body{ background:#06121F; color:rgba(255,255,255,0.72); }
     body::before{
       content:''; position:fixed; inset:0; z-index:0; pointer-events:none;
       background:
-        radial-gradient(55% 45% at 12% 6%, rgba(59,127,234,0.22), transparent 60%),
-        radial-gradient(48% 40% at 88% 16%, rgba(122,90,255,0.16), transparent 60%),
-        radial-gradient(60% 50% at 50% 108%, rgba(38,205,178,0.13), transparent 60%);
+        radial-gradient(55% 45% at 12% 6%, rgba(74,147,224,0.22), transparent 60%),
+        radial-gradient(48% 40% at 88% 16%, rgba(104,169,240,0.16), transparent 60%),
+        radial-gradient(60% 50% at 50% 108%, rgba(56,210,190,0.13), transparent 60%);
     }
     .nav, .page-hero, .section, footer{ position:relative; z-index:1; }
     .section, .section-alt, .section-dark, .page-hero{ background:transparent !important; }
@@ -25,29 +26,29 @@
     h2, h3, h4, h5, .section-header h2{ color:#EAF2FF !important; }
     .section p, .section-header p{ color:rgba(255,255,255,0.56) !important; }
     /* glowing eyebrow pill */
-    .eyebrow-tag{ background:rgba(59,127,234,0.14) !important; border:1px solid rgba(89,161,255,0.45) !important; color:#8FC0FF !important; box-shadow:0 0 22px rgba(59,127,234,0.28); }
+    .eyebrow-tag{ background:rgba(74,147,224,0.14) !important; border:1px solid rgba(104,169,240,0.45) !important; color:#9ECCF5 !important; box-shadow:0 0 22px rgba(74,147,224,0.28); }
     /* hero glass badges */
-    .security-badge{ background:rgba(255,255,255,0.05) !important; border:1px solid rgba(120,170,255,0.32) !important; color:rgba(222,236,255,0.92) !important; box-shadow:0 0 18px rgba(59,127,234,0.20); }
+    .security-badge{ background:rgba(255,255,255,0.05) !important; border:1px solid rgba(143,194,244,0.32) !important; color:rgba(222,236,255,0.92) !important; box-shadow:0 0 18px rgba(74,147,224,0.20); }
     /* glassmorphic neon feature cards */
     .feature-card{
       background:rgba(255,255,255,0.035) !important;
-      border:1px solid rgba(120,170,255,0.14) !important;
+      border:1px solid rgba(143,194,244,0.14) !important;
       border-radius:16px !important;
       backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
       box-shadow:0 12px 40px rgba(0,0,0,0.35);
       transition:transform .3s cubic-bezier(.16,1,.3,1), box-shadow .3s ease, border-color .3s ease;
       position:relative; overflow:hidden;
     }
-    .feature-card:hover{ transform:translateY(-5px); border-color:rgba(89,161,255,0.5) !important; box-shadow:0 20px 54px rgba(59,127,234,0.24), 0 0 0 1px rgba(89,161,255,0.25); }
+    .feature-card:hover{ transform:translateY(-5px); border-color:rgba(104,169,240,0.5) !important; box-shadow:0 20px 54px rgba(74,147,224,0.24), 0 0 0 1px rgba(104,169,240,0.25); }
     .feature-card h4{ color:#EFF5FF !important; }
     .feature-card p{ color:rgba(255,255,255,0.55) !important; }
     /* neon glowing icon chips */
     .feature-icon{
-      background:rgba(59,127,234,0.14) !important;
-      border:1px solid rgba(89,161,255,0.45) !important;
-      color:#8FC7FF !important;
+      background:rgba(74,147,224,0.14) !important;
+      border:1px solid rgba(104,169,240,0.45) !important;
+      color:#9ECCF5 !important;
       border-radius:12px !important;
-      box-shadow:0 0 20px rgba(59,127,234,0.35), inset 0 0 12px rgba(89,161,255,0.12);
+      box-shadow:0 0 20px rgba(74,147,224,0.35), inset 0 0 12px rgba(104,169,240,0.12);
       animation:secGlow 3.4s ease-in-out infinite;
     }
     .feature-card:nth-child(2) .feature-icon{ animation-delay:.5s; }
@@ -56,11 +57,11 @@
     .feature-card:nth-child(5) .feature-icon{ animation-delay:2s; }
     .feature-card:nth-child(6) .feature-icon{ animation-delay:2.5s; }
     @keyframes secGlow{
-      0%,100%{ box-shadow:0 0 16px rgba(59,127,234,0.30), inset 0 0 10px rgba(89,161,255,0.10); }
-      50%{ box-shadow:0 0 30px rgba(89,161,255,0.60), inset 0 0 14px rgba(89,161,255,0.20); }
+      0%,100%{ box-shadow:0 0 16px rgba(74,147,224,0.30), inset 0 0 10px rgba(104,169,240,0.10); }
+      50%{ box-shadow:0 0 30px rgba(104,169,240,0.60), inset 0 0 14px rgba(104,169,240,0.20); }
     }
     /* any white cards -> glass so text shows */
-    .value-item, .feature-list-item, .card{ background:rgba(255,255,255,0.035) !important; border:1px solid rgba(120,170,255,0.14) !important; border-radius:14px !important; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); }
+    .value-item, .feature-list-item, .card{ background:rgba(255,255,255,0.035) !important; border:1px solid rgba(143,194,244,0.14) !important; border-radius:14px !important; backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px); }
     .value-item{ padding:16px 20px !important; }
     .feature-list-item h5, .card h5{ color:#EFF5FF !important; }
     .feature-list-item p, .card p{ color:rgba(255,255,255,0.55) !important; }
@@ -68,41 +69,41 @@
     .value-item h5{ color:#EFF5FF !important; }
     .value-item p{ color:rgba(255,255,255,0.55) !important; }
     /* commitments / navy panels: add electric edge */
-    div[style*="var(--navy)"]{ border:1px solid rgba(89,161,255,0.28) !important; box-shadow:0 0 46px rgba(59,127,234,0.16); }
+    div[style*="var(--navy)"]{ border:1px solid rgba(104,169,240,0.28) !important; box-shadow:0 0 46px rgba(74,147,224,0.16); }
     /* primary buttons glow */
-    .btn-primary{ box-shadow:0 0 26px rgba(59,127,234,0.45) !important; }
+    .btn-primary{ box-shadow:0 0 26px rgba(74,147,224,0.45) !important; }
 
     /* ── slow drifting light rays ── */
     body::after{
       content:''; position:fixed; inset:-60%; z-index:0; pointer-events:none;
-      background:conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(89,161,255,0.06) 10deg, transparent 26deg, transparent 70deg, rgba(122,90,255,0.05) 84deg, transparent 100deg, transparent 190deg, rgba(38,205,178,0.05) 208deg, transparent 226deg, transparent 300deg, rgba(89,161,255,0.05) 320deg, transparent 338deg);
+      background:conic-gradient(from 0deg at 50% 50%, transparent 0deg, rgba(104,169,240,0.06) 10deg, transparent 26deg, transparent 70deg, rgba(104,169,240,0.05) 84deg, transparent 100deg, transparent 190deg, rgba(56,210,190,0.05) 208deg, transparent 226deg, transparent 300deg, rgba(104,169,240,0.05) 320deg, transparent 338deg);
       animation:rayDrift 75s linear infinite;
     }
     @keyframes rayDrift{ to{ transform:rotate(360deg); } }
 
     /* ── hero glowing shield ── */
-    .sec-hero-shield{ position:relative; width:96px; height:96px; margin:0 auto var(--sp-5); border-radius:26px; display:flex; align-items:center; justify-content:center; color:#A6D2FF; background:radial-gradient(circle at 50% 34%, rgba(59,127,234,0.42), rgba(9,17,34,0.65)); border:1.5px solid rgba(89,161,255,0.6); box-shadow:0 0 50px rgba(59,127,234,0.55), inset 0 0 26px rgba(89,161,255,0.30); animation:shieldPulse 3.2s ease-in-out infinite; }
-    .sec-hero-shield svg{ width:46px; height:46px; filter:drop-shadow(0 0 8px rgba(130,185,255,0.85)); }
-    .sec-hero-shield::before{ content:''; position:absolute; inset:-11px; border-radius:34px; border:1px solid rgba(89,161,255,0.30); animation:ringPulse 3.2s ease-in-out infinite; }
-    @keyframes shieldPulse{ 0%,100%{ box-shadow:0 0 40px rgba(59,127,234,0.5), inset 0 0 20px rgba(89,161,255,0.25);} 50%{ box-shadow:0 0 68px rgba(89,161,255,0.85), inset 0 0 30px rgba(89,161,255,0.42);} }
+    .sec-hero-shield{ position:relative; width:96px; height:96px; margin:0 auto var(--sp-5); border-radius:26px; display:flex; align-items:center; justify-content:center; color:#A9D0F6; background:radial-gradient(circle at 50% 34%, rgba(74,147,224,0.42), rgba(7,20,38,0.65)); border:1.5px solid rgba(104,169,240,0.6); box-shadow:0 0 50px rgba(74,147,224,0.55), inset 0 0 26px rgba(104,169,240,0.30); animation:shieldPulse 3.2s ease-in-out infinite; }
+    .sec-hero-shield svg{ width:46px; height:46px; filter:drop-shadow(0 0 8px rgba(143,194,244,0.85)); }
+    .sec-hero-shield::before{ content:''; position:absolute; inset:-11px; border-radius:34px; border:1px solid rgba(104,169,240,0.30); animation:ringPulse 3.2s ease-in-out infinite; }
+    @keyframes shieldPulse{ 0%,100%{ box-shadow:0 0 40px rgba(74,147,224,0.5), inset 0 0 20px rgba(104,169,240,0.25);} 50%{ box-shadow:0 0 68px rgba(104,169,240,0.85), inset 0 0 30px rgba(104,169,240,0.42);} }
     @keyframes ringPulse{ 0%,100%{ transform:scale(1); opacity:0.55;} 50%{ transform:scale(1.09); opacity:0.12;} }
 
     /* ── vertical security stepper ── */
     .sec-steps{ position:relative; max-width:720px; margin:var(--sp-6) auto 0; display:flex; flex-direction:column; gap:24px; }
-    .sec-steps::before{ content:''; position:absolute; left:29px; top:34px; bottom:34px; width:2px; background:linear-gradient(180deg, rgba(89,161,255,0.65), rgba(89,161,255,0.12)); box-shadow:0 0 14px rgba(59,127,234,0.7); }
+    .sec-steps::before{ content:''; position:absolute; left:29px; top:34px; bottom:34px; width:2px; background:linear-gradient(180deg, rgba(104,169,240,0.65), rgba(104,169,240,0.12)); box-shadow:0 0 14px rgba(74,147,224,0.7); }
     .sec-step{ position:relative; display:flex; gap:22px; align-items:center; }
-    .sec-node{ position:relative; z-index:1; width:60px; height:60px; flex-shrink:0; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#9FD0FF; background:radial-gradient(circle at 50% 38%, rgba(59,127,234,0.38), rgba(9,17,34,0.92)); border:1.5px solid rgba(89,161,255,0.6); box-shadow:0 0 24px rgba(59,127,234,0.55), inset 0 0 14px rgba(89,161,255,0.22); animation:secGlow 3.4s ease-in-out infinite; }
+    .sec-node{ position:relative; z-index:1; width:60px; height:60px; flex-shrink:0; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#A9D0F6; background:radial-gradient(circle at 50% 38%, rgba(74,147,224,0.38), rgba(7,20,38,0.92)); border:1.5px solid rgba(104,169,240,0.6); box-shadow:0 0 24px rgba(74,147,224,0.55), inset 0 0 14px rgba(104,169,240,0.22); animation:secGlow 3.4s ease-in-out infinite; }
     .sec-node svg{ width:24px; height:24px; }
     .sec-step:nth-child(2) .sec-node{ animation-delay:.5s; } .sec-step:nth-child(3) .sec-node{ animation-delay:1s; } .sec-step:nth-child(4) .sec-node{ animation-delay:1.5s; } .sec-step:nth-child(5) .sec-node{ animation-delay:2s; } .sec-step:nth-child(6) .sec-node{ animation-delay:2.5s; }
-    .sec-step-card{ flex:1; background:rgba(255,255,255,0.04); border:1px solid rgba(120,170,255,0.16); border-radius:14px; padding:16px 22px; backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); box-shadow:0 10px 30px rgba(0,0,0,0.35); transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
-    .sec-step:hover .sec-step-card{ transform:translateX(5px); border-color:rgba(89,161,255,0.5); box-shadow:0 0 0 1px rgba(89,161,255,0.25), 0 16px 42px rgba(59,127,234,0.22); }
+    .sec-step-card{ flex:1; background:rgba(255,255,255,0.04); border:1px solid rgba(143,194,244,0.16); border-radius:14px; padding:16px 22px; backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px); box-shadow:0 10px 30px rgba(0,0,0,0.35); transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+    .sec-step:hover .sec-step-card{ transform:translateX(5px); border-color:rgba(104,169,240,0.5); box-shadow:0 0 0 1px rgba(104,169,240,0.25), 0 16px 42px rgba(74,147,224,0.22); }
     .sec-step-card h4{ color:#EFF5FF !important; margin:0 0 4px; font-size:var(--text-base); }
     .sec-step-card p{ color:rgba(255,255,255,0.58) !important; font-size:var(--text-sm); margin:0; line-height:1.6; }
     @media (max-width:600px){ .sec-step-card{ padding:14px 16px; } .sec-steps::before{ left:27px; } .sec-node{ width:52px; height:52px; } }
 
     @media (prefers-reduced-motion: reduce){ .feature-icon, .sec-node, .sec-hero-shield, .sec-hero-shield::before, body::after{ animation:none !important; } }
     /* dark solid footer to match the page */
-    .footer--slim{ background:#0A1526 !important; }
+    .footer--slim{ background:#081C30 !important; }
     .footer--slim .footer-logo{ color:#EAF2FF !important; }
     .footer--slim .footer-slim-links a{ color:rgba(255,255,255,0.72) !important; }
     .footer--slim .footer-slim-social a{ color:rgba(255,255,255,0.55) !important; }
@@ -115,7 +116,7 @@
 <!-- NAV -->
 <nav class="nav" data-dark-hero>
   <div class="nav-inner">
-    <a href="index.html" class="nav-logo"><svg class="logo-mark" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Composure"><path d="M31.96 12.64 A13 13 0 1 0 31.96 29.36"/><line x1="19" y1="15.5" x2="19" y2="26.5"/><line x1="25" y1="15.5" x2="25" y2="26.5"/></svg>Composure</a>
+    <a href="index.html" class="nav-logo"><svg class="logo-mark" viewBox="509.5 176 451 416" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Composure"><path fill="#68A9F0" d="M 882.085938 236.945312 C 842.863281 197.632812 790.53125 176 734.972656 176 C 679.417969 176 628.179688 197.214844 589.007812 235.746094 L 706.363281 353.058594 C 758.277344 306.988281 836.984375 309.222656 886.195312 358.414062 C 916.574219 388.785156 930.046875 432.046875 922.710938 473.90625 C 960.476562 395.074219 944.613281 299.34375 882.085938 236.839844 Z M 882.085938 236.945312"/><path fill="currentColor" d="M 587.8125 531.054688 C 627.136719 570.367188 679.363281 592 734.972656 592 C 790.582031 592 841.769531 570.785156 880.890625 532.25 L 763.53125 414.9375 C 711.617188 461.011719 632.910156 458.773438 583.648438 409.582031 C 553.320312 379.164062 539.953125 335.847656 547.289062 293.988281 C 509.523438 372.820312 525.285156 468.550781 587.8125 531.054688 Z M 587.8125 531.054688"/></svg>Composure</a>
     <div class="nav-links">
       <a href="features.html" class="nav-link">Features</a>
       <a href="solutions.html" class="nav-link">Solutions</a>
@@ -134,7 +135,7 @@
 </nav>
 <div class="mobile-nav-overlay"></div>
 <div class="mobile-nav">
-  <div class="mobile-nav-header"><a href="index.html" class="nav-logo" style="font-size:1.1rem;"><svg class="logo-mark" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Composure"><path d="M31.96 12.64 A13 13 0 1 0 31.96 29.36"/><line x1="19" y1="15.5" x2="19" y2="26.5"/><line x1="25" y1="15.5" x2="25" y2="26.5"/></svg>Composure</a><button class="mobile-nav-close btn btn-ghost" style="padding:8px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
+  <div class="mobile-nav-header"><a href="index.html" class="nav-logo" style="font-size:1.1rem;"><svg class="logo-mark" viewBox="509.5 176 451 416" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Composure"><path fill="#68A9F0" d="M 882.085938 236.945312 C 842.863281 197.632812 790.53125 176 734.972656 176 C 679.417969 176 628.179688 197.214844 589.007812 235.746094 L 706.363281 353.058594 C 758.277344 306.988281 836.984375 309.222656 886.195312 358.414062 C 916.574219 388.785156 930.046875 432.046875 922.710938 473.90625 C 960.476562 395.074219 944.613281 299.34375 882.085938 236.839844 Z M 882.085938 236.945312"/><path fill="currentColor" d="M 587.8125 531.054688 C 627.136719 570.367188 679.363281 592 734.972656 592 C 790.582031 592 841.769531 570.785156 880.890625 532.25 L 763.53125 414.9375 C 711.617188 461.011719 632.910156 458.773438 583.648438 409.582031 C 553.320312 379.164062 539.953125 335.847656 547.289062 293.988281 C 509.523438 372.820312 525.285156 468.550781 587.8125 531.054688 Z M 587.8125 531.054688"/></svg>Composure</a><button class="mobile-nav-close btn btn-ghost" style="padding:8px;"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button></div>
   <div class="mobile-nav-links"><a href="features.html" class="mobile-nav-link">Features</a><a href="solutions.html" class="mobile-nav-link">Solutions</a><a href="pricing.html" class="mobile-nav-link">Pricing</a><a href="comparison.html" class="mobile-nav-link">Why Composure</a><a href="security.html" class="mobile-nav-link">Security</a><a href="about.html" class="mobile-nav-link">About</a><a href="contact.html" class="mobile-nav-link">Contact</a></div>
   <div class="mobile-nav-actions"><button class="mobile-theme-toggle" type="button" aria-label="Toggle light or dark mode" data-theme-save><svg class="ic-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="ic-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span class="mtt-to-light">Prefer light elsewhere</span></button><a href="start-trial.html" class="btn btn-secondary" style="text-align:center;">Start free trial</a></div>
 </div>
@@ -261,32 +262,32 @@
           <h3 style="color:var(--white);margin-bottom:var(--sp-6);">Our security commitments</h3>
           <div style="display:flex;flex-direction:column;gap:var(--sp-4);">
             <div style="display:flex;gap:var(--sp-3);align-items:flex-start;">
-              <div style="width:28px;height:28px;background:rgba(16,185,129,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <div style="width:28px;height:28px;background:rgba(31,169,140,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1FA98C" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
               </div>
               <div style="font-size:var(--text-sm);color:rgba(255,255,255,0.7);">No data ever leaves the UK and EU</div>
             </div>
             <div style="display:flex;gap:var(--sp-3);align-items:flex-start;">
-              <div style="width:28px;height:28px;background:rgba(16,185,129,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <div style="width:28px;height:28px;background:rgba(31,169,140,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1FA98C" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
               </div>
               <div style="font-size:var(--text-sm);color:rgba(255,255,255,0.7);">Security incidents disclosed within 72 hours in accordance with GDPR requirements</div>
             </div>
             <div style="display:flex;gap:var(--sp-3);align-items:flex-start;">
-              <div style="width:28px;height:28px;background:rgba(16,185,129,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <div style="width:28px;height:28px;background:rgba(31,169,140,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1FA98C" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
               </div>
               <div style="font-size:var(--text-sm);color:rgba(255,255,255,0.7);">Regular security testing and penetration testing</div>
             </div>
             <div style="display:flex;gap:var(--sp-3);align-items:flex-start;">
-              <div style="width:28px;height:28px;background:rgba(16,185,129,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <div style="width:28px;height:28px;background:rgba(31,169,140,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1FA98C" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
               </div>
               <div style="font-size:var(--text-sm);color:rgba(255,255,255,0.7);">We do not sell or share your data with third parties for any commercial purpose</div>
             </div>
             <div style="display:flex;gap:var(--sp-3);align-items:flex-start;">
-              <div style="width:28px;height:28px;background:rgba(16,185,129,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#10B981" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+              <div style="width:28px;height:28px;background:rgba(31,169,140,0.15);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;margin-top:2px;">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#1FA98C" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
               </div>
               <div style="font-size:var(--text-sm);color:rgba(255,255,255,0.7);">Access to production environments is restricted and logged</div>
             </div>
@@ -377,7 +378,7 @@
 <footer class="footer footer--slim" aria-label="Site footer">
   <div class="container">
     <div class="footer-slim">
-      <a href="index.html" class="footer-logo"><svg class="logo-mark" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Composure"><path d="M31.96 12.64 A13 13 0 1 0 31.96 29.36"/><line x1="19" y1="15.5" x2="19" y2="26.5"/><line x1="25" y1="15.5" x2="25" y2="26.5"/></svg>Composure</a>
+      <a href="index.html" class="footer-logo"><svg class="logo-mark" viewBox="509.5 176 451 416" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Composure"><path fill="#68A9F0" d="M 882.085938 236.945312 C 842.863281 197.632812 790.53125 176 734.972656 176 C 679.417969 176 628.179688 197.214844 589.007812 235.746094 L 706.363281 353.058594 C 758.277344 306.988281 836.984375 309.222656 886.195312 358.414062 C 916.574219 388.785156 930.046875 432.046875 922.710938 473.90625 C 960.476562 395.074219 944.613281 299.34375 882.085938 236.839844 Z M 882.085938 236.945312"/><path fill="currentColor" d="M 587.8125 531.054688 C 627.136719 570.367188 679.363281 592 734.972656 592 C 790.582031 592 841.769531 570.785156 880.890625 532.25 L 763.53125 414.9375 C 711.617188 461.011719 632.910156 458.773438 583.648438 409.582031 C 553.320312 379.164062 539.953125 335.847656 547.289062 293.988281 C 509.523438 372.820312 525.285156 468.550781 587.8125 531.054688 Z M 587.8125 531.054688"/></svg>Composure</a>
       <nav class="footer-slim-links">
         <a href="features.html">Features</a>
         <a href="pricing.html">Pricing</a>

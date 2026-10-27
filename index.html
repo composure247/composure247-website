@@ -5,28 +5,29 @@
 
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
   <meta name="description" content="Composure is the AI-powered client communication platform built for MSPs. Communicate clearly and professionally with clients during incidents, outages, and service events, automatically.">
   <meta name="keywords" content="MSP client communication, managed service provider software, incident communication, MSP platform, AI communications">
   <meta property="og:title" content="Composure, Client Communication for MSPs, Handled Brilliantly">
   <meta property="og:description" content="The AI-powered communication layer for Managed Service Providers. Never let a client sit in silence during an incident again.">
   <meta property="og:type" content="website">
   <title>Composure, Client Communication for MSPs, Handled Brilliantly</title>
-  <link rel="stylesheet" href="css/styles.css?v=77">
+  <link rel="stylesheet" href="css/styles.css?v=78">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap">
   <style>
     /* ── Product Demo ───────────────────────────────────── */
     .demo-section{background:var(--navy);padding:var(--sp-20) 0;position:relative;overflow:hidden;}
-    .demo-section::before{content:'';position:absolute;top:-150px;left:50%;transform:translateX(-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(59,127,234,0.07) 0%,transparent 68%);pointer-events:none;}
+    .demo-section::before{content:'';position:absolute;top:-150px;left:50%;transform:translateX(-50%);width:700px;height:700px;background:radial-gradient(circle,rgba(74,147,224,0.07) 0%,transparent 68%);pointer-events:none;}
     .demo-section .section-header h2{color:var(--white);}
     .demo-section .section-header p{color:rgba(255,255,255,0.55);}
     .demo-steps{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:var(--sp-8);}
     .demo-step-btn{padding:8px 20px;border-radius:100px;border:1px solid rgba(255,255,255,0.14);background:transparent;color:rgba(255,255,255,0.45);font-size:var(--text-sm);font-weight:500;cursor:pointer;transition:var(--transition);font-family:var(--font);}
     .demo-step-btn:hover{border-color:rgba(255,255,255,0.35);color:rgba(255,255,255,0.75);}
     .demo-step-btn.active{background:var(--accent);border-color:var(--accent);color:var(--white);}
-    .demo-window{max-width:880px;margin:0 auto;background:#111d2e;border-radius:16px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,0.5),0 0 0 1px rgba(255,255,255,0.06);}
-    .demo-titlebar{display:flex;align-items:center;gap:12px;padding:12px 20px;background:#0d1824;border-bottom:1px solid rgba(255,255,255,0.06);}
+    .demo-window{max-width:880px;margin:0 auto;background:#0E2D4A;border-radius:16px;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,0.5),0 0 0 1px rgba(255,255,255,0.06);}
+    .demo-titlebar{display:flex;align-items:center;gap:12px;padding:12px 20px;background:#0A2238;border-bottom:1px solid rgba(255,255,255,0.06);}
     .demo-dots{display:flex;gap:6px;}
     .demo-dot{width:10px;height:10px;border-radius:50%;}
     .demo-dot:nth-child(1){background:#FF5F57;} .demo-dot:nth-child(2){background:#FFBD2E;} .demo-dot:nth-child(3){background:#28CA41;}
@@ -45,15 +46,15 @@
     .d-incident-meta{font-size:12px;color:rgba(255,255,255,0.38);margin-bottom:22px;}
     .d-chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px;}
     .d-chip{width:34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;}
-    .d-ai-box{display:flex;align-items:center;gap:12px;padding:13px 16px;background:rgba(59,127,234,0.1);border:1px solid rgba(59,127,234,0.22);border-radius:10px;}
-    .d-spinner{width:17px;height:17px;border:2px solid rgba(59,127,234,0.28);border-top-color:var(--accent);border-radius:50%;animation:dSpin .75s linear infinite;flex-shrink:0;}
+    .d-ai-box{display:flex;align-items:center;gap:12px;padding:13px 16px;background:rgba(74,147,224,0.1);border:1px solid rgba(74,147,224,0.22);border-radius:10px;}
+    .d-spinner{width:17px;height:17px;border:2px solid rgba(74,147,224,0.28);border-top-color:var(--accent);border-radius:50%;animation:dSpin .75s linear infinite;flex-shrink:0;}
     @keyframes dSpin{to{transform:rotate(360deg)}}
     .d-ai-text{font-size:12px;color:rgba(255,255,255,0.65);} .d-ai-text strong{color:var(--white);display:block;margin-bottom:2px;font-size:13px;}
     /* scene 1 */
     .d-tabs{display:flex;gap:0;margin-bottom:18px;border-bottom:1px solid rgba(255,255,255,0.08);}
     .d-tab{padding:8px 16px;font-size:12px;font-weight:600;color:rgba(255,255,255,0.38);border-bottom:2px solid transparent;margin-bottom:-1px;}
     .d-tab.active{color:var(--accent);border-bottom-color:var(--accent);}
-    .d-tab .dtick{display:inline-flex;align-items:center;justify-content:center;width:13px;height:13px;background:#10b981;border-radius:50%;color:#fff;font-size:7px;margin-left:5px;}
+    .d-tab .dtick{display:inline-flex;align-items:center;justify-content:center;width:13px;height:13px;background:#1FA98C;border-radius:50%;color:#fff;font-size:7px;margin-left:5px;}
     .d-meta{font-size:11px;color:rgba(255,255,255,0.32);margin-bottom:10px;text-transform:uppercase;letter-spacing:.06em;}
     .d-subject{font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:12px;padding-bottom:12px;border-bottom:1px solid rgba(255,255,255,0.07);}
     .d-subject span{color:var(--white);font-weight:600;}
@@ -67,12 +68,12 @@
     .d-av{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;flex-shrink:0;}
     .d-card-name{font-size:12px;font-weight:600;color:var(--white);}
     .d-card-role{font-size:10px;color:rgba(255,255,255,0.38);}
-    .d-tone{display:inline-block;padding:2px 7px;background:rgba(59,127,234,0.14);border-radius:4px;font-size:10px;color:var(--accent);font-weight:600;margin-bottom:7px;}
+    .d-tone{display:inline-block;padding:2px 7px;background:rgba(74,147,224,0.14);border-radius:4px;font-size:10px;color:var(--accent);font-weight:600;margin-bottom:7px;}
     .d-preview{font-size:11px;color:rgba(255,255,255,0.42);line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
     .d-send{display:flex;align-items:center;justify-content:center;gap:8px;padding:11px 28px;background:var(--grad-accent);border-radius:8px;color:#fff;font-size:13px;font-weight:600;box-shadow:var(--shadow-accent);cursor:default;}
     /* scene 3 */
     .d-success-head{display:flex;align-items:center;gap:14px;margin-bottom:24px;}
-    .d-success-icon{width:46px;height:46px;background:rgba(16,185,129,0.14);border:1px solid rgba(16,185,129,0.28);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .d-success-icon{width:46px;height:46px;background:rgba(31,169,140,0.14);border:1px solid rgba(31,169,140,0.28);border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
     .d-success-title{font-size:18px;font-weight:700;color:var(--white);}
     .d-success-sub{font-size:12px;color:rgba(255,255,255,0.38);}
     .d-rows{display:flex;flex-direction:column;gap:9px;margin-bottom:18px;}
@@ -80,8 +81,8 @@
     .d-row-info{flex:1;}
     .d-row-name{font-size:13px;font-weight:600;color:var(--white);}
     .d-row-role{font-size:11px;color:rgba(255,255,255,0.38);}
-    .d-row-status{display:flex;align-items:center;gap:5px;font-size:11px;color:#34d399;font-weight:500;white-space:nowrap;}
-    .d-next{display:flex;align-items:center;gap:10px;padding:11px 14px;background:rgba(59,127,234,0.08);border:1px solid rgba(59,127,234,0.14);border-radius:8px;font-size:12px;color:rgba(255,255,255,0.55);}
+    .d-row-status{display:flex;align-items:center;gap:5px;font-size:11px;color:#56CFB8;font-weight:500;white-space:nowrap;}
+    .d-next{display:flex;align-items:center;gap:10px;padding:11px 14px;background:rgba(74,147,224,0.08);border:1px solid rgba(74,147,224,0.14);border-radius:8px;font-size:12px;color:rgba(255,255,255,0.55);}
     .d-next strong{color:var(--white);}
     @media(max-width:768px){.d-review-grid{grid-template-columns:1fr;}.demo-step-btn{font-size:11px;padding:6px 13px;}}
   </style>
@@ -94,7 +95,7 @@
 <nav class="nav" role="navigation" aria-label="Main navigation">
   <div class="nav-inner">
     <a href="index.html" class="nav-logo">
-      <svg class="logo-mark" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Composure"><path d="M31.96 12.64 A13 13 0 1 0 31.96 29.36"/><line x1="19" y1="15.5" x2="19" y2="26.5"/><line x1="25" y1="15.5" x2="25" y2="26.5"/></svg>
+      <svg class="logo-mark" viewBox="509.5 176 451 416" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Composure"><path fill="#68A9F0" d="M 882.085938 236.945312 C 842.863281 197.632812 790.53125 176 734.972656 176 C 679.417969 176 628.179688 197.214844 589.007812 235.746094 L 706.363281 353.058594 C 758.277344 306.988281 836.984375 309.222656 886.195312 358.414062 C 916.574219 388.785156 930.046875 432.046875 922.710938 473.90625 C 960.476562 395.074219 944.613281 299.34375 882.085938 236.839844 Z M 882.085938 236.945312"/><path fill="currentColor" d="M 587.8125 531.054688 C 627.136719 570.367188 679.363281 592 734.972656 592 C 790.582031 592 841.769531 570.785156 880.890625 532.25 L 763.53125 414.9375 C 711.617188 461.011719 632.910156 458.773438 583.648438 409.582031 C 553.320312 379.164062 539.953125 335.847656 547.289062 293.988281 C 509.523438 372.820312 525.285156 468.550781 587.8125 531.054688 Z M 587.8125 531.054688"/></svg>
       Composure
     </a>
 
@@ -126,7 +127,7 @@
 <div class="mobile-nav">
   <div class="mobile-nav-header">
     <a href="index.html" class="nav-logo" style="font-size:1.1rem;">
-      <svg class="logo-mark" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Composure"><path d="M31.96 12.64 A13 13 0 1 0 31.96 29.36"/><line x1="19" y1="15.5" x2="19" y2="26.5"/><line x1="25" y1="15.5" x2="25" y2="26.5"/></svg>
+      <svg class="logo-mark" viewBox="509.5 176 451 416" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Composure"><path fill="#68A9F0" d="M 882.085938 236.945312 C 842.863281 197.632812 790.53125 176 734.972656 176 C 679.417969 176 628.179688 197.214844 589.007812 235.746094 L 706.363281 353.058594 C 758.277344 306.988281 836.984375 309.222656 886.195312 358.414062 C 916.574219 388.785156 930.046875 432.046875 922.710938 473.90625 C 960.476562 395.074219 944.613281 299.34375 882.085938 236.839844 Z M 882.085938 236.945312"/><path fill="currentColor" d="M 587.8125 531.054688 C 627.136719 570.367188 679.363281 592 734.972656 592 C 790.582031 592 841.769531 570.785156 880.890625 532.25 L 763.53125 414.9375 C 711.617188 461.011719 632.910156 458.773438 583.648438 409.582031 C 553.320312 379.164062 539.953125 335.847656 547.289062 293.988281 C 509.523438 372.820312 525.285156 468.550781 587.8125 531.054688 Z M 587.8125 531.054688"/></svg>
       Composure
     </a>
     <button class="mobile-nav-close btn btn-ghost" style="padding:8px;">
@@ -198,8 +199,8 @@
       </video>
       <div class="video-clients video-clients--right">
         <div class="client-chip"><span class="client-dot" style="background:var(--navy-light);"></span>Apex Networks</div>
-        <div class="client-chip"><span class="client-dot" style="background:#7C3AED;"></span>NorthStar Tech</div>
-        <div class="client-chip"><span class="client-dot" style="background:#0CA5D8;"></span>PrimePoint IT</div>
+        <div class="client-chip"><span class="client-dot" style="background:#4A93E0;"></span>NorthStar Tech</div>
+        <div class="client-chip"><span class="client-dot" style="background:#2FABBF;"></span>PrimePoint IT</div>
       </div>
     </div>
     <p class="video-clients-label">Trusted by MSPs across the UK and Europe</p>
@@ -271,7 +272,7 @@
       <!-- Visual: glassy 3D client-experience timeline -->
       <div class="fade-in stagger-2 problem-3d" style="position:relative;">
         <div class="problem-3d-card" style="padding:var(--sp-6);position:relative;overflow:hidden;">
-          <div style="position:absolute;top:-70px;right:-70px;width:220px;height:220px;background:radial-gradient(circle,rgba(59,127,234,0.35),transparent 70%);pointer-events:none;"></div>
+          <div style="position:absolute;top:-70px;right:-70px;width:220px;height:220px;background:radial-gradient(circle,rgba(74,147,224,0.35),transparent 70%);pointer-events:none;"></div>
 
           <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:var(--sp-5);position:relative;">
             <div style="font-weight:600;color:#fff;">A poorly communicated incident</div>
@@ -454,7 +455,7 @@
 
         <!-- Floating status chip -->
         <div style="position:absolute;top:0;right:6%;background:var(--white);border:1px solid var(--border-light);border-radius:var(--radius-full);box-shadow:var(--shadow-lg);padding:8px 14px;display:flex;align-items:center;gap:8px;font-size:var(--text-xs);font-weight:600;color:var(--text-body);">
-          <span style="width:8px;height:8px;border-radius:50%;background:#10b981;flex-shrink:0;"></span> Delivered to 7 clients
+          <span style="width:8px;height:8px;border-radius:50%;background:#1FA98C;flex-shrink:0;"></span> Delivered to 7 clients
         </div>
 
       </div>
@@ -527,7 +528,7 @@
       <div class="aud-hint">Hover a stakeholder below to see the exact message they'd receive.</div>
       <div class="card aud-msg aud-msg--cto" style="border-left:3px solid var(--accent);">
         <div style="display:flex;align-items:center;gap:var(--sp-3);margin-bottom:var(--sp-4);">
-          <div class="contact-avatar" style="background:#3B7FEA;width:40px;height:40px;">CTO</div>
+          <div class="contact-avatar" style="background:#4A93E0;width:40px;height:40px;">CTO</div>
           <div>
             <div style="font-size:var(--text-sm);font-weight:700;color:var(--navy);">Chief Technology Officer</div>
             <div style="font-size:var(--text-xs);color:var(--text-muted);">Strategic impact · Confidence · Timeline</div>
@@ -542,9 +543,9 @@
         </div>
       </div>
 
-      <div class="card aud-msg aud-msg--it" style="border-left:3px solid #7C3AED;">
+      <div class="card aud-msg aud-msg--it" style="border-left:3px solid #4A93E0;">
         <div style="display:flex;align-items:center;gap:var(--sp-3);margin-bottom:var(--sp-4);">
-          <div class="contact-avatar" style="background:#7C3AED;width:40px;height:40px;">IT</div>
+          <div class="contact-avatar" style="background:#4A93E0;width:40px;height:40px;">IT</div>
           <div>
             <div style="font-size:var(--text-sm);font-weight:700;color:var(--navy);">IT Manager</div>
             <div style="font-size:var(--text-xs);color:var(--text-muted);">Technical detail · Status · Workarounds</div>
@@ -553,15 +554,15 @@
         <div style="background:var(--off-white);border-radius:var(--radius);padding:var(--sp-4);font-size:var(--text-sm);color:var(--text-muted);font-style:italic;line-height:1.7;">
           "Authentication failures are occurring across the M365 tenant. We have isolated the issue to Azure AD token validation. A workaround is available for critical users, please contact our helpdesk directly. Engineering is working on a full remediation."
         </div>
-        <div class="contact-status" style="margin-top:var(--sp-3);display:inline-flex;background:rgba(124,58,237,0.08);color:#7C3AED;">
+        <div class="contact-status" style="margin-top:var(--sp-3);display:inline-flex;background:rgba(74,147,224,0.08);color:#4A93E0;">
           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
           Tone: Technical · Actionable · Detailed
         </div>
       </div>
 
-      <div class="card aud-msg aud-msg--fd" style="border-left:3px solid #0CA5D8;">
+      <div class="card aud-msg aud-msg--fd" style="border-left:3px solid #2FABBF;">
         <div style="display:flex;align-items:center;gap:var(--sp-3);margin-bottom:var(--sp-4);">
-          <div class="contact-avatar" style="background:#0CA5D8;width:40px;height:40px;">FD</div>
+          <div class="contact-avatar" style="background:#2FABBF;width:40px;height:40px;">FD</div>
           <div>
             <div style="font-size:var(--text-sm);font-weight:700;color:var(--navy);">Finance Director</div>
             <div style="font-size:var(--text-xs);color:var(--text-muted);">Business impact · No jargon · Resolution ETA</div>
@@ -570,7 +571,7 @@
         <div style="background:var(--off-white);border-radius:var(--radius);padding:var(--sp-4);font-size:var(--text-sm);color:var(--text-muted);font-style:italic;line-height:1.7;">
           "We are currently experiencing an issue affecting email access. Your team may not be able to send or receive emails until this is resolved. We expect to have normal service restored within the hour and will confirm once complete."
         </div>
-        <div class="contact-status" style="margin-top:var(--sp-3);display:inline-flex;background:rgba(12,165,216,0.08);color:#0CA5D8;">
+        <div class="contact-status" style="margin-top:var(--sp-3);display:inline-flex;background:rgba(47,171,191,0.08);color:#2FABBF;">
           <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
           Tone: Plain · Non-technical · Reassuring
         </div>
@@ -594,10 +595,10 @@
       </div>
     </div>
       <div class="audience-avatars">
-        <div class="aud-avatar aud-avatar--cto" style="background:#3B7FEA;">CTO</div>
-        <div class="aud-avatar aud-avatar--it" style="background:#7C3AED;">IT</div>
-        <div class="aud-avatar aud-avatar--fd" style="background:#0CA5D8;">FD</div>
-        <div class="aud-avatar aud-avatar--am" style="background:#10B981;">AM</div>
+        <div class="aud-avatar aud-avatar--cto" style="background:#4A93E0;">CTO</div>
+        <div class="aud-avatar aud-avatar--it" style="background:#4A93E0;">IT</div>
+        <div class="aud-avatar aud-avatar--fd" style="background:#2FABBF;">FD</div>
+        <div class="aud-avatar aud-avatar--am" style="background:#1FA98C;">AM</div>
       </div>
       <div class="eyebrow-tag">Stakeholder-calibrated communication</div>
       <h2 id="audience-heading">One incident. Four stakeholders.<br><span class="headline-accent">Four very different messages.</span></h2>
@@ -921,7 +922,7 @@
 <footer class="footer footer--slim" aria-label="Site footer">
   <div class="container">
     <div class="footer-slim">
-      <a href="index.html" class="footer-logo"><svg class="logo-mark" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Composure"><path d="M31.96 12.64 A13 13 0 1 0 31.96 29.36"/><line x1="19" y1="15.5" x2="19" y2="26.5"/><line x1="25" y1="15.5" x2="25" y2="26.5"/></svg>Composure</a>
+      <a href="index.html" class="footer-logo"><svg class="logo-mark" viewBox="509.5 176 451 416" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Composure"><path fill="#68A9F0" d="M 882.085938 236.945312 C 842.863281 197.632812 790.53125 176 734.972656 176 C 679.417969 176 628.179688 197.214844 589.007812 235.746094 L 706.363281 353.058594 C 758.277344 306.988281 836.984375 309.222656 886.195312 358.414062 C 916.574219 388.785156 930.046875 432.046875 922.710938 473.90625 C 960.476562 395.074219 944.613281 299.34375 882.085938 236.839844 Z M 882.085938 236.945312"/><path fill="currentColor" d="M 587.8125 531.054688 C 627.136719 570.367188 679.363281 592 734.972656 592 C 790.582031 592 841.769531 570.785156 880.890625 532.25 L 763.53125 414.9375 C 711.617188 461.011719 632.910156 458.773438 583.648438 409.582031 C 553.320312 379.164062 539.953125 335.847656 547.289062 293.988281 C 509.523438 372.820312 525.285156 468.550781 587.8125 531.054688 Z M 587.8125 531.054688"/></svg>Composure</a>
       <nav class="footer-slim-links">
         <a href="features.html">Features</a>
         <a href="pricing.html">Pricing</a>
