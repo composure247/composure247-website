@@ -45,6 +45,14 @@
       "destination": "/legal-privacy.html"
     },
     {
+      "source": "/legal/terms/v1.1",
+      "destination": "/legal-terms-v1.1.html"
+    },
+    {
+      "source": "/legal/trial/v1.1",
+      "destination": "/legal-trial-v1.1.html"
+    },
+    {
       "source": "/legal/terms/v1.0",
       "destination": "/legal-terms-v1.0.html"
     },
