@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <link rel="icon" type="image/png" href="/images/composure-mark.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Composure pricing, two simple plans priced by client volume. Respond for incident communications, and Communicate for Root Cause Analyses, scheduled maintenance and Branded Portal. 30-day free trial on Communicate, no card required.">
+  <meta name="description" content="Composure247 pricing: one plan with every feature included, in four sizes by the active customers you enrol. From £199 a month. 30-day free trial, no card needed.">
   <title>Pricing, Composure</title>
   <link rel="stylesheet" href="css/styles.css?v=87">
   <style>
@@ -59,54 +59,6 @@
       letter-spacing:-0.015em;
       font-variation-settings:"opsz" 36;
     }
-
-    /* Band segmented selector */
-    .band-segments{
-      display:inline-flex;
-      align-items:stretch;
-      background:var(--white);
-      padding:6px;
-      border-radius:var(--radius-full);
-      border:1px solid var(--border);
-      box-shadow:var(--shadow-sm);
-      flex-wrap:wrap;
-      justify-content:center;
-    }
-    .band-seg{
-      display:inline-flex;
-      flex-direction:column;
-      align-items:center;
-      padding:11px 22px;
-      border-radius:var(--radius-full);
-      cursor:pointer;
-      transition:background .25s var(--ease),color .25s var(--ease),box-shadow .25s var(--ease);
-      min-width:110px;
-      background:none;
-      border:none;
-      font-family:inherit;
-    }
-    .band-seg-name{
-      font-family:var(--font-display);
-      font-size:1rem;
-      font-weight:600;
-      color:var(--navy);
-      letter-spacing:-0.01em;
-      line-height:1.1;
-    }
-    .band-seg-range{
-      font-size:11.5px;
-      color:var(--text-muted);
-      font-weight:500;
-      margin-top:2px;
-    }
-    .band-seg:hover{background:var(--surface);}
-    .band-seg.active{
-      background:var(--navy);
-      box-shadow:var(--shadow-md);
-    }
-    .band-seg.active .band-seg-name,
-    .band-seg.active .band-seg-range{color:var(--white);}
-    .band-seg.active .band-seg-range{opacity:0.75;}
 
     /* Period switch */
     .period-switch{
@@ -166,13 +118,14 @@
     /* Tier cards */
     .tiers{
       display:grid;
-      grid-template-columns:1fr 1fr;
-      gap:24px;
+      grid-template-columns:repeat(4,minmax(0,1fr));
+      gap:20px;
       align-items:stretch;
-      max-width:1080px;
+      max-width:1240px;
       margin:0 auto;
     }
-    @media (max-width:880px){.tiers{grid-template-columns:1fr;gap:18px;}}
+    @media (max-width:1180px){.tiers{grid-template-columns:repeat(2,minmax(0,1fr));max-width:820px;}}
+    @media (max-width:640px){.tiers{grid-template-columns:1fr;gap:16px;}}
 
     .tier{
       position:relative;
@@ -187,30 +140,6 @@
     }
     .tier:hover{transform:translateY(-3px);box-shadow:var(--shadow-md);}
 
-    .tier-communicate{
-      border-color:rgba(74,147,224,0.40);
-      background:linear-gradient(180deg,#F4F8FE 0%,var(--white) 30%);
-      box-shadow:var(--shadow-md);
-    }
-    .tier-communicate:hover{box-shadow:var(--shadow-accent);}
-
-    .tier-recommended-tag{
-      position:absolute;
-      top:-14px;
-      left:50%;
-      transform:translateX(-50%);
-      display:inline-flex;
-      align-items:center;
-      gap:7px;
-      padding:6px 14px;
-      background:var(--accent-solid);
-      color:var(--white);
-      font-size:12px;
-      font-weight:700;
-      letter-spacing:0.02em;
-      border-radius:var(--radius-full);
-      box-shadow:var(--shadow-accent);
-    }
     @media (max-width:880px){.tier{padding:36px 28px;}}
 
     .tier-header{
@@ -603,28 +532,40 @@
     }
     .bc-quote figcaption strong{color:var(--navy);font-weight:600;}
   
-    /* ── Plan comparison columns ─────────────────────────── */
-    .pc-wrap{overflow-x:auto;padding:22px 0 10px;}
-    .pc-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:16px;min-width:640px;align-items:end;}
-    .pc-col{border-radius:18px;display:flex;flex-direction:column;overflow:hidden;}
-    .pc-labels{background:#0E3A62;}
-    .pc-respond{background:linear-gradient(180deg,#8FC2F4 0%,#2F74D6 100%);box-shadow:0 18px 40px rgba(47,116,214,0.26);}
-    .pc-communicate{position:relative;overflow:visible;background:linear-gradient(180deg,#72E0CD 0%,#2FB79E 100%);box-shadow:0 24px 48px rgba(47,183,158,0.32);}
-    .pc-head{height:104px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:0 16px;text-align:center;}
-    .pc-labels .pc-head{align-items:flex-start;padding-left:20px;}
-    .pc-title{color:#fff;font-size:1.05rem;font-weight:700;letter-spacing:-0.01em;}
-    .pc-plan{color:#fff;font-size:1.3rem;font-weight:700;letter-spacing:-0.01em;line-height:1;}
-    .pc-sub{color:rgba(255,255,255,0.82);font-size:12px;font-weight:500;}
-    .pc-row{height:44px;display:flex;align-items:center;justify-content:center;font-size:13px;color:#fff;border-top:1px solid rgba(255,255,255,0.10);}
-    .pc-labels .pc-row{justify-content:flex-start;padding:0 20px;color:rgba(255,255,255,0.74);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;border-top-color:rgba(255,255,255,0.06);}
-    .pc-mk{width:18px;height:18px;}
-    .pc-x{opacity:0.45;}
-    .pc-txt{font-size:12px;font-weight:700;}
-    .pc-foot{height:82px;display:flex;align-items:center;justify-content:center;padding:0 16px;}
-    .pc-btn{display:flex;align-items:center;justify-content:center;width:100%;padding:11px;border-radius:100px;background:rgba(255,255,255,0.95);color:#1A568F;font-weight:700;font-size:13px;transition:var(--transition);}
-    .pc-communicate .pc-btn{color:#1A8C74;}
-    .pc-btn:hover{background:#fff;transform:translateY(-1px);}
-    .pc-badge{position:absolute;top:-13px;left:50%;transform:translateX(-50%);z-index:2;background:#fff;color:#1A8C74;font-size:10.5px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;padding:5px 14px;border-radius:100px;box-shadow:0 8px 18px rgba(0,0,0,0.18);}
+
+    /* Size cards (one plan, four sizes) */
+    .size-card{padding:32px 26px;}
+    .size-card .tier-name{font-size:1.45rem;}
+    .size-card .tier-tag{margin-bottom:18px;font-weight:500;color:var(--navy);}
+    .size-card .tier-price .amt{font-size:clamp(2.4rem,3.4vw,3rem);}
+    .size-card .tier-header{padding-bottom:22px;margin-bottom:22px;}
+    .size-card .tier-features{gap:11px;}
+    .size-card .tier-feat{font-size:14.5px;}
+    .size-card .tier-cta{margin-top:auto;padding-top:26px;display:flex;flex-direction:column;align-items:center;gap:12px;}
+    .size-talk{font-size:13.5px;font-weight:600;color:var(--accent);border-bottom:1px solid rgba(74,147,224,0.30);}
+    .beyond-note{max-width:820px;margin:28px auto 0;text-align:center;font-size:15px;color:var(--text-body);line-height:1.55;}
+    .beyond-note strong{color:var(--navy);}
+    .pricing-note{margin-top:12px;}
+
+    /* Everything included */
+    .included{max-width:1080px;margin:0 auto;background:var(--white);border:1px solid var(--border);border-radius:var(--radius-2xl);padding:48px;box-shadow:var(--shadow-sm);}
+    @media (max-width:880px){.included{padding:32px 22px;}}
+    .included-head{max-width:640px;margin-bottom:28px;}
+    .included-head h2{margin:10px 0 10px;}
+    .included-head p{color:var(--text-muted);}
+    .included-list{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:1fr 1fr;gap:14px 32px;}
+    @media (max-width:720px){.included-list{grid-template-columns:1fr;}}
+    .included-list li{display:flex;align-items:flex-start;gap:12px;font-size:15px;line-height:1.5;color:var(--text-body);}
+    .included-list .ck{flex:0 0 22px;width:22px;height:22px;border-radius:50%;background:var(--accent-glow);color:var(--accent);display:inline-flex;align-items:center;justify-content:center;margin-top:1px;}
+    .included-foot{margin-top:26px;padding-top:20px;border-top:1px solid var(--border-light);font-size:14.5px;color:var(--text-muted);}
+    .included-foot strong{color:var(--navy);}
+    .ent-ctas{display:flex;align-items:center;gap:22px;flex-wrap:wrap;}
+    .ent-link{color:#9EEAD6;font-weight:600;font-size:14.5px;border-bottom:1px solid rgba(158,234,214,0.4);}
+    .theme-dark .included{background:rgba(255,255,255,0.035) !important;border-color:rgba(143,194,244,0.12) !important;}
+    .theme-dark .included-head h2,.theme-dark .beyond-note strong,.theme-dark .included-foot strong{color:#EFF5FF !important;}
+    .theme-dark .included-list li,.theme-dark .beyond-note{color:rgba(255,255,255,0.80) !important;}
+    .theme-dark .included-head p,.theme-dark .included-foot{color:rgba(255,255,255,0.6) !important;}
+    .theme-dark .included-foot{border-top-color:rgba(143,194,244,0.12) !important;}
 </style>
   <!-- Vercel Web Analytics: cookie-free visit counts, served from our own domain (Privacy Notice v1.1, 7.4) -->
   <script defer src="/_vercel/insights/script.js"></script>
@@ -663,15 +604,15 @@
 <!-- PAGE HERO -->
 <section class="page-hero">
   <div class="container" style="position:relative;z-index:1;text-align:center;">
-    <div class="eyebrow-tag" style="margin-bottom:var(--sp-3);">Simple, transparent pricing</div>
-    <h1>Pricing built for the way you actually run your MSP.</h1>
-    <p>Two simple plans. Priced by the number of clients you manage, never by seat, never by message volume. Pick what fits, and ask us to change it whenever your needs do.</p>
+    <div class="eyebrow-tag" style="margin-bottom:var(--sp-3);">One plan. Everything included.</div>
+    <h1>Priced by the customers you put in Composure. Nothing held back.</h1>
+    <p>Every size gets every feature: the update clock, AI-drafted updates for each contact, the branded portal, and Root Cause Analyses that are reviewed and liability-checked before they go. Pick the size that matches the active customers you enrol.</p>
     <div class="trust-pillbar">
       <div class="trust-pillbar-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>30-day free trial</div>
       <span class="sep"></span>
-      <div class="trust-pillbar-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>No credit card needed</div>
+      <div class="trust-pillbar-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>No card needed</div>
       <span class="sep"></span>
-      <div class="trust-pillbar-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Cancel with 30 days' notice</div>
+      <div class="trust-pillbar-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Same published prices for everyone</div>
       <span class="sep"></span>
       <div class="trust-pillbar-item"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>UK data hosting</div>
     </div>
@@ -683,84 +624,52 @@
   <div class="container">
 
     <div class="pricing-controls">
-      <div class="controls-q" id="pricing-heading">How many clients do you manage?</div>
-
-      <div class="band-segments fade-up" id="bands" role="tablist" aria-label="Client volume bands">
-        <button class="band-seg" data-band="Starter" role="tab"><span class="band-seg-name">Starter</span><span class="band-seg-range">1–25 clients</span></button>
-        <button class="band-seg active" data-band="Growth" role="tab" aria-selected="true"><span class="band-seg-name">Growth</span><span class="band-seg-range">26–100 clients</span></button>
-        <button class="band-seg" data-band="Scale" role="tab"><span class="band-seg-name">Scale</span><span class="band-seg-range">101–500 clients</span></button>
-        <button class="band-seg" data-band="Enterprise" role="tab"><span class="band-seg-name">Enterprise</span><span class="band-seg-range">500+ clients</span></button>
-      </div>
+      <div class="controls-q" id="pricing-heading">How many active customers will you enrol?</div>
 
       <div class="period-switch" id="period-switch">
         <span class="period-switch-label active" data-label="monthly">Pay monthly</span>
-        <button class="period-switch-track" id="period-track" aria-label="Toggle billing period"></button>
+        <button class="period-switch-track" id="period-track" role="switch" aria-checked="false" aria-label="Pay annually"></button>
         <span class="period-switch-label" data-label="annual">Pay annually</span>
         <span class="period-saving" id="period-saving">
           <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-          Save 1 month
+          2 months free
         </span>
       </div>
     </div>
 
-    <div class="tiers fade-up">
-      <!-- RESPOND -->
-      <div class="tier tier-respond">
-        <div class="tier-header">
-          <h3 class="tier-name">Respond</h3>
-          <p class="tier-tag">Incident communications, made simple. Keep clients informed when something goes wrong, fast.</p>
-          <div class="tier-price" id="respond-price">
-            <span class="cur">£</span><span class="amt">249</span><span class="per">/ month</span>
-          </div>
-          <div class="tier-price-trial"><strong>30-day free trial</strong> runs on Communicate &middot; no card required</div>
-        </div>
-        <div class="tier-features-label">What you get</div>
-        <div class="tier-features">
-          <div class="tier-feat"><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>P0 to P3 incident communications</div>
-          <div class="tier-feat"><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Email, SMS to UK mobiles, and WhatsApp</div>
-          <div class="tier-feat"><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>AI drafts each contact&rsquo;s update, a person reviews &amp; sends</div>
-          <div class="tier-feat"><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Update clock with reminders and escalation</div>
-          <div class="tier-feat"><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Customer portal with your logo</div>
-          <div class="tier-feat"><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Account Manager and CSM briefed after every customer update</div>
-          <div class="tier-feat"><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Insights, HaloPSA and Microsoft Entra ID SSO + SCIM</div>
-          <div class="tier-feat"><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Email support in UK business hours, guided setup</div>
-        </div>
-        <div class="tier-cta">
-          <a href="start-trial.html" class="btn btn-secondary">Start free trial</a>
-        </div>
-      </div>
+    <!-- Size cards: rendered from js/pricing-data.js -->
+    <div class="tiers sizes fade-up" id="size-cards" aria-live="polite"></div>
 
-      <!-- COMMUNICATE -->
-      <div class="tier tier-communicate">
-        <span class="tier-recommended-tag">
-          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 8.5 22 9.5 17 14.5 18 22 12 18 6 22 7 14.5 2 9.5 9 8.5 12 2"/></svg>
-          Recommended
-        </span>
-        <div class="tier-header">
-          <h3 class="tier-name">Communicate</h3>
-          <p class="tier-tag">Everything in Respond, plus Root Cause Analyses, scheduled maintenance and Branded Portal.</p>
-          <div class="tier-price" id="communicate-price">
-            <span class="cur">£</span><span class="amt">499</span><span class="per">/ month</span>
-          </div>
-          <div class="tier-price-trial"><strong>30 days free</strong> &middot; no card required</div>
-        </div>
-        <div class="tier-features-label">Everything in Respond, plus</div>
-        <div class="tier-features">
-          <div class="tier-feat"><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Root Cause Analyses drafted by AI, independently reviewed, sent after approval</div>
-          <div class="tier-feat"><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>RCA Actions chased to completion</div>
-          <div class="tier-feat"><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Scheduled maintenance notices</div>
-          <div class="tier-feat"><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>AI Persona per customer and contact</div>
-          <div class="tier-feat"><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Per-customer SLA overrides</div>
-          <div class="tier-feat"><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Customer history uploads</div>
-          <div class="tier-feat"><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span><span><strong>Branded Portal</strong>: your colours and your own sign-in page</span></div>
-        </div>
-        <div class="tier-cta">
-          <a href="start-trial.html" class="btn btn-primary">Start free trial</a>
-        </div>
+    <div class="beyond-note fade-up" id="beyond-note"></div>
+    <p class="pricing-note"><span data-pricing="vat">Prices exclude VAT.</span> Annual billing: pay for 10 months, get 12.</p>
+  </div>
+</section>
+
+<!-- EVERYTHING INCLUDED -->
+<section class="section" style="padding-top:0;" aria-labelledby="included-heading">
+  <div class="container">
+    <div class="included fade-up">
+      <div class="included-head">
+        <div class="eyebrow-tag">Same at every size</div>
+        <h2 id="included-heading">Everything included.</h2>
+        <p>No cut-down plan, no paid add-ons for features. The Root Cause Analysis and the follow-through are what protect your accounts, so every size gets them.</p>
       </div>
+      <ul class="included-list">
+        <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>AI-drafted updates for each contact, approved by a person before they go</li>
+        <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Update clock per customer, with reminders and escalation</li>
+        <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Branded customer portal: your colours and your own sign-in page</li>
+        <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Root Cause Analyses with independent review and a liability check</li>
+        <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>The Standard or Advanced PIR process, your choice</li>
+        <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Corrective actions chased to completion</li>
+        <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Planned maintenance notices, with reminders</li>
+        <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>AI personas and per-customer SLA overrides</li>
+        <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>HaloPSA and Microsoft Entra ID (SSO and SCIM)</li>
+        <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Email, SMS and WhatsApp</li>
+        <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>Unlimited team users</li>
+        <li><span class="ck"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></span>AI-first support, 24/7. Platform and security incidents always reach a person.</li>
+      </ul>
+      <p class="included-foot">Message credits for SMS and WhatsApp are included every month at each size. Need more? Extra credits are <strong data-pricing="creditPack">£100 per 2,000</strong>. Email is unlimited.</p>
     </div>
-
-    <p class="pricing-note">Need to talk numbers? <a href="contact.html">Book a 20-minute call</a> and we'll walk through it together.</p>
   </div>
 </section>
 
@@ -819,7 +728,7 @@
 
         <div class="case-row">
           <div class="case-row-label">Comms staff</div>
-          <div class="case-row-value">Communicate for 26 to 100 clients: <strong>£5,489/year</strong>, less than 20% of one coordinator salary, no rota gaps.</div>
+          <div class="case-row-value">Growth, for 21 to 75 active customers: <strong>£3,490/year</strong> billed annually, less than 12% of one coordinator salary, no rota gaps.</div>
         </div>
         <div class="case-row">
           <div class="case-row-label">Per incident</div>
@@ -840,7 +749,7 @@
 
         <div class="case-foot">
           <div class="case-foot-label">Annual saving from year one</div>
-          <div class="case-foot-value">£24,500–£39,500</div>
+          <div class="case-foot-value">£26,500–£41,500</div>
           <div class="case-foot-sub"><strong>Just on staffing.</strong> Add senior-time savings and one retained client and the gap widens fast.</div>
         </div>
       </div>
@@ -850,32 +759,34 @@
   </div>
 </section>
 
-<!-- ENTERPRISE -->
+<!-- LARGER MSPs -->
 <section class="section" style="padding-top:0;">
   <div class="container">
     <div class="ent fade-up">
       <div class="ent-grid">
         <div>
-          <div class="ent-tag"><span class="dot"></span>For 500+ clients</div>
-          <h2>Enterprise, built around how you work.</h2>
-          <p class="ent-lead">If you're running 500+ clients or need contracted terms and a dedicated CSM, we'll wrap a bespoke package around Communicate, with the Advanced RCA process on top.</p>
+          <div class="ent-tag"><span class="dot"></span>201 active customers and up</div>
+          <h2>Enterprise, published and self-serve.</h2>
+          <p class="ent-lead">Same plan, same features, same price for everyone. No sales gate and no custom quotes: choose Enterprise in the app on annual billing.</p>
           <div class="ent-meta">
-            <div class="ent-meta-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><strong>From £1,500/month</strong> on Communicate</span></div>
-            <div class="ent-meta-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Bespoke contract terms</span></div>
-            <div class="ent-meta-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Advanced RCA process included</span></div>
-            <div class="ent-meta-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>Quarterly business reviews included</span></div>
+            <div class="ent-meta-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span><strong data-pricing="enterpriseAnnual">£8,990 a year</strong> for 201 to 400 active customers</span></div>
+            <div class="ent-meta-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-pricing="enterpriseCredits">4,000 message credits a month</span></div>
+            <div class="ent-meta-row"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span data-pricing="beyond">Above 400: +£1,990 a year (£199 a month, billed annually) for each further 100 customers, with 1,000 more credits each</span></div>
           </div>
-          <a href="contact.html" class="btn btn-success">Book a call</a>
+          <div class="ent-ctas">
+            <a href="start-trial.html" class="btn btn-success">Start a free trial</a>
+            <a href="contact.html" class="ent-link">Talk to us</a>
+          </div>
         </div>
         <div>
-          <div class="ent-addons-label">What's added on top</div>
+          <div class="ent-addons-label">What you get at every size</div>
           <div class="ent-addons">
-            <div class="ent-addon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Advanced RCA process: internal PIR, review-call transcripts, sign-off</div>
-            <div class="ent-addon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Dedicated Customer Success Manager</div>
-            <div class="ent-addon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Contracted uptime commitment in your order form</div>
-            <div class="ent-addon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Custom onboarding</div>
-            <div class="ent-addon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Quarterly Business Reviews</div>
-            <div class="ent-addon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Bespoke contract terms</div>
+            <div class="ent-addon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>The Standard or Advanced PIR process: internal PIR, review-call transcripts, sign-off</div>
+            <div class="ent-addon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>RCAs independently reviewed and liability-checked</div>
+            <div class="ent-addon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Branded customer portal</div>
+            <div class="ent-addon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>HaloPSA and Microsoft Entra ID SSO and SCIM</div>
+            <div class="ent-addon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>Unlimited team users</div>
+            <div class="ent-addon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>AI-first support, 24/7; platform and security incidents always reach a person</div>
           </div>
         </div>
       </div>
@@ -883,39 +794,8 @@
   </div>
 </section>
 
-<!-- COMPARISON -->
-<section class="section section-alt">
-  <div class="container">
-    <div class="section-header fade-up">
-      <div class="eyebrow-tag">Side-by-side</div>
-      <h2>Compare what's in each plan.</h2>
-      <p>Same platform. Communicate adds Root Cause Analyses, scheduled maintenance and Branded Portal.</p>
-    </div>
-    <div class="pc-wrap fade-up">
-  <div class="pc-grid">
-    <div class="pc-col pc-labels">
-      <div class="pc-head"><div class="pc-title">What you get</div></div>
-      <div class="pc-row">P0 to P3 incident comms</div><div class="pc-row">AI-drafted update per contact</div><div class="pc-row">A person sends every update</div><div class="pc-row">Email, SMS to UK mobiles, and WhatsApp</div><div class="pc-row">Update clock with reminders and escalation</div><div class="pc-row">Customer portal with your logo</div><div class="pc-row">Account Manager / CSM briefings</div><div class="pc-row">Insights</div><div class="pc-row">HaloPSA integration</div><div class="pc-row">Microsoft Entra ID SSO + SCIM</div><div class="pc-row">Root Cause Analyses (RCAs)</div><div class="pc-row">RCA Actions and Reviews</div><div class="pc-row">Scheduled maintenance notices</div><div class="pc-row">AI Persona and SLA overrides</div><div class="pc-row">Customer history uploads</div><div class="pc-row">Branded Portal</div><div class="pc-row">Email support</div>
-      <div class="pc-foot"></div>
-    </div>
-    <div class="pc-col pc-respond">
-      <div class="pc-head"><div class="pc-plan">Respond</div><div class="pc-sub">Incident core</div></div>
-      <div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk pc-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><div class="pc-row"><svg class="pc-mk pc-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><div class="pc-row"><svg class="pc-mk pc-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><div class="pc-row"><svg class="pc-mk pc-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><div class="pc-row"><svg class="pc-mk pc-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><div class="pc-row"><svg class="pc-mk pc-x" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></div><div class="pc-row"><span class="pc-txt">UK hours</span></div>
-      <div class="pc-foot"><a href="start-trial.html" class="pc-btn">Start free trial</a></div>
-    </div>
-    <div class="pc-col pc-communicate">
-      <div class="pc-badge">Recommended</div>
-      <div class="pc-head"><div class="pc-plan">Communicate</div><div class="pc-sub">Full platform</div></div>
-      <div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><svg class="pc-mk" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div><div class="pc-row"><span class="pc-txt">UK hours</span></div>
-      <div class="pc-foot"><a href="start-trial.html" class="pc-btn">Start free trial</a></div>
-    </div>
-  </div>
-</div>
-  </div>
-</section>
-
 <!-- FAQ -->
-<section class="section">
+<section class="section section-alt">
   <div class="container-narrow">
     <div class="section-header fade-up">
       <div class="eyebrow-tag">FAQ</div>
@@ -923,28 +803,40 @@
     </div>
     <div class="faq-list fade-up">
       <div class="faq-item">
-        <button class="faq-question">How exactly do you count clients?<div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
-        <div class="faq-answer"><div class="faq-answer-inner">A "client" is any end-customer organisation you manage communications for inside Composure. If your numbers change, email sales@composure247.com and we'll move you to the right band. We don't audit message volumes or seat counts.</div></div>
+        <button class="faq-question">What counts as an active customer?<div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+        <div class="faq-answer"><div class="faq-answer-inner">A customer you have enrolled in Composure and marked active. Customers you manage but haven't enrolled don't count. Inactive customers keep their history and don't count either.</div></div>
       </div>
       <div class="faq-item">
-        <button class="faq-question">Can I start on Respond and upgrade later?<div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Yes. Plan changes are by request: email sales@composure247.com, or ask from your plan page in the app, and we'll move you across.</div></div>
+        <button class="faq-question">What happens if I go over my size?<div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+        <div class="faq-answer"><div class="faq-answer-inner">When you try to add the customer that would take you past your size, Composure asks you to move up first. One click upgrades you, and the difference is charged pro rata. Nothing is charged automatically, and incidents for your existing customers are never blocked. Moving down a size takes effect at renewal.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Is there a cheaper plan with fewer features?<div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+        <div class="faq-answer"><div class="faq-answer-inner">No. Every size includes everything, because the Root Cause Analysis and the follow-through are what protect your accounts.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Do you offer custom pricing?<div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+        <div class="faq-answer"><div class="faq-answer-inner">No. Prices are published and the same for everyone.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What support do I get?<div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+        <div class="faq-answer"><div class="faq-answer-inner">AI support in the app and by email, 24/7. Platform and security incidents always reach a person: within 1 hour from 07:00 to 22:00 UK time, and within 4 hours otherwise.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What does annual billing save?<div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+        <div class="faq-answer"><div class="faq-answer-inner">Two months: you pay for 10 and get 12. Enterprise is billed annually.</div></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What are message credits?<div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
+        <div class="faq-answer"><div class="faq-answer-inner">One credit per 160 characters of SMS, and one per WhatsApp message. Each size includes a monthly allowance; extra packs are <span data-pricing="creditPack">£100 per 2,000</span>. Email is unlimited.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-question">Is there a setup fee?<div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
-        <div class="faq-answer"><div class="faq-answer-inner">No setup fees. Every plan includes guided setup in the app (allow about an hour), and email support in UK business hours if you get stuck. Enterprise customers also get custom onboarding as part of their package.</div></div>
+        <div class="faq-answer"><div class="faq-answer-inner">No setup fees. Every size includes guided setup in the app (allow about an hour), with customer notifications paused until you choose to go live.</div></div>
       </div>
       <div class="faq-item">
         <button class="faq-question">What happens after my free trial?<div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
-        <div class="faq-answer"><div class="faq-answer-inner">At the end of your trial we'll get in touch. If you don't subscribe, your workspace may be suspended, and 30 days later deleted; we'll email first and can export your data on request.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">Do you offer annual or multi-year discounts?<div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Pay annually and you get one month free (11× monthly for a full year of access). Monthly or annual, plans renew automatically; cancel with 30 days' notice before renewal. For multi-year Enterprise contracts, get in touch and we'll structure terms that fit.</div></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-question">Is Branded Portal really included on Communicate?<div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></div></button>
-        <div class="faq-answer"><div class="faq-answer-inner">Yes, at every client-volume band, with no paid add-on. Branded Portal gives your customers' portal your colours and your own sign-in page, co-branded with your customer's logo. Your logo appears on every plan. Emails come from Composure247's sending address.</div></div>
+        <div class="faq-answer"><div class="faq-answer-inner">Nothing is charged unless you choose a size. If you don't subscribe, your workspace may be suspended, and 30 days later deleted; we'll email first and can export your data on request.</div></div>
       </div>
     </div>
   </div>
@@ -953,8 +845,8 @@
 <!-- CTA BANNER -->
 <section class="cta-banner">
   <div class="container" style="position:relative;z-index:1;">
-    <h2 class="fade-up">Ready to start your free trial?</h2>
-    <p class="fade-up stagger-1">30 days on Communicate. No card required. The setup guide takes about an hour.</p>
+    <h2 class="fade-up">Start a 30-day free trial. No card needed.</h2>
+    <p class="fade-up stagger-1">Every feature, from day one. The setup guide takes about an hour, and nothing reaches your customers until you go live.</p>
     <div class="cta-banner-actions fade-up stagger-2">
       <a href="start-trial.html" class="btn btn-primary btn-lg">Start free trial</a>
     </div>
@@ -990,51 +882,82 @@
 </footer>
 
 <script src="js/main.js?v=2"></script>
+<script src="js/pricing-data.js?v=1"></script>
 <script>
 (function(){
-  /* Pricing data table */
-  var prices = {
-    // Annual = 11 x monthly: pay annually, get one month free (Keith, 24 Oct 2026).
-    // Enterprise is Communicate only; Respond shows a note instead of a price.
-    Starter:    { respond:{m:149,a:1639}, communicate:{m:299,a:3289} },
-    Growth:     { respond:{m:249,a:2739}, communicate:{m:499,a:5489} },
-    Scale:      { respond:{m:399,a:4389}, communicate:{m:899,a:9889} },
-    Enterprise: { respond:null,            communicate:{m:1500,a:16500} }
-  };
+  /* All figures come from js/pricing-data.js (one place, GBP only today). */
+  var cfg = window.COMPOSURE_PRICING;
+  if(!cfg) return;
+  var P = cfg.currencies[cfg.currency];
+  var state = { period:'monthly' };
 
-  var state = { band:'Growth', period:'monthly' };
-  function fmt(n){ return n.toLocaleString('en-GB'); }
+  function fmt(n){ return n.toLocaleString(P.locale); }
+  function money(n){ return P.symbol + fmt(n); }
+  var TICK = '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>';
 
-  function renderTier(elId, tier){
-    var el = document.getElementById(elId);
-    if(!el) return;
-    var data = prices[state.band][tier];
-    if(!data){
-      el.innerHTML = '<span class="amt" style="font-size:1.35rem;font-weight:580;color:var(--navy);letter-spacing:-0.01em;line-height:1.3;">Enterprise runs on Communicate</span>';
-      return;
+  function range(s){ return s.min <= 1 ? 'Up to ' + s.max + ' active customers' : s.min + '–' + s.max + ' active customers'; }
+
+  function card(s){
+    var annual = state.period === 'annual';
+    var amt, per, sub;
+    if(annual){
+      amt = fmt(s.annual); per = '/ year';
+      sub = 'Pay for 10 months, get 12';
+    } else if(s.annualOnly){
+      amt = fmt(s.monthly); per = '/ month';
+      sub = 'Billed annually at <strong>' + money(s.annual) + '</strong>';
+    } else {
+      amt = fmt(s.monthly); per = '/ month';
+      sub = 'Or ' + money(s.annual) + ' a year, 2 months free';
     }
-    var v = state.period === 'annual' ? data.a : data.m;
-    var per = state.period === 'annual' ? '/ year' : '/ month';
-    var pre = state.band === 'Enterprise' ? '<span class="pre">From</span>' : '';
-    el.innerHTML = pre + '<span class="cur">£</span><span class="amt">'+fmt(v)+'</span><span class="per">'+per+'</span>';
+    var extra = s.annualOnly
+      ? '<a href="contact.html" class="size-talk">Talk to us</a>'
+      : '';
+    return '' +
+      '<div class="tier size-card" data-size="' + s.id + '">' +
+        '<div class="tier-header">' +
+          '<h3 class="tier-name">' + s.name + '</h3>' +
+          '<p class="tier-tag">' + range(s) + '</p>' +
+          '<div class="tier-price"><span class="cur">' + P.symbol + '</span><span class="amt">' + amt + '</span><span class="per">' + per + '</span></div>' +
+          '<div class="tier-price-trial">' + sub + '</div>' +
+        '</div>' +
+        '<div class="tier-features">' +
+          '<div class="tier-feat"><span class="ck">' + TICK + '</span><span><strong>' + fmt(s.credits) + '</strong> message credits a month</span></div>' +
+          '<div class="tier-feat"><span class="ck">' + TICK + '</span><span>Every feature included</span></div>' +
+          '<div class="tier-feat"><span class="ck">' + TICK + '</span><span>Unlimited team users</span></div>' +
+          (s.annualOnly ? '<div class="tier-feat"><span class="ck">' + TICK + '</span><span>Self-serve, annual billing</span></div>' : '') +
+        '</div>' +
+        '<div class="tier-cta">' +
+          '<a href="start-trial.html" class="btn ' + (s.annualOnly ? 'btn-secondary' : 'btn-primary') + '">Start free trial</a>' +
+          extra +
+        '</div>' +
+      '</div>';
   }
 
   function render(){
-    renderTier('respond-price','respond');
-    renderTier('communicate-price','communicate');
+    var wrap = document.getElementById('size-cards');
+    if(wrap) wrap.innerHTML = P.sizes.map(card).join('');
   }
 
-  /* Band selector */
-  var segs = document.querySelectorAll('.band-seg');
-  segs.forEach(function(s){
-    s.addEventListener('click', function(){
-      segs.forEach(function(x){ x.classList.remove('active'); x.removeAttribute('aria-selected'); });
-      this.classList.add('active');
-      this.setAttribute('aria-selected','true');
-      state.band = this.dataset.band;
-      render();
+  /* Static copy that quotes a figure: filled from the same data. */
+  function fillCopy(){
+    var ent = P.sizes[P.sizes.length - 1];
+    var b = P.beyond;
+    var beyondText = 'Above ' + ent.max + ': +' + money(b.annual) + ' a year (' + money(b.monthlyEquivalent) + ' a month, billed annually) for each further ' + b.blockSize + ' customers, with ' + fmt(b.credits) + ' more credits each';
+    var map = {
+      vat: P.vatNote,
+      creditPack: money(P.creditPack.price) + ' per ' + fmt(P.creditPack.credits),
+      enterpriseAnnual: money(ent.annual) + ' a year',
+      enterpriseCredits: fmt(ent.credits) + ' message credits a month',
+      beyond: beyondText
+    };
+    document.querySelectorAll('[data-pricing]').forEach(function(el){
+      var k = el.getAttribute('data-pricing');
+      if(map[k]) el.textContent = map[k];
     });
-  });
+    var note = document.getElementById('beyond-note');
+    if(note) note.innerHTML = '<strong>More than ' + ent.max + ' active customers?</strong> ' + beyondText.replace(/^Above \d+: \+/,'Add ') + '.';
+  }
 
   /* Period switch */
   var pswitch = document.getElementById('period-switch');
@@ -1044,6 +967,7 @@
   function setPeriod(period){
     state.period = period;
     pswitch.classList.toggle('annual', period==='annual');
+    ptrack.setAttribute('aria-checked', period==='annual' ? 'true' : 'false');
     labels.forEach(function(l){ l.classList.toggle('active', l.dataset.label === period); });
     if(saving) saving.classList.toggle('show', period === 'annual');
     render();
@@ -1055,6 +979,7 @@
     l.addEventListener('click', function(){ setPeriod(this.dataset.label); });
   });
 
+  fillCopy();
   render();
 })();
 </script>
